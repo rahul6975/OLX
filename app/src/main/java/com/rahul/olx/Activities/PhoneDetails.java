@@ -1,16 +1,16 @@
-package com.rahul.olx;
+package com.rahul.olx.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.rahul.olx.R;
+
+public class PhoneDetails extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.eneter_phone_details);
-
+        setContentView(R.layout.activity_phone_details);
     }
-
 }

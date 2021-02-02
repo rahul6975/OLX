@@ -11,4 +11,7 @@
     <color name="blue_grey">#60787A</color>
     <color name="sea_green">#5D797C</color>
     <color name="folroscent_green">#8acbca</color>
+    <color name="welcome_screen_color">#003034</color>
+    <color name="dark_gray">#A9A9A9</color>
+
 </resources>
