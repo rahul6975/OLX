@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">OLX</string>
+    <string name="login">Login</string>
+    <string name="next">Next</string>
+    <string name="country_code">+91</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="description">We will send confirmation code to your phone.</string>
+    <string name="title">Enter your phone</string>
+    <string name="country">Country</string>
 </resources>
