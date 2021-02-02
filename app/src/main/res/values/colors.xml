@@ -10,4 +10,12 @@
     <color name="darkGreen">#06261A</color>
     <color name="whiteSnow">#FFF7FE</color>
     <color name="gray">#5E5E5E</color>
+    <color name="marine_blue">#003034</color>
+    <color name="blue_grey">#60787A</color>
+    <color name="sea_green">#5D797C</color>
+    <color name="folroscent_green">#8acbca</color>
+    <color name="welcome_screen_color">#003034</color>
+    <color name="dark_gray">#A9A9A9</color>
+
+
 </resources>

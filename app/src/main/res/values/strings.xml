@@ -4,10 +4,22 @@
     <string name="continue_with_google">Continue with Google</string>
     <string name="continue_with_facebook">Continue with Facebook</string>
     <string name="Or">OR</string>
-
     <string name="Login_with_Email">Login with Email</string>
     <string name="olx_Term">If you continue, you are accepting OLX Terms and Conditions and Privacy Policy</string>
     <string name="whats_youe_name">Whats your name?</string>
     <string name="StrangerFeel">Stranger feel so impersonal, you know?</string>
     <string name="enter_your_name">Enter your Name</string>
+    <string name="login">Login</string>
+    <string name="next">Next</string>
+    <string name="country_code">+91</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="description">We will send confirmation code to your phone.</string>
+    <string name="title">Enter your phone</string>
+    <string name="country">Country</string>
+    <string name="india_s_leading_marketplace">India\'s Leading marketplace</string>
+    <string name="find_cars_mobile_phones_etc">Find Cars, Mobile Phones etc</string>
+    <string name="browse_categories">Browse categories</string>
+    <string name="see_all">See all</string>
+
+
 </resources>
