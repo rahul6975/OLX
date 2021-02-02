@@ -11,10 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OLX">
-        <activity android:name=".Activities.PhoneDetails"></activity>
+        <activity android:name=".maps_and_location"></activity>
+        <activity android:name=".Activities.Welcome_Splash_Screen" />
         <activity android:name=".Activities.Homepage" />
         <activity android:name=".Activities.MainActivity" />
-        <activity android:name=".Activities.Welcome_Splash_Screen">
+        <activity android:name=".Activities.PhoneDetails">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

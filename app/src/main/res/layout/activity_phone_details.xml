@@ -35,7 +35,7 @@
         android:scaleType="fitXY"
         android:layout_marginStart="@dimen/dp_30"
         android:layout_marginTop="@dimen/dp_10"
-        android:src="@drawable/olxavatar"/>
+        android:src="@drawable/ic_man"/>
     <TextView
         android:id="@+id/tvEnterPhone"
         android:layout_width="match_parent"

@@ -33,11 +33,34 @@
         app:layout_constraintTop_toBottomOf="@+id/ivNavigation" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvLocationDetails"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="TextView"
-        app:layout_constraintTop_toBottomOf="@+id/tvNavigationTitle"
-        tools:layout_editor_absoluteX="160dp" />
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        android:text="To enjoy all that OLX has to offer for you, we need to know where to look for them."
+        android:textAlignment="center"
+        android:textColor="@color/marine_blue"
+        app:layout_constraintEnd_toEndOf="@+id/tvNavigationTitle"
+        app:layout_constraintStart_toStartOf="@+id/tvNavigationTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvNavigationTitle" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/marine_blue"
+        android:padding="@dimen/dp_20"
+        android:text="Around me"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintEnd_toEndOf="@+id/tvLocationDetails"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/tvLocationDetails"
+        app:layout_constraintTop_toBottomOf="@+id/tvLocationDetails" />
 </androidx.constraintlayout.widget.ConstraintLayout>
