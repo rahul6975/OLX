@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">OLX</string>
+    <string name="india_s_leading_marketplace">India\'s Leading marketplace</string>
+    <string name="find_cars_mobile_phones_etc">Find Cars, Mobile Phones etc</string>
+    <string name="browse_categories">Browse categories</string>
+    <string name="see_all">See all</string>
 </resources>
