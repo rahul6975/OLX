@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">OLX</string>
+    <string name="continue_with_phone">Continue with Phone</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="continue_with_facebook">Continue with Facebook</string>
+    <string name="Or">OR</string>
+
+    <string name="Login_with_Email">Login with Email</string>
+    <string name="olx_Term">If you continue, you are accepting OLX Terms and Conditions and Privacy Policy</string>
+    <string name="whats_youe_name">Whats your name?</string>
+    <string name="StrangerFeel">Stranger feel so impersonal, you know?</string>
+    <string name="enter_your_name">Enter your Name</string>
 </resources>
