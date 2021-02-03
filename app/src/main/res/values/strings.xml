@@ -10,7 +10,13 @@
     <string name="StrangerFeel">Stranger feel so impersonal, you know?</string>
     <string name="enter_your_name">Enter your Name</string>
     <string name="login">Login</string>
+    <string name="settings">Settings</string>
+    <string name="privacy_logout">Privacy and logout</string>
+    <string name="Help_and_support">Help and support</string>
+    <string name="Help_center">Help center and legal terms</string>
     <string name="next">Next</string>
+    <string name="select_language">Select Language</string>
+    <string name="English">English</string>
     <string name="country_code">+91</string>
     <string name="phone_number">Phone Number</string>
     <string name="description">We will send confirmation code to your phone.</string>
@@ -20,10 +26,23 @@
     <string name="find_cars_mobile_phones_etc">Find Cars, Mobile Phones etc</string>
     <string name="browse_categories">Browse categories</string>
     <string name="see_all">See all</string>
+<<<<<<< HEAD
     <string name="hello">Hello</string>
     <string name="trending">Trending :</string>
     <string name="fresh_recommendations">Fresh recommendations</string>
     <string name="price_not_mentioned">Price not mentioned</string>
+=======
+    <string name="Navigation_title">Where do you want to buy/sell products?</string>
+    <string name="navigation_body">To enjoy all that OLX has to offer for you, we need to know where to look for them.</string>
+    <string name="btn_text">Around me</string>
+    <string name="phone_message">We sent a 4-digit code to</string>
+    <string name="asterix">*</string>
+    <string name="resend">RESEND CODE BY CALL</string>
+    <string name="dhanashree_rane">Dhanashree Rane</string>
+    <string name="view_edit_profile">View and edit profile</string>
+    <string name="buy_packages_my_orders">Buy Packages and My Orders</string>
+    <string name="packages_orders">Packages,orders,billing and invoices</string>
+>>>>>>> 76a0b17821e4b0164cda27f92a876478b72e3497
 
 
 </resources>

@@ -1,30 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.PhoneDetails"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Activities.PhoneDetails">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="@dimen/dp_20">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/ivphoneDetailsBackArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/dp_20"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:scaleType="fitCenter"/>
+
         <TextView
             android:id="@+id/tvEnterPhoneNo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/sp_24"
-            android:padding="@dimen/dp_10"
-            android:text="@string/login"
             android:layout_marginStart="@dimen/dp_10"
             android:layout_marginEnd="@dimen/dp_10"
+            android:drawablePadding="@dimen/dp_15"
+            android:padding="@dimen/dp_10"
+            android:text="@string/login"
             android:textColor="@color/marine_blue"
-            android:drawableStart="@drawable/ic_baseline_arrow_back_24"
-            android:drawablePadding="@dimen/dp_15"/>
-
+            android:textSize="@dimen/sp_24" />
+</LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
@@ -35,28 +46,34 @@
         android:layout_marginStart="@dimen/dp_30"
         android:layout_marginTop="@dimen/dp_10"
         android:scaleType="fitXY"
+<<<<<<< HEAD
         android:src="@drawable/olxavatar" />
+=======
+        android:src="@drawable/ic_man" />
+
+>>>>>>> 76a0b17821e4b0164cda27f92a876478b72e3497
     <TextView
         android:id="@+id/tvEnterPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/title"
-        android:textStyle="bold"
-        android:textSize="@dimen/sp_28"
-        android:layout_marginTop="@dimen/dp_15"
-        android:textColor="@color/marine_blue"
         android:layout_marginStart="@dimen/dp_30"
-        android:layout_marginEnd="@dimen/dp_5"/>
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_5"
+        android:text="@string/title"
+        android:textColor="@color/marine_blue"
+        android:textSize="@dimen/sp_28"
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/tvDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/description"
-        android:textSize="@dimen/sp_14"
-        android:textColor="@color/sea_green"
-        android:layout_marginTop="@dimen/dp_10"
         android:layout_marginStart="@dimen/dp_30"
-        android:layout_marginEnd="@dimen/dp_5"/>
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_5"
+        android:text="@string/description"
+        android:textColor="@color/sea_green"
+        android:textSize="@dimen/sp_14" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -66,41 +83,44 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_25"
             android:text="@string/country"
             android:textColor="@color/blue_grey"
-            android:textSize="@dimen/sp_14"
-            android:layout_marginStart="@dimen/dp_20"
-            android:layout_marginTop="@dimen/dp_25"/>
+            android:textSize="@dimen/sp_14" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_25"
             android:text="@string/phone_number"
             android:textColor="@color/folroscent_green"
-            android:textSize="@dimen/sp_14"
-            android:layout_marginStart="@dimen/dp_30"
-            android:layout_marginTop="@dimen/dp_25"/>
+            android:textSize="@dimen/sp_14" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/etCountryCode"
+            android:id="@+id/etEnterCountryCode"
             android:layout_width="@dimen/dp_60"
             android:layout_height="wrap_content"
             android:focusable="false"
 
             android:layout_marginStart="@dimen/dp_20"
-            android:hint="@string/country_code"/>
+            android:hint="@string/country_code" />
+
         <EditText
-            android:id="@+id/etPhoneNum"
+            android:id="@+id/etEnterPhoneNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/dp_10"
             android:layout_marginEnd="@dimen/dp_10"
-            android:layout_marginStart="@dimen/dp_10"/>
+            android:textColor="@color/black" />
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -111,6 +131,8 @@
             android:id="@+id/btnPhoneNumLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginEnd="@dimen/dp_15"
             android:layout_marginBottom="@dimen/dp_40"
             android:background="@color/marine_blue"
             android:paddingTop="@dimen/dp_15"
@@ -119,8 +141,6 @@
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="@dimen/sp_22"
-            android:layout_marginStart="@dimen/dp_15"
-            android:layout_marginEnd="@dimen/dp_15"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
