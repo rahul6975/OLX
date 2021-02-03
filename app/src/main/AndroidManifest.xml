@@ -11,12 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OLX">
-        <activity android:name=".NamePageActivity"></activity>
+
+        <activity android:name=".NamePageActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".Activities.PhoneDetails"></activity>
+        <activity android:name=".Activities.PhoneDetails" />
         <activity android:name=".Activities.Homepage" />
         <activity android:name=".Activities.MainActivity" />
-        <activity android:name=".Activities.Welcome_Splash_Screen">
+        <activity android:name=".Activities.Welcome_Splash_Screen"/>
+            <activity android:name=".Activities.AccountPageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
