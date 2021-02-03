@@ -20,7 +20,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
     <ImageView
-        android:id="@+id/ivconfirmationBackArrow"
+        android:id="@+id/ivConfirmationBackArrow"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:paddingStart="@dimen/dp_20"
@@ -28,7 +28,7 @@
         android:scaleType="fitCenter"/>
 
         <TextView
-            android:id="@+id/tvEnterPhoneNo"
+            android:id="@+id/tvConfirmationLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/dp_10"
