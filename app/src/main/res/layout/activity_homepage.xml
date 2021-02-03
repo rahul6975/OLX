@@ -12,7 +12,8 @@
         android:layout_height="@dimen/dp_50"
         android:layout_margin="@dimen/dp_20"
         android:background="@drawable/search_bg"
-        android:hint="@string/find_cars_mobile_phones_etc"
+        android:hint="Search from location"
+        android:textStyle="italic"
         android:textAlignment="center"
         android:textColorHint="@color/black"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,6 +27,19 @@
         app:layout_constraintStart_toStartOf="@id/etSearch"
         app:layout_constraintTop_toTopOf="@id/etSearch" />
 
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:background="@drawable/ic_search_invisible"
+        android:textSize="@dimen/sp_10"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/etSearch"
+        app:layout_constraintEnd_toEndOf="@id/etSearch"
+        app:layout_constraintTop_toTopOf="@id/etSearch" />
+
+
     <TextView
         android:id="@+id/tvBrowseCategories"
         android:layout_width="wrap_content"
@@ -38,17 +52,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etSearch" />
 
-    <TextView
-        android:id="@+id/tvSeeAll"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dp_20"
-        android:text="@string/see_all"
-        android:textColor="@color/black"
-        android:textSize="@dimen/sp_15"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etSearch" />
+<!--    <TextView-->
+<!--        android:id="@+id/tvSeeAll"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="@dimen/dp_20"-->
+<!--        android:text="@string/see_all"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="@dimen/sp_15"-->
+<!--        android:textStyle="italic"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/etSearch" />-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvBrowseCategories"

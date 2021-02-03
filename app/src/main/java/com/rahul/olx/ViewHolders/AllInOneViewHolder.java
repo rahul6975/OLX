@@ -36,19 +36,24 @@ public class AllInOneViewHolder extends RecyclerView.ViewHolder {
                 imgAllheart.setImageResource(R.drawable.ic_heart_selected);
             }
         });
+
+        imgAllheart.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                imgAllheart.setImageResource(R.drawable.ic_heart_unselected);
+                return false;
+            }
+        });
     }
 
-    public void setData(DataClasses dataClasses)
-    {
+    public void setData(DataClasses dataClasses) {
         try {
             tvAllPrice.setText(dataClasses.getPrice().getValue().getDisplay());
             tvAllTitle.setText(dataClasses.getTitle());
             tvAllTown.setText(dataClasses.getLocationsResolved().getADMINLEVEL3Name());
             tvAllCity.setText(dataClasses.getLocationsResolved().getADMINLEVEL1Name());
             Glide.with(imgAllCoverImage).load(dataClasses.getImages().get(0).getUrl()).into(imgAllCoverImage);
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             tvAllPrice.setText(R.string.price_not_mentioned);
         }
     }
