@@ -11,17 +11,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OLX">
-        <activity android:name=".maps_and_location"></activity>
-        <activity android:name=".Activities.Welcome_Splash_Screen" />
-        <activity android:name=".Activities.Homepage" />
+        <activity android:name=".Activities.confirmation_code"></activity>
         <activity android:name=".Activities.MainActivity" />
-        <activity android:name=".Activities.PhoneDetails">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".Activities.Welcome_Splash_Screen" />
+        <activity android:name=".NamePageActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".Activities.PhoneDetails" />
+        <activity android:name=".Activities.maps_and_location" />
+        <activity android:name=".Activities.Homepage" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
 
         <meta-data
             android:name="preloaded_fonts"

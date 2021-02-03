@@ -1,8 +1,10 @@
-package com.rahul.olx;
+package com.rahul.olx.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.rahul.olx.R;
 
 public class maps_and_location extends AppCompatActivity {
 

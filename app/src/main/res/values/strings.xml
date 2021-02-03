@@ -1,5 +1,14 @@
 <resources>
     <string name="app_name">OLX</string>
+    <string name="continue_with_phone">Continue with Phone</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="continue_with_facebook">Continue with Facebook</string>
+    <string name="Or">OR</string>
+    <string name="Login_with_Email">Login with Email</string>
+    <string name="olx_Term">If you continue, you are accepting OLX Terms and Conditions and Privacy Policy</string>
+    <string name="whats_youe_name">Whats your name?</string>
+    <string name="StrangerFeel">Stranger feel so impersonal, you know?</string>
+    <string name="enter_your_name">Enter your Name</string>
     <string name="login">Login</string>
     <string name="next">Next</string>
     <string name="country_code">+91</string>
@@ -11,5 +20,12 @@
     <string name="find_cars_mobile_phones_etc">Find Cars, Mobile Phones etc</string>
     <string name="browse_categories">Browse categories</string>
     <string name="see_all">See all</string>
+    <string name="Navigation_title">Where do you want to buy/sell products?</string>
+    <string name="navigation_body">To enjoy all that OLX has to offer for you, we need to know where to look for them.</string>
+    <string name="btn_text">Around me</string>
+    <string name="phone_message">We sent a 4-digit code to</string>
+    <string name="asterix">*</string>
+    <string name="resend">RESEND CODE BY CALL</string>
+
 
 </resources>
