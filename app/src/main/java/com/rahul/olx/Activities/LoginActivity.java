@@ -1,14 +1,16 @@
-package com.rahul.olx;
+package com.rahul.olx.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class NamePageActivity extends AppCompatActivity {
+import com.rahul.olx.R;
+
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_name_page);
+        setContentView(R.layout.activity_login);
     }
 }

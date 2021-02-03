@@ -20,6 +20,10 @@
     <string name="find_cars_mobile_phones_etc">Find Cars, Mobile Phones etc</string>
     <string name="browse_categories">Browse categories</string>
     <string name="see_all">See all</string>
+    <string name="hello">Hello</string>
+    <string name="trending">Trending :</string>
+    <string name="fresh_recommendations">Fresh recommendations</string>
+    <string name="price_not_mentioned">Price not mentioned</string>
 
 
 </resources>
