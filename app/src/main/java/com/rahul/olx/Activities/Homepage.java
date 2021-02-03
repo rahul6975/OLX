@@ -78,12 +78,12 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
     }
 
     private void buildBrowseCategory() {
-        modelClassArrayList.add(new BrowseCategoriesModelClass(R.drawable.ic_car, "OLX Autos (CARS)"));
-        modelClassArrayList.add(new BrowseCategoriesModelClass(R.drawable.ic_house, "PROPERTIES"));
-        modelClassArrayList.add(new BrowseCategoriesModelClass(R.drawable.ic_smartphone, "MOBILES"));
+        modelClassArrayList.add(new BrowseCategoriesModelClass(R.drawable.ic_car_jade, "OLX Autos (CARS)"));
+        modelClassArrayList.add(new BrowseCategoriesModelClass(R.drawable.ic_house_jade, "PROPERTIES"));
+        modelClassArrayList.add(new BrowseCategoriesModelClass(R.drawable.ic_smartphone_jade, "MOBILES"));
         modelClassArrayList.add(new BrowseCategoriesModelClass(R.drawable.ic_jobs, "JOBS"));
-        modelClassArrayList.add(new BrowseCategoriesModelClass(R.drawable.ic_motorbike, "BIKES"));
-        modelClassArrayList.add(new BrowseCategoriesModelClass(R.drawable.ic_desktop, "ELECTRONICS"));
+        modelClassArrayList.add(new BrowseCategoriesModelClass(R.drawable.ic_motorbike_jade, "BIKES"));
+        modelClassArrayList.add(new BrowseCategoriesModelClass(R.drawable.ic_desktop_jade, "ELECTRONICS"));
     }
 
     private void initViewsAndListeners() {
