@@ -12,7 +12,8 @@
         android:layout_height="@dimen/dp_50"
         android:layout_margin="@dimen/dp_20"
         android:background="@drawable/search_bg"
-        android:hint="@string/find_cars_mobile_phones_etc"
+        android:hint="Search from location"
+        android:textStyle="italic"
         android:textAlignment="center"
         android:textColorHint="@color/black"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,6 +27,19 @@
         app:layout_constraintStart_toStartOf="@id/etSearch"
         app:layout_constraintTop_toTopOf="@id/etSearch" />
 
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:background="@drawable/ic_search_invisible"
+        android:textSize="@dimen/sp_10"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/etSearch"
+        app:layout_constraintEnd_toEndOf="@id/etSearch"
+        app:layout_constraintTop_toTopOf="@id/etSearch" />
+
+
     <TextView
         android:id="@+id/tvBrowseCategories"
         android:layout_width="wrap_content"
@@ -38,17 +52,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etSearch" />
 
-    <TextView
-        android:id="@+id/tvSeeAll"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dp_20"
-        android:text="@string/see_all"
-        android:textColor="@color/black"
-        android:textSize="@dimen/sp_15"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etSearch" />
+<!--    <TextView-->
+<!--        android:id="@+id/tvSeeAll"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="@dimen/dp_20"-->
+<!--        android:text="@string/see_all"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="@dimen/sp_15"-->
+<!--        android:textStyle="italic"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/etSearch" />-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvBrowseCategories"
@@ -58,61 +72,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvBrowseCategories" />
 
-    <!--    <HorizontalScrollView-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="@dimen/dp_30"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/tvBrowseCategories">-->
 
+    <TextView
+        android:id="@+id/tvTrending"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        android:text="@string/fresh_recommendations"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_20"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvBrowseCategories" />
 
-    <!--        <LinearLayout-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="match_parent"-->
-    <!--            android:gravity="center"-->
-    <!--            android:orientation="horizontal">-->
+    <ProgressBar
+        android:id="@+id/ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTrending" />
 
-    <!--            <ImageView-->
-    <!--                android:id="@+id/imgCars"-->
-    <!--                android:layout_width="@dimen/dp_20"-->
-    <!--                android:layout_height="@dimen/dp_20"-->
-    <!--                android:layout_weight="1"-->
-    <!--                android:src="@drawable/ic_car" />-->
-
-    <!--            <ImageView-->
-    <!--                android:id="@+id/imgProperties"-->
-    <!--                android:layout_width="@dimen/dp_20"-->
-    <!--                android:layout_height="@dimen/dp_20"-->
-    <!--                android:layout_weight="1"-->
-    <!--                android:src="@drawable/ic_house" />-->
-
-    <!--            <ImageView-->
-    <!--                android:id="@+id/imgMobiles"-->
-    <!--                android:layout_width="@dimen/dp_20"-->
-    <!--                android:layout_height="@dimen/dp_20"-->
-    <!--                android:layout_weight="1"-->
-    <!--                android:src="@drawable/ic_smartphone" />-->
-
-    <!--            <ImageView-->
-    <!--                android:id="@+id/imgJobs"-->
-    <!--                android:layout_width="@dimen/dp_20"-->
-    <!--                android:layout_height="@dimen/dp_20"-->
-    <!--                android:layout_weight="1"-->
-    <!--                android:src="@drawable/ic_jobs" />-->
-
-    <!--            <ImageView-->
-    <!--                android:id="@+id/imgBikes"-->
-    <!--                android:layout_width="@dimen/dp_20"-->
-    <!--                android:layout_height="@dimen/dp_20"-->
-    <!--                android:layout_weight="1"-->
-    <!--                android:src="@drawable/ic_motorbike" />-->
-
-    <!--            <ImageView-->
-    <!--                android:id="@+id/imgElectronics"-->
-    <!--                android:layout_width="@dimen/dp_20"-->
-    <!--                android:layout_height="@dimen/dp_20"-->
-    <!--                android:layout_weight="1"-->
-    <!--                android:src="@drawable/ic_desktop" />-->
-
-    <!--        </LinearLayout>-->
-    <!--    </HorizontalScrollView>-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RVForAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTrending" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

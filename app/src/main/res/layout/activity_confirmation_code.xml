@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.confirmation_code">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/dp_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <ImageView
+        android:id="@+id/ivConfirmationBackArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/dp_20"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:scaleType="fitCenter"/>
+
+        <TextView
+            android:id="@+id/tvConfirmationLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:drawablePadding="@dimen/dp_15"
+            android:padding="@dimen/dp_10"
+            android:text="@string/login"
+            android:textColor="@color/marine_blue"
+            android:textSize="@dimen/sp_24" />
+
+</LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvConfirmationTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_25"
+        android:layout_marginTop="@dimen/dp_25"
+        android:layout_marginEnd="@dimen/dp_25"
+        android:text="Enter your confirmation code"
+        android:textColor="@color/marine_blue"
+        android:textSize="@dimen/sp_28"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_25"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/tvConfirmationTitle"
+        app:layout_constraintStart_toStartOf="@+id/tvConfirmationTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvConfirmationTitle">
+
+        <TextView
+            android:id="@+id/tvMessageBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phone_message"
+            android:textColor="@color/marine_blue"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tvDisplayCountryCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_5"
+            android:textColor="@color/marine_blue"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDisplayPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/marine_blue"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivEditPhoneNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llConfirmationCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_60"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <EditText
+            android:id="@+id/etCode_1"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:background="@drawable/box"
+            android:textAlignment="center"
+            android:textColorHighlight="@color/folroscent_green"
+            android:textColorHint="@color/marine_blue"
+            android:textSize="@dimen/sp_22"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="241dp" />
+
+        <EditText
+            android:id="@+id/etCode_2"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginStart="@dimen/dp_20"
+            android:background="@drawable/box"
+            android:textAlignment="center"
+            android:textColorHighlight="@color/folroscent_green"
+            android:textColorHint="@color/marine_blue"
+            android:textSize="@dimen/sp_22"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="241dp" />
+
+        <EditText
+            android:id="@+id/etCode_3"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginStart="@dimen/dp_20"
+            android:background="@drawable/box"
+            android:textAlignment="center"
+            android:textColorHighlight="@color/folroscent_green"
+            android:textColorHint="@color/marine_blue"
+            android:textSize="@dimen/sp_22"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="241dp" />
+
+        <EditText
+            android:id="@+id/etCode_4"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginStart="@dimen/dp_20"
+            android:background="@drawable/box"
+            android:textAlignment="center"
+            android:textColorHighlight="@color/folroscent_green"
+            android:textColorHint="@color/marine_blue"
+            android:textSize="@dimen/sp_22"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="241dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvConfirmationLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_25"
+        android:layout_marginTop="@dimen/dp_50"
+        android:text="@string/resend"
+        android:textColor="@color/marine_blue"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/llConfirmationCode"
+        app:layout_constraintStart_toStartOf="@+id/llConfirmationCode"
+        app:layout_constraintTop_toBottomOf="@+id/llConfirmationCode" />
+
+    <TextView
+        android:id="@+id/tvConfirmationLine"
+        android:layout_width="@dimen/dp_170"
+        android:layout_height="@dimen/dp_2"
+        android:background="@color/marine_blue"
+        android:backgroundTint="@color/marine_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvConfirmationLink"
+        app:layout_constraintTop_toBottomOf="@+id/tvConfirmationLink" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

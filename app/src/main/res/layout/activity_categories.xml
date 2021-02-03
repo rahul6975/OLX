@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Activities.Categories">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CategoriesCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/dp_40"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_15">
+
+
+            <ImageView
+                android:id="@+id/ivBuyBackArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/dp_20"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/tvCategoriesHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:drawablePadding="@dimen/dp_20"
+                android:padding="@dimen/dp_10"
+                android:text="@string/categories"
+                android:textColor="@color/marine_blue"
+                android:textSize="@dimen/sp_22"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/CategoriesCardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CategoriesCardView">
+
+        <LinearLayout
+            android:id="@+id/llMainScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llCategoryCar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableStart="@drawable/ic_car_jade"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:text="@string/olx_autos_cars"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCategoryProperty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:drawableStart="@drawable/ic_house_jade"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:text="@string/properties"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCategoryMobile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:drawableStart="@drawable/ic_smartphone_jade"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:text="@string/mobiles"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCategoryJobs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableStart="@drawable/ic_suitcase_jade"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:text="@string/jobs"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCategoryBikes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:drawableStart="@drawable/ic_motorbike_jade"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:text="@string/bikes"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCategoryElectronics"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:drawableStart="@drawable/ic_desktop_jade"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:text="@string/electronics_and_appliances"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCategorySpares"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableStart="@drawable/ic_car_door_jade"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:text="@string/commercial_vehicles_and_spares"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCategoryFurniture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:drawableStart="@drawable/ic_sofa_jade"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:text="Furniture"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCategoryFashion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableStart="@drawable/ic_tshirt_jade"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:text="@string/fashion"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCategoryHobbies"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableStart="@drawable/ic_soccer_ball_jade"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:text="@string/books_sports_hobbies_and_more"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCategoryPets"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableStart="@drawable/ic_pets_jade"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:text="@string/pets"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCategoryServices"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableStart="@drawable/ic_reception_bell_jade"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:text="Services"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

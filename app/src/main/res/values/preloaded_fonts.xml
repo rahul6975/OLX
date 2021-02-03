@@ -2,5 +2,9 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/amiri</item>
+        <item>@font/bubblegum_sans</item>
+        <item>@font/luckiest_guy</item>
+        <item>@font/salsa</item>
+        <item>@font/sniglet</item>
     </array>
 </resources>

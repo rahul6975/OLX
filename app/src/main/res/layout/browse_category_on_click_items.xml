@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_10"
+    android:background="@drawable/search_bg">
+
+
+    <ImageView
+        android:id="@+id/imgInBrowseCategory"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_150"
+        android:padding="@dimen/dp_4"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/PriceOfBrowseCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_6"
+        android:fontFamily="@font/bubblegum_sans"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_25"
+        app:layout_constraintStart_toEndOf="@id/imgInBrowseCategory"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TitleOfBrowseCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_6"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_15"
+        android:fontFamily="@font/sniglet"
+        app:layout_constraintStart_toEndOf="@id/imgInBrowseCategory"
+        app:layout_constraintTop_toBottomOf="@id/PriceOfBrowseCategory" />
+
+    <TextView
+        android:id="@+id/ExtrasOfBrowseCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_6"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintStart_toEndOf="@id/imgInBrowseCategory"
+        app:layout_constraintTop_toBottomOf="@id/TitleOfBrowseCategory" />
+
+    <ImageView
+        android:id="@+id/LocationIconInBrowseCategory"
+        android:layout_width="@dimen/dp_15"
+        android:layout_height="@dimen/dp_15"
+        android:layout_margin="@dimen/dp_6"
+        android:src="@drawable/ic_location"
+        app:layout_constraintStart_toEndOf="@id/imgInBrowseCategory"
+        app:layout_constraintTop_toBottomOf="@id/ExtrasOfBrowseCategory" />
+
+    <TextView
+        android:id="@+id/tvTownOfBrowseCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_4"
+        android:layout_marginTop="@dimen/dp_5"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_10"
+        app:layout_constraintStart_toEndOf="@id/LocationIconInBrowseCategory"
+        app:layout_constraintTop_toBottomOf="@id/ExtrasOfBrowseCategory" />
+
+    <TextView
+        android:id="@+id/CityOfBrowseCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_4"
+        android:layout_marginTop="@dimen/dp_5"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_10"
+        app:layout_constraintStart_toEndOf="@id/tvTownOfBrowseCategory"
+        app:layout_constraintTop_toBottomOf="@id/ExtrasOfBrowseCategory" />
+
+
+    <ImageView
+        android:id="@+id/imgBrowseCategoryHeart"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_margin="@dimen/dp_10"
+        android:src="@drawable/ic_heart_unselected"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

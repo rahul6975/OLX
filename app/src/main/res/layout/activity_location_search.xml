@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.LocationSearchActivity">
+
+    <TextView
+        android:id="@+id/tvShowingResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        android:fontFamily="@font/salsa"
+        android:text="@string/showing_results_for"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_15" />
+
+    <TextView
+        android:id="@+id/tvLocationName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        android:layout_toEndOf="@id/tvShowingResult"
+        android:fontFamily="@font/luckiest_guy"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_20" />
+
+
+    <ProgressBar
+        android:id="@+id/ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLocationName"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ProgressBar" />
+
+
+</RelativeLayout>
