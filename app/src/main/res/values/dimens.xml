@@ -38,5 +38,9 @@
     <dimen name="dp_55">55dp</dimen>
     <dimen name="dp_170">170dp</dimen>
     <dimen name="dp_3">3dp</dimen>
+    <dimen name="dp_28">28dp</dimen>
+    <dimen name="sp_25">25sp</dimen>
+    <dimen name="dp_35">35dp</dimen>
+
 
 </resources>

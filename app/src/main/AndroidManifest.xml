@@ -19,12 +19,13 @@
         <activity android:name=".Activities.PhoneDetails" />
         <activity android:name=".Activities.maps_and_location" />
         <activity android:name=".Activities.Homepage" />
+        <activity android:name=".Activities.AccountPageActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
 
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+            </intent-filter>
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"
