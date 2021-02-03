@@ -79,7 +79,6 @@
             android:id="@+id/tvDisplayCountryCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+91"
             android:layout_marginStart="@dimen/dp_5"
             android:textColor="@color/marine_blue"
             android:textSize="@dimen/sp_14"
@@ -88,7 +87,6 @@
         <TextView
             android:id="@+id/tvDisplayPhoneNumber"
             android:layout_width="wrap_content"
-            android:text="8790623742"
             android:layout_height="wrap_content"
             android:textColor="@color/marine_blue"
             android:textSize="@dimen/sp_14"
