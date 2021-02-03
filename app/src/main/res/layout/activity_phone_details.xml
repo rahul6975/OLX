@@ -46,12 +46,9 @@
         android:layout_marginStart="@dimen/dp_30"
         android:layout_marginTop="@dimen/dp_10"
         android:scaleType="fitXY"
-<<<<<<< HEAD
-        android:src="@drawable/olxavatar" />
-=======
         android:src="@drawable/ic_man" />
 
->>>>>>> 76a0b17821e4b0164cda27f92a876478b72e3497
+
     <TextView
         android:id="@+id/tvEnterPhone"
         android:layout_width="match_parent"

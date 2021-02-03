@@ -26,12 +26,10 @@
     <string name="find_cars_mobile_phones_etc">Find Cars, Mobile Phones etc</string>
     <string name="browse_categories">Browse categories</string>
     <string name="see_all">See all</string>
-<<<<<<< HEAD
     <string name="hello">Hello</string>
     <string name="trending">Trending :</string>
     <string name="fresh_recommendations">Fresh recommendations</string>
     <string name="price_not_mentioned">Price not mentioned</string>
-=======
     <string name="Navigation_title">Where do you want to buy/sell products?</string>
     <string name="navigation_body">To enjoy all that OLX has to offer for you, we need to know where to look for them.</string>
     <string name="btn_text">Around me</string>
@@ -42,7 +40,7 @@
     <string name="view_edit_profile">View and edit profile</string>
     <string name="buy_packages_my_orders">Buy Packages and My Orders</string>
     <string name="packages_orders">Packages,orders,billing and invoices</string>
->>>>>>> 76a0b17821e4b0164cda27f92a876478b72e3497
+
 
 
 </resources>

@@ -73,23 +73,25 @@
             android:layout_height="wrap_content"
             android:text="@string/phone_message"
             android:textColor="@color/marine_blue"
-            android:textSize="@dimen/sp_16" />
+            android:textSize="@dimen/sp_14" />
 
         <TextView
             android:id="@+id/tvDisplayCountryCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_2"
+            android:text="+91"
+            android:layout_marginStart="@dimen/dp_5"
             android:textColor="@color/marine_blue"
-            android:textSize="@dimen/sp_16"
+            android:textSize="@dimen/sp_14"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvDisplayPhoneNumber"
             android:layout_width="wrap_content"
+            android:text="8790623742"
             android:layout_height="wrap_content"
             android:textColor="@color/marine_blue"
-            android:textSize="@dimen/sp_16"
+            android:textSize="@dimen/sp_14"
             android:textStyle="bold" />
 
         <ImageView
@@ -103,9 +105,8 @@
         android:id="@+id/llConfirmationCode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_55"
+        android:gravity="center"
         android:layout_marginTop="@dimen/dp_60"
-        android:layout_marginEnd="@dimen/dp_55"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
@@ -113,8 +114,8 @@
 
         <EditText
             android:id="@+id/etCode_1"
-            android:layout_width="@dimen/dp_60"
-            android:layout_height="@dimen/dp_60"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
             android:background="@drawable/box"
             android:textAlignment="center"
             android:textColorHighlight="@color/folroscent_green"
@@ -125,8 +126,8 @@
 
         <EditText
             android:id="@+id/etCode_2"
-            android:layout_width="@dimen/dp_60"
-            android:layout_height="@dimen/dp_60"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
             android:layout_marginStart="@dimen/dp_20"
             android:background="@drawable/box"
             android:textAlignment="center"
@@ -138,8 +139,8 @@
 
         <EditText
             android:id="@+id/etCode_3"
-            android:layout_width="@dimen/dp_60"
-            android:layout_height="@dimen/dp_60"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
             android:layout_marginStart="@dimen/dp_20"
             android:background="@drawable/box"
             android:textAlignment="center"
@@ -151,8 +152,8 @@
 
         <EditText
             android:id="@+id/etCode_4"
-            android:layout_width="@dimen/dp_60"
-            android:layout_height="@dimen/dp_60"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
             android:layout_marginStart="@dimen/dp_20"
             android:background="@drawable/box"
             android:textAlignment="center"
