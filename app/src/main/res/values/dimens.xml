@@ -46,5 +46,6 @@
     <dimen name="dp_6">6dp</dimen>
     <dimen name="sp_6">6sp</dimen>
     <dimen name="dp_65">65dp</dimen>
+    <dimen name="dp_120">120dp</dimen>
 
 </resources>

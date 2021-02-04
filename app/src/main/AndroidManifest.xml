@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OLX">
         <activity android:name=".Activities.Categories"></activity>
-        <activity android:name=".Activities.my_offers_menu" />
+        <activity android:name=".Activities.Homepage" />
         <activity android:name=".Activities.AccountPageActivity" />
         <activity android:name=".Activities.BrowseCategoryDisplayer" />
         <activity android:name=".Activities.LocationSearchActivity" />
@@ -26,8 +26,8 @@
         <activity android:name=".Activities.MainActivity" />
         <activity android:name=".Activities.ChatActivity" />
         <activity android:name=".Activities.maps_and_location" />
-        <activity android:name=".Activities.Homepage" />
-        <activity android:name=".Activities.Invoices">
+        <activity android:name=".Activities.Invoices" />
+        <activity android:name=".Activities.my_offers_menu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
