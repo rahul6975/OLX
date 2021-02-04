@@ -15,6 +15,7 @@
     <string name="Help_and_support">Help and support</string>
     <string name="Help_center">Help center and legal terms</string>
     <string name="next">Next</string>
+    <string name="Chat">Chats</string>
     <string name="select_language">Select Language</string>
     <string name="English">English</string>
     <string name="country_code">+91</string>
@@ -40,6 +41,11 @@
     <string name="view_edit_profile">View and edit profile</string>
     <string name="buy_packages_my_orders">Buy Packages and My Orders</string>
     <string name="packages_orders">Packages,orders,billing and invoices</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_messages_yet">No messages, yet?</string>
+    <string name="keep_messages">We will keep messages for any items you are trying to buy in here</string>
+    <string name="explore">Explore the latest ads</string>
+    <string name="start_selling">Start selling</string>
     <string name="search">search</string>
     <string name="showing_results_for">Showing results for :</string>
     <string name="cars">Cars</string>
@@ -68,4 +74,5 @@
     <string name="fashion">Fashion</string>
     <string name="books_sports_hobbies_and_more">Books, Sports, Hobbies and More</string>
     <string name="pets">Pets</string>
+
 </resources>
