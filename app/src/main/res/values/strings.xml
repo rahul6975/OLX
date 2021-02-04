@@ -102,5 +102,8 @@
     <string name="logout">Logout</string>
     <string name="deactivate_account_and_delete_my_data">Deactivate account and delete my data</string>
     <string name="logout_from_all_devices">Logout from all devices</string>
+    <string name="password">Password</string>
+    <string name="please_enter_your_new_password">Please enter your new password</string>
+    <string name="new_password">New Password</string>
 
 </resources>
