@@ -68,4 +68,6 @@
     <string name="fashion">Fashion</string>
     <string name="books_sports_hobbies_and_more">Books, Sports, Hobbies and More</string>
     <string name="pets">Pets</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

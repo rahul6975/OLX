@@ -5,10 +5,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.rahul.olx.CarResponseClasses.DataCarClasses;
+import com.rahul.olx.ClickListeners.CarClickListener;
 import com.rahul.olx.MumbaiResponseClasses.DataMumbaiClasses;
 import com.rahul.olx.R;
 
@@ -16,15 +18,19 @@ public class CarsViewHolder extends RecyclerView.ViewHolder {
 
     private TextView tvCarPrice, tvCarTitle, tvCarTown, tvCarCity ,tvExtraCar;
     private ImageView imgCarCoverImage, imgCarheart;
+    private ConstraintLayout constraintLayout;
+    private CarClickListener carClickListener;
 
-    public CarsViewHolder(@NonNull View itemView) {
+    public CarsViewHolder(@NonNull View itemView,CarClickListener carClickListener) {
         super(itemView);
+        this.carClickListener = carClickListener;
         initView(itemView);
     }
     private void initView(View itemView) {
         tvCarPrice = itemView.findViewById(R.id.PriceOfBrowseCategory);
         tvCarTitle = itemView.findViewById(R.id.TitleOfBrowseCategory);
         tvExtraCar = itemView.findViewById(R.id.ExtrasOfBrowseCategory);
+        constraintLayout = itemView.findViewById(R.id.constraintLayout);
         tvCarTown = itemView.findViewById(R.id.tvTownOfBrowseCategory);
         tvCarCity = itemView.findViewById(R.id.CityOfBrowseCategory);
         imgCarCoverImage = itemView.findViewById(R.id.imgInBrowseCategory);
@@ -50,5 +56,15 @@ public class CarsViewHolder extends RecyclerView.ViewHolder {
         {
             tvExtraCar.setText("");
         }
+        constraintLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = getAdapterPosition();
+                if(position != RecyclerView.NO_POSITION)
+                {
+                    carClickListener.onClick(dataCarClasses);
+                }
+            }
+        });
     }
 }

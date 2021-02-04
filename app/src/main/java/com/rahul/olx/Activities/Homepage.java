@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.rahul.olx.AllInOneResponseClasses.AllInOneResponseClasses;
 import com.rahul.olx.AllInOneResponseClasses.DataClasses;
 import com.rahul.olx.ApiCallInterfaces.AllInOneApiClient;
+import com.rahul.olx.ClickListeners.AllInOneClickListener;
 import com.rahul.olx.ClickListeners.BrowseCategoryClickListener;
 import com.rahul.olx.ModelClasses.BrowseCategoriesModelClass;
 import com.rahul.olx.Networks.Network;
@@ -31,7 +32,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Homepage extends AppCompatActivity implements BrowseCategoryClickListener {
+public class Homepage extends AppCompatActivity implements BrowseCategoryClickListener , AllInOneClickListener {
 
     private ArrayList<BrowseCategoriesModelClass> modelClassArrayList = new ArrayList<>();
     private RecyclerView rvBrowseCategories, rvForAll;
@@ -54,7 +55,7 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
     private void setAdapter() {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
         rvForAll.setLayoutManager(gridLayoutManager);
-        adapter = new AllInOneViewAdapter(dataClassesArrayList);
+        adapter = new AllInOneViewAdapter(dataClassesArrayList,this);
         rvForAll.setAdapter(adapter);
     }
 
@@ -132,9 +133,29 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
 
     @Override
     public void onItemClick(int position) {
-//        Toasty.info(this, "You Clicked " + position, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, BrowseCategoryDisplayer.class);
-        intent.putExtra("position",position);
+        intent.putExtra("position", position);
         startActivity(intent);
+    }
+
+    @Override
+    public void onItemClick(DataClasses dataClasses) {
+        try {
+            Intent intent = new Intent(Homepage.this, ItemDetails.class);
+            intent.putExtra("price", dataClasses.getPrice().getValue().getDisplay());
+            intent.putExtra("title", dataClasses.getTitle());
+            intent.putExtra("extras", dataClasses.getMainInfo());
+            intent.putExtra("image1", dataClasses.getImages().get(0).getUrl());
+            intent.putExtra("image2", dataClasses.getImages().get(1).getUrl());
+            intent.putExtra("town", dataClasses.getLocationsResolved().getADMINLEVEL3Name());
+            intent.putExtra("city", dataClasses.getLocationsResolved().getADMINLEVEL1Name());
+            intent.putExtra("description", dataClasses.getDescription());
+            startActivity(intent);
+        }
+        catch (Exception e)
+        {
+            Toasty.info(Homepage.this,"Failed to fetch results, try again!",Toast.LENGTH_LONG).show();
+        }
+
     }
 }

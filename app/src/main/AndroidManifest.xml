@@ -11,10 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OLX">
-        <activity android:name=".Activities.BrowseCategoryDisplayer"></activity>
+        <activity android:name=".Activities.ItemDetails"></activity>
+        <activity android:name=".Activities.BrowseCategoryDisplayer" />
         <activity android:name=".Activities.LocationSearchActivity" />
         <activity android:name=".Activities.NamePageActivity" />
-        <activity android:name=".Activities.Buy_packages"></activity>
+        <activity android:name=".Activities.Buy_packages" />
         <activity android:name=".Activities.Invoices_and_billing" />
         <activity android:name=".Activities.AccountPageActivity" />
         <activity android:name=".Activities.confirmation_code" />
@@ -23,7 +24,7 @@
         <activity android:name=".Activities.PhoneDetails" />
         <activity android:name=".Activities.MainActivity" />
         <activity android:name=".Activities.maps_and_location" />
-        <activity android:name=".Activities.Categories"/>
+        <activity android:name=".Activities.Categories" />
         <activity android:name=".Activities.Homepage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

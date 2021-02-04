@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.rahul.olx.BikesResponseClasses.DataClass;
+import com.rahul.olx.ClickListeners.BikeClickListener;
 import com.rahul.olx.JobsReponseClasses.DataJobClasses;
 import com.rahul.olx.R;
 import com.rahul.olx.ViewHolders.BikesViewHolder;
@@ -16,8 +17,10 @@ import java.util.List;
 
 public class BikesViewAdapter extends RecyclerView.Adapter<BikesViewHolder> {
     private List<DataClass> dataClassList;
+    private BikeClickListener bikeClickListener;
 
-    public BikesViewAdapter(List<DataClass> dataClassList) {
+    public BikesViewAdapter(List<DataClass> dataClassList, BikeClickListener bikeClickListener) {
+        this.bikeClickListener =bikeClickListener;
         this.dataClassList = dataClassList;
     }
 
@@ -25,7 +28,7 @@ public class BikesViewAdapter extends RecyclerView.Adapter<BikesViewHolder> {
     @Override
     public BikesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.browse_category_on_click_items, parent, false);
-        return new BikesViewHolder(view);
+        return new BikesViewHolder(view,bikeClickListener);
     }
 
     @Override

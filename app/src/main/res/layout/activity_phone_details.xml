@@ -11,31 +11,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="@dimen/dp_20">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/ivphoneDetailsBackArrow"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:paddingStart="@dimen/dp_20"
-        android:src="@drawable/ic_baseline_arrow_back_24"
-        android:scaleType="fitCenter"/>
-
-        <TextView
-            android:id="@+id/tvEnterPhoneLogin"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_10"
-            android:layout_marginEnd="@dimen/dp_10"
-            android:drawablePadding="@dimen/dp_15"
-            android:padding="@dimen/dp_10"
-            android:text="@string/login"
-            android:textColor="@color/marine_blue"
-            android:textSize="@dimen/sp_24" />
-</LinearLayout>
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivphoneDetailsBackArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/dp_20"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/tvEnterPhoneLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:drawablePadding="@dimen/dp_15"
+                android:padding="@dimen/dp_10"
+                android:text="@string/login"
+                android:textColor="@color/marine_blue"
+                android:textSize="@dimen/sp_24" />
+        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
@@ -47,6 +48,7 @@
         android:layout_marginTop="@dimen/dp_10"
         android:scaleType="fitXY"
         android:src="@drawable/ic_man" />
+
     <TextView
         android:id="@+id/tvEnterPhone"
         android:layout_width="match_parent"
@@ -104,8 +106,8 @@
             android:id="@+id/etEnterCountryCode"
             android:layout_width="@dimen/dp_60"
             android:layout_height="wrap_content"
-            android:focusable="false"
             android:layout_marginStart="@dimen/dp_20"
+            android:focusable="false"
             android:hint="@string/country_code" />
 
         <EditText

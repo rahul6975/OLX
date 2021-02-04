@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.rahul.olx.ClickListeners.MumbaiClickListener;
 import com.rahul.olx.MumbaiResponseClasses.DataMumbaiClasses;
 import com.rahul.olx.R;
 import com.rahul.olx.ViewHolders.MumbaiLocationViewHolder;
@@ -15,16 +16,18 @@ import java.util.List;
 
 public class MumbaiViewAdapter extends RecyclerView.Adapter<MumbaiLocationViewHolder> {
     private List<DataMumbaiClasses> dataMumbaiClassesList;
+    private MumbaiClickListener mumbaiClickListener;
 
-    public MumbaiViewAdapter(List<DataMumbaiClasses> dataMumbaiClassesList) {
+    public MumbaiViewAdapter(List<DataMumbaiClasses> dataMumbaiClassesList, MumbaiClickListener mumbaiClickListener) {
         this.dataMumbaiClassesList = dataMumbaiClassesList;
+        this.mumbaiClickListener = mumbaiClickListener;
     }
 
     @NonNull
     @Override
     public MumbaiLocationViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_for_mumbai, parent, false);
-        return new MumbaiLocationViewHolder(view);
+        return new MumbaiLocationViewHolder(view, mumbaiClickListener);
     }
 
     @Override
