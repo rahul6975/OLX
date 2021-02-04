@@ -17,7 +17,7 @@ public class Welcome_Splash_Screen extends AppCompatActivity {
     private Animation topAnim, bottomAnim;
     private ImageView imgLogo;
     private TextView tvSlogan;
-    private static int SPLASH_SCREEN = 6000;
+    private static int SPLASH_SCREEN = 4000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

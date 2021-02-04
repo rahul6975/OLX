@@ -5,23 +5,29 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.rahul.olx.ClickListeners.DelhiClickListener;
 import com.rahul.olx.DelhiResponseClasses.DataDelhiClasses;
 import com.rahul.olx.MumbaiResponseClasses.DataMumbaiClasses;
 import com.rahul.olx.R;
 
 public class DelhiLocationViewHolder extends RecyclerView.ViewHolder {
+    private DelhiClickListener delhiClickListener;
+    private ConstraintLayout constraintLayout;
     private TextView tvDelhiPrice, tvDelhiTitle, tvDelhiTown, tvDelhiCity ,tvExtraDelhi;
     private ImageView imgDelhiCoverImage, imgDelhiheart;
-    public DelhiLocationViewHolder(@NonNull View itemView) {
+    public DelhiLocationViewHolder(@NonNull View itemView, DelhiClickListener delhiClickListener) {
         super(itemView);
+        this.delhiClickListener = delhiClickListener;
         initView(itemView);
     }
 
     private void initView(View itemView) {
         tvDelhiPrice = itemView.findViewById(R.id.PriceOfMumbai);
+        constraintLayout = itemView.findViewById(R.id.constraintLayout2);
         tvDelhiTitle = itemView.findViewById(R.id.TitleOfMumbai);
         tvExtraDelhi = itemView.findViewById(R.id.ExtrasOfMumbai);
         tvDelhiTown = itemView.findViewById(R.id.tvTownOfMumbai);
@@ -49,5 +55,11 @@ public class DelhiLocationViewHolder extends RecyclerView.ViewHolder {
         {
             tvExtraDelhi.setText("");
         }
+        constraintLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                delhiClickListener.onClick(dataDelhiClasses);
+            }
+        });
     }
 }

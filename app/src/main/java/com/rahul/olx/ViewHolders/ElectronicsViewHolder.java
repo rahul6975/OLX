@@ -5,10 +5,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.rahul.olx.CarResponseClasses.DataCarClasses;
+import com.rahul.olx.ClickListeners.ElectronicsClickListener;
 import com.rahul.olx.ElectronicsResponseClasses.DataElectronicClasses;
 import com.rahul.olx.R;
 
@@ -16,15 +18,19 @@ public class ElectronicsViewHolder extends RecyclerView.ViewHolder {
 
     private TextView tvElectronicsPrice, tvElectronicsTitle, tvElectronicsTown, tvElectronicsCity ,tvExtraElectronics;
     private ImageView imgElectronicsCoverImage, imgElectronicsHeart;
+    private ElectronicsClickListener electronicsClickListener;
+    private ConstraintLayout constraintLayout;
 
 
-    public ElectronicsViewHolder(@NonNull View itemView) {
+    public ElectronicsViewHolder(@NonNull View itemView, ElectronicsClickListener electronicsClickListener) {
         super(itemView);
+        this.electronicsClickListener =electronicsClickListener;
         initView(itemView);
     }
 
     private void initView(View itemView) {
         tvElectronicsPrice = itemView.findViewById(R.id.PriceOfBrowseCategory);
+        constraintLayout = itemView.findViewById(R.id.constraintLayout);
         tvElectronicsTitle = itemView.findViewById(R.id.TitleOfBrowseCategory);
         tvExtraElectronics = itemView.findViewById(R.id.ExtrasOfBrowseCategory);
         tvElectronicsTown = itemView.findViewById(R.id.tvTownOfBrowseCategory);
@@ -52,5 +58,11 @@ public class ElectronicsViewHolder extends RecyclerView.ViewHolder {
         {
             tvExtraElectronics.setText("");
         }
+        constraintLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                electronicsClickListener.onClick(dataElectronicClasses);
+            }
+        });
     }
 }

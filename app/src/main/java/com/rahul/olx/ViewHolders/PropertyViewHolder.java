@@ -5,19 +5,24 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.rahul.olx.CarResponseClasses.DataCarClasses;
+import com.rahul.olx.ClickListeners.PropertyClickListener;
 import com.rahul.olx.PropertiesResponseClasses.DataPropertyClasses;
 import com.rahul.olx.R;
 
 public class PropertyViewHolder extends RecyclerView.ViewHolder {
+    private PropertyClickListener propertyClickListener;
+    private ConstraintLayout constraintLayout;
     private TextView tvPropertyPrice, tvPropertyTitle, tvPropertyTown, tvPropertyCity, tvExtraProperty;
     private ImageView imgPropertyCoverImage, imgPropertyheart;
 
-    public PropertyViewHolder(@NonNull View itemView) {
+    public PropertyViewHolder(@NonNull View itemView,PropertyClickListener propertyClickListener) {
         super(itemView);
+        this.propertyClickListener = propertyClickListener;
         itemView(itemView);
     }
 
@@ -25,6 +30,7 @@ public class PropertyViewHolder extends RecyclerView.ViewHolder {
         tvPropertyPrice = itemView.findViewById(R.id.PriceOfBrowseCategory);
         tvPropertyTitle = itemView.findViewById(R.id.TitleOfBrowseCategory);
         tvExtraProperty = itemView.findViewById(R.id.ExtrasOfBrowseCategory);
+        constraintLayout = itemView.findViewById(R.id.constraintLayout);
         tvPropertyTown = itemView.findViewById(R.id.tvTownOfBrowseCategory);
         tvPropertyCity = itemView.findViewById(R.id.CityOfBrowseCategory);
         imgPropertyCoverImage = itemView.findViewById(R.id.imgInBrowseCategory);
@@ -49,5 +55,11 @@ public class PropertyViewHolder extends RecyclerView.ViewHolder {
         {
             tvExtraProperty.setText("");
         }
+        constraintLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                propertyClickListener.onClick(dataPropertyClasses);
+            }
+        });
     }
 }

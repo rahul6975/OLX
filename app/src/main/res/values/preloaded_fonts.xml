@@ -2,7 +2,9 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/amiri</item>
+        <item>@font/boogaloo</item>
         <item>@font/bubblegum_sans</item>
+        <item>@font/chicle</item>
         <item>@font/luckiest_guy</item>
         <item>@font/salsa</item>
         <item>@font/sniglet</item>
