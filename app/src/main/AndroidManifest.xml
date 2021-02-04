@@ -11,12 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OLX">
-
-        <activity android:name=".Activities.MyAdsActivity"></activity>
+        <activity android:name=".Activities.MobileDetailesActivity"></activity>
+        <activity
+            android:name=".Activities.MobileActivity"
+            android:label="@string/title_activity_mobile"
+            android:theme="@style/Theme.OLX.NoActionBar" />
+        <activity android:name=".Activities.MyAdsActivity" />
         <activity android:name=".Activities.Invoices" />
         <activity android:name=".Activities.Homepage" />
         <activity android:name=".Activities.AccountPageActivity" />
-        <activity android:name=".Activities.Help_and_Support"></activity>
+        <activity android:name=".Activities.Help_and_Support" />
         <activity android:name=".Activities.Privacy" />
         <activity android:name=".Activities.Settings" />
         <activity android:name=".Activities.ChatActivity" />
@@ -35,12 +39,8 @@
         <activity android:name=".Activities.MainActivity" />
         <activity android:name=".Activities.MyOrdersActivity" />
         <activity android:name=".Activities.maps_and_location" />
-
-
-        <activity android:name=".Activities.ProductDetailsActivity"/>
-
+        <activity android:name=".Activities.ProductDetailsActivity" />
         <activity android:name=".Activities.Password">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.MAIN" />

@@ -97,7 +97,6 @@
     <string name="required_fields">*Required fields</string>
     <string name="includes_some_details">Include some details</string>
     <string name="Next">Next</string>
-
     <string name="_14_9_004">14.9.004</string>
     <string name="version">Version</string>
     <string name="invite_friends_to_olx">Invite friends to OLX</string>
@@ -116,5 +115,13 @@
     <string name="password">Password</string>
     <string name="please_enter_your_new_password">Please enter your new password</string>
     <string name="new_password">New Password</string>
-
+    <string name="title_activity_mobile">MobileActivity</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+    <string name="tablets">Tablets</string>
+    <string name="Accessories">Accessories</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="mobile_phones">Mobile Phones</string>
 </resources>
