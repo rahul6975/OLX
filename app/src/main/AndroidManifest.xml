@@ -23,8 +23,8 @@
         <activity android:name=".Activities.PhoneDetails" />
         <activity android:name=".Activities.MainActivity" />
         <activity android:name=".Activities.maps_and_location" />
-        <activity android:name=".Activities.Categories"/>
-        <activity android:name=".Activities.Homepage">
+        <activity android:name=".Activities.Homepage"/>
+        <activity android:name=".Activities.Categories">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

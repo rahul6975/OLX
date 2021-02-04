@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".Activities.Categories">
 
     <androidx.cardview.widget.CardView
@@ -48,16 +48,19 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/CategoriesCardView"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CategoriesCardView">
+        app:layout_constraintTop_toBottomOf="@+id/CategoriesCardView"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:id="@+id/llMainScroll"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <LinearLayout
@@ -71,10 +74,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:drawableStart="@drawable/ic_car_jade"
                     android:layout_marginStart="@dimen/dp_15"
                     android:layout_marginTop="@dimen/dp_10"
                     android:layout_marginEnd="@dimen/dp_10"
+                    android:drawableStart="@drawable/ic_car_jade"
                     android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
                     android:drawablePadding="@dimen/dp_10"
                     android:text="@string/olx_autos_cars"
@@ -118,9 +121,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/dp_15"
-                    android:drawableStart="@drawable/ic_smartphone_jade"
                     android:layout_marginTop="@dimen/dp_15"
                     android:layout_marginEnd="@dimen/dp_10"
+                    android:drawableStart="@drawable/ic_smartphone_jade"
                     android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
                     android:drawablePadding="@dimen/dp_10"
                     android:text="@string/mobiles"
@@ -139,10 +142,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:drawableStart="@drawable/ic_suitcase_jade"
                     android:layout_marginStart="@dimen/dp_15"
                     android:layout_marginTop="@dimen/dp_15"
                     android:layout_marginEnd="@dimen/dp_10"
+                    android:drawableStart="@drawable/ic_suitcase_jade"
                     android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
                     android:drawablePadding="@dimen/dp_10"
                     android:text="@string/jobs"
@@ -162,9 +165,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/dp_15"
-                    android:drawableStart="@drawable/ic_motorbike_jade"
                     android:layout_marginTop="@dimen/dp_15"
                     android:layout_marginEnd="@dimen/dp_10"
+                    android:drawableStart="@drawable/ic_motorbike_jade"
                     android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
                     android:drawablePadding="@dimen/dp_10"
                     android:text="@string/bikes"
@@ -185,9 +188,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/dp_15"
-                    android:drawableStart="@drawable/ic_desktop_jade"
                     android:layout_marginTop="@dimen/dp_15"
                     android:layout_marginEnd="@dimen/dp_10"
+                    android:drawableStart="@drawable/ic_desktop_jade"
                     android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
                     android:drawablePadding="@dimen/dp_10"
                     android:text="@string/electronics_and_appliances"
@@ -205,10 +208,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:drawableStart="@drawable/ic_car_door_jade"
                     android:layout_marginStart="@dimen/dp_15"
                     android:layout_marginTop="@dimen/dp_15"
                     android:layout_marginEnd="@dimen/dp_10"
+                    android:drawableStart="@drawable/ic_car_door_jade"
                     android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
                     android:drawablePadding="@dimen/dp_10"
                     android:text="@string/commercial_vehicles_and_spares"
@@ -228,9 +231,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/dp_15"
-                    android:drawableStart="@drawable/ic_sofa_jade"
                     android:layout_marginTop="@dimen/dp_15"
                     android:layout_marginEnd="@dimen/dp_10"
+                    android:drawableStart="@drawable/ic_sofa_jade"
                     android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
                     android:drawablePadding="@dimen/dp_10"
                     android:text="Furniture"
@@ -249,10 +252,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:drawableStart="@drawable/ic_tshirt_jade"
                     android:layout_marginStart="@dimen/dp_15"
                     android:layout_marginTop="@dimen/dp_15"
                     android:layout_marginEnd="@dimen/dp_10"
+                    android:drawableStart="@drawable/ic_tshirt_jade"
                     android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
                     android:drawablePadding="@dimen/dp_10"
                     android:text="@string/fashion"
@@ -270,10 +273,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:drawableStart="@drawable/ic_soccer_ball_jade"
                     android:layout_marginStart="@dimen/dp_15"
                     android:layout_marginTop="@dimen/dp_15"
                     android:layout_marginEnd="@dimen/dp_10"
+                    android:drawableStart="@drawable/ic_soccer_ball_jade"
                     android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
                     android:drawablePadding="@dimen/dp_10"
                     android:text="@string/books_sports_hobbies_and_more"
@@ -292,10 +295,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:drawableStart="@drawable/ic_pets_jade"
                     android:layout_marginStart="@dimen/dp_15"
                     android:layout_marginTop="@dimen/dp_15"
                     android:layout_marginEnd="@dimen/dp_10"
+                    android:drawableStart="@drawable/ic_pets_jade"
                     android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
                     android:drawablePadding="@dimen/dp_10"
                     android:text="@string/pets"
@@ -313,13 +316,14 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:drawableStart="@drawable/ic_reception_bell_jade"
                     android:layout_marginStart="@dimen/dp_15"
                     android:layout_marginTop="@dimen/dp_15"
                     android:layout_marginEnd="@dimen/dp_10"
+                    android:drawableStart="@drawable/ic_reception_bell_jade"
                     android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
                     android:drawablePadding="@dimen/dp_10"
                     android:text="Services"
+                    android:paddingBottom="@dimen/dp_10"
                     android:textColor="@color/black"
                     android:textSize="@dimen/sp_16" />
             </LinearLayout>
