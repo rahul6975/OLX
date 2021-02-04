@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".Activities.FragmentExpired">
+
+    <ImageView
+        android:id="@+id/IvMissing_Expired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_missing"
+        android:layout_margin="@dimen/dp_10"
+        android:layout_gravity="center_horizontal"/>
+    <TextView
+        android:id="@+id/TvNothingHere_Expired"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/darkGreen"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/nothing_here"
+        android:textSize="@dimen/sp_30"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/TvPackage_Expired"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/active_package"
+        android:textSize="@dimen/sp_18"
+        android:layout_margin="@dimen/dp_10"/>
+
+
+</LinearLayout>

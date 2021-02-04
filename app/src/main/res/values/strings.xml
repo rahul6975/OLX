@@ -74,5 +74,6 @@
     <string name="fashion">Fashion</string>
     <string name="books_sports_hobbies_and_more">Books, Sports, Hobbies and More</string>
     <string name="pets">Pets</string>
-
+    <string name="nothing_here">Nothing here...</string>
+    <string name="active_package">you dont have any active package</string>
 </resources>
