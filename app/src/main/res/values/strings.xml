@@ -87,7 +87,14 @@
     <string name="collect">Collect all the things you like in one place</string>
     <string name="Discover">Discover</string>
     <string name="more_categories">More categories</string>
-
-
-
+    <string name="Brands">Brand *</string>
+    <string name="years">Year *</string>
+    <string name="Owners">No. of Owners *</string>
+    <string name="Add_title">Add title *</string>
+    <string name="Describe_selling">Describe what you are selling *</string>
+    <string name="mention_the_key">Mention the key fratures of your item (e.g. brand, model, age, type)</string>
+    <string name="include_condition">Include condition, features and reason for selling</string>
+    <string name="required_fields">*Required fields</string>
+    <string name="includes_some_details">Include some details</string>
+    <string name="Next">Next</string>
 </resources>
