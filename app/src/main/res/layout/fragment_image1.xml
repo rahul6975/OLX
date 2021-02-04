@@ -5,12 +5,12 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.ImageFragment1">
 
-   <ImageView
-       android:layout_width="match_parent"
-       android:layout_margin="@dimen/dp_6"
-       android:layout_height="match_parent"
-       android:layout_gravity="center"
-       android:id="@+id/Image1"
-       android:scaleType="centerCrop"/>
+    <ImageView
+        android:id="@+id/Image1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dp_6"
+        android:scaleType="centerCrop" />
 
 </FrameLayout>

@@ -189,5 +189,18 @@
         app:layout_constraintStart_toStartOf="@+id/tvConfirmationLink"
         app:layout_constraintTop_toBottomOf="@+id/tvConfirmationLink" />
 
+    <Button
+        android:id="@+id/btnContinuePhone"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:background="@color/purple_200"
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
