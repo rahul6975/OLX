@@ -56,7 +56,7 @@
         android:layout_below="@id/TvCommercialOther_commercial"/>
 
     <TextView
-        android:id="@+id/TvSpareParts"
+        android:id="@+id/TvSpareParts_commercial"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/spare_parts"
@@ -70,6 +70,6 @@
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:background="@color/gray"
-        android:layout_below="@id/TvSpareParts"/>
+        android:layout_below="@id/TvSpareParts_commercial"/>
 
 </LinearLayout>
