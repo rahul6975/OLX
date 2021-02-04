@@ -17,6 +17,9 @@
     <color name="welcome_screen_color">#003034</color>
     <color name="dark_gray">#A9A9A9</color>
     <color name="cream_color">#F7F0EF</color>
+    <color name="yellow_bg">#F6FAD4</color>
+    <color name="green_bg">#DCF9DB</color>
+    <color name="red_bg">#FCEDED</color>
 
 
 </resources>
