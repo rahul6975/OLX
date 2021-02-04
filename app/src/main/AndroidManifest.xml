@@ -11,23 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OLX">
-
-
-        <activity android:name=".Activities.Homepage">
-
-        </activity>
-        <activity android:name=".Activities.AccountPageActivity">
-
-        </activity>
-
-        <activity android:name=".Activities.Categories"></activity>
-<<<<<<< HEAD
+        <activity android:name=".Activities.Settings"></activity>
+        <activity android:name=".Activities.ChatActivity" />
         <activity android:name=".Activities.Homepage" />
         <activity android:name=".Activities.AccountPageActivity" />
-=======
+        <activity android:name=".Activities.Categories" />
         <activity android:name=".Activities.my_offers_menu" />
-
->>>>>>> 4fbf594968eff91e2529f9a89297e1703d0fbce2
         <activity android:name=".Activities.BrowseCategoryDisplayer" />
         <activity android:name=".Activities.LocationSearchActivity" />
         <activity android:name=".Activities.NamePageActivity" />
@@ -38,27 +27,16 @@
         <activity android:name=".Activities.LoginActivity" />
         <activity android:name=".Activities.PhoneDetails" />
         <activity android:name=".Activities.MainActivity" />
-
         <activity android:name=".Activities.MyOrdersActivity" />
         <activity android:name=".Activities.maps_and_location" />
-<<<<<<< HEAD
         <activity android:name=".Activities.Invoices" />
-        <activity android:name=".Activities.my_offers_menu">
-=======
+        <activity android:name=".Activities.Help_and_Support" />
 
-        <activity android:name=".Activities.ChatActivity"/>
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-
-
-        <activity android:name=".Activities.Invoices">
-
->>>>>>> 4fbf594968eff91e2529f9a89297e1703d0fbce2
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
 
         <meta-data
             android:name="preloaded_fonts"

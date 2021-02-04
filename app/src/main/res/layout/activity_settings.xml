@@ -8,7 +8,7 @@
     tools:context=".Activities.Invoices_and_billing">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/invoicesCardView"
+        android:id="@+id/settingsCardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="@dimen/dp_40"
@@ -25,7 +25,7 @@
 
 
             <ImageView
-                android:id="@+id/ivInvoiceBackArrow"
+                android:id="@+id/ivSettingsBackArrow"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:paddingStart="@dimen/dp_20"
@@ -33,13 +33,13 @@
                 android:src="@drawable/ic_baseline_arrow_back_24" />
 
             <TextView
-                android:id="@+id/tvInvoiceLogin"
+                android:id="@+id/tvSettingsHead"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dp_10"
                 android:drawablePadding="@dimen/dp_20"
                 android:padding="@dimen/dp_10"
-                android:text="Invoices and Billing"
+                android:text="@string/settings"
                 android:textColor="@color/marine_blue"
                 android:textSize="@dimen/sp_22"
                 android:textStyle="bold" />
@@ -48,7 +48,7 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/TvBuyPacks"
+        android:id="@+id/TvPrivacy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_15"
@@ -56,155 +56,157 @@
         android:layout_marginEnd="@dimen/dp_15"
         android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
         android:drawablePadding="@dimen/dp_15"
-        android:text="@string/buy_packages"
+        android:text="@string/privacy"
         android:textColor="@color/marine_blue"
         android:textSize="@dimen/sp_18"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/invoicesCardView"
+        app:layout_constraintEnd_toEndOf="@+id/settingsCardView"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/invoicesCardView"
-        app:layout_constraintTop_toBottomOf="@+id/invoicesCardView" />
+        app:layout_constraintStart_toStartOf="@+id/settingsCardView"
+        app:layout_constraintTop_toBottomOf="@+id/settingsCardView" />
 
     <TextView
-        android:id="@+id/tvBuypacksDetails"
+        android:id="@+id/tvPrivacyDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_15"
         android:layout_marginEnd="@dimen/dp_15"
-        android:text="@string/buy_details"
+        android:text="@string/create_password"
         android:textColor="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/TvBuyPacks"
-        app:layout_constraintTop_toBottomOf="@+id/TvBuyPacks" />
+        app:layout_constraintStart_toStartOf="@+id/TvPrivacy"
+        app:layout_constraintTop_toBottomOf="@+id/TvPrivacy" />
 
     <View
-        android:id="@+id/view_FullUnderLine"
+        android:id="@+id/view_FullUnderLine_P"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:layout_marginTop="@dimen/dp_15"
         android:background="@color/gray"
-        app:layout_constraintEnd_toEndOf="@+id/TvBuyPacks"
-        app:layout_constraintStart_toStartOf="@+id/TvBuyPacks"
-        app:layout_constraintTop_toBottomOf="@+id/tvBuypacksDetails" />
+        app:layout_constraintEnd_toEndOf="@+id/TvPrivacy"
+        app:layout_constraintStart_toStartOf="@+id/TvPrivacy"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrivacyDetails" />
 
     <TextView
-        android:id="@+id/TvMyOrders"
+        android:id="@+id/tvNotifications"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_15"
         android:layout_marginTop="@dimen/dp_20"
         android:layout_marginEnd="@dimen/dp_15"
-        android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
         android:drawablePadding="@dimen/dp_15"
-        android:text="@string/my_orders"
+        android:text="@string/notifications"
         android:textColor="@color/marine_blue"
         android:textSize="@dimen/sp_18"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/view_FullUnderLine"
+        app:layout_constraintEnd_toEndOf="@+id/view_FullUnderLine_P"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/view_FullUnderLine"
-        app:layout_constraintTop_toBottomOf="@+id/view_FullUnderLine" />
+        app:layout_constraintStart_toStartOf="@+id/view_FullUnderLine_P"
+        app:layout_constraintTop_toBottomOf="@+id/view_FullUnderLine_P" />
 
     <TextView
-        android:id="@+id/tvMyOrdersDetails"
+        android:id="@+id/tvNotificationsDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_15"
         android:layout_marginEnd="@dimen/dp_15"
-        android:text="@string/myorder_details"
+        android:text="Recommendations and Special communications"
         android:textColor="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/TvMyOrders"
-        app:layout_constraintTop_toBottomOf="@+id/TvMyOrders" />
+        app:layout_constraintStart_toStartOf="@+id/tvNotifications"
+        app:layout_constraintTop_toBottomOf="@+id/tvNotifications" />
 
     <View
-        android:id="@+id/view_FullUnderLine1"
+        android:id="@+id/view_FullUnderLine_n"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:layout_marginTop="@dimen/dp_15"
         android:background="@color/gray"
-        app:layout_constraintEnd_toEndOf="@+id/TvBuyPacks"
-        app:layout_constraintStart_toStartOf="@+id/TvMyOrders"
-        app:layout_constraintTop_toBottomOf="@+id/tvMyOrdersDetails" />
+        app:layout_constraintEnd_toEndOf="@+id/tvNotifications"
+        app:layout_constraintStart_toStartOf="@+id/tvNotifications"
+        app:layout_constraintTop_toBottomOf="@+id/tvNotificationsDetails" />
 
     <TextView
-        android:id="@+id/TvInvoices"
+        android:id="@+id/TvLogout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_15"
         android:layout_marginTop="@dimen/dp_20"
         android:layout_marginEnd="@dimen/dp_15"
-        android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
         android:drawablePadding="@dimen/dp_15"
-        android:text="@string/invoices"
+        android:text="@string/logout"
         android:textColor="@color/marine_blue"
         android:textSize="@dimen/sp_18"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/view_FullUnderLine1"
+        app:layout_constraintEnd_toEndOf="@+id/view_FullUnderLine_n"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/view_FullUnderLine1"
-        app:layout_constraintTop_toBottomOf="@+id/view_FullUnderLine1" />
-
-    <TextView
-        android:id="@+id/tvInvoicesDetails"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_15"
-        android:layout_marginEnd="@dimen/dp_15"
-        android:text="@string/invoice_details"
-        android:textColor="@color/gray"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/TvInvoices"
-        app:layout_constraintTop_toBottomOf="@+id/TvInvoices" />
+        app:layout_constraintStart_toStartOf="@+id/view_FullUnderLine_n"
+        app:layout_constraintTop_toBottomOf="@+id/view_FullUnderLine_n" />
 
     <View
-        android:id="@+id/view_FullUnderLine2"
+        android:id="@+id/view_FullUnderLine_lg"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:layout_marginTop="@dimen/dp_15"
         android:background="@color/gray"
-        app:layout_constraintEnd_toEndOf="@+id/TvMyOrders"
-        app:layout_constraintStart_toStartOf="@+id/TvInvoices"
-        app:layout_constraintTop_toBottomOf="@+id/tvInvoicesDetails" />
+        app:layout_constraintEnd_toEndOf="@+id/TvLogout"
+        app:layout_constraintStart_toStartOf="@+id/TvLogout"
+        app:layout_constraintTop_toBottomOf="@+id/TvLogout" />
+
 
     <TextView
-        android:id="@+id/TvBillingInfo"
+        android:id="@+id/TvLogoutFromAll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_15"
         android:layout_marginTop="@dimen/dp_20"
         android:layout_marginEnd="@dimen/dp_15"
-        android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
         android:drawablePadding="@dimen/dp_15"
-        android:text="@string/billing_information"
+        android:text="@string/logout_from_all_devices"
         android:textColor="@color/marine_blue"
         android:textSize="@dimen/sp_18"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/view_FullUnderLine2"
+        app:layout_constraintEnd_toEndOf="@+id/view_FullUnderLine_lg"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/view_FullUnderLine2"
-        app:layout_constraintTop_toBottomOf="@+id/view_FullUnderLine2" />
-
-    <TextView
-        android:id="@+id/tvBillingInfoDetails"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_15"
-        android:layout_marginEnd="@dimen/dp_15"
-        android:text="@string/bill_details"
-        android:textColor="@color/gray"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/TvBillingInfo"
-        app:layout_constraintTop_toBottomOf="@+id/TvBillingInfo" />
+        app:layout_constraintStart_toStartOf="@+id/view_FullUnderLine_lg"
+        app:layout_constraintTop_toBottomOf="@+id/view_FullUnderLine_lg" />
 
     <View
-        android:id="@+id/view_FullUnderLine3"
+        android:id="@+id/view_FullUnderLine_Alg"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:layout_marginTop="@dimen/dp_15"
         android:background="@color/gray"
-        app:layout_constraintEnd_toEndOf="@+id/TvInvoices"
-        app:layout_constraintStart_toStartOf="@+id/TvBillingInfo"
-        app:layout_constraintTop_toBottomOf="@+id/tvBillingInfoDetails" />
+        app:layout_constraintEnd_toEndOf="@+id/TvLogoutFromAll"
+        app:layout_constraintStart_toStartOf="@+id/TvLogoutFromAll"
+        app:layout_constraintTop_toBottomOf="@+id/TvLogoutFromAll" />
+
+
+    <TextView
+        android:id="@+id/TvDeactivate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:drawablePadding="@dimen/dp_15"
+        android:text="@string/deactivate_account_and_delete_my_data"
+        android:textColor="@color/marine_blue"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/view_FullUnderLine_Alg"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view_FullUnderLine_Alg"
+        app:layout_constraintTop_toBottomOf="@+id/view_FullUnderLine_Alg" />
+
+    <View
+        android:id="@+id/view_FullUnderLine_Dv"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/dp_15"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="@+id/TvDeactivate"
+        app:layout_constraintStart_toStartOf="@+id/TvDeactivate"
+        app:layout_constraintTop_toBottomOf="@+id/TvDeactivate" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
