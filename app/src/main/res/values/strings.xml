@@ -9,7 +9,6 @@
     <string name="whats_youe_name">Whats your name?</string>
     <string name="StrangerFeel">Stranger feel so impersonal, you know?</string>
     <string name="enter_your_name">Enter your Name</string>
-    <string name="login">Login</string>
     <string name="settings">Settings</string>
     <string name="privacy_logout">Privacy and logout</string>
     <string name="Help_and_support">Help and support</string>
@@ -112,6 +111,13 @@
     <string name="logout">Logout</string>
     <string name="deactivate_account_and_delete_my_data">Deactivate account and delete my data</string>
     <string name="logout_from_all_devices">Logout from all devices</string>
+    <string name="continue_without_location">Continue without Location</string>
+    <string name="female">female</string>
+    <string name="male">male</string>
+    <string name="enter_password">enter password</string>
+    <string name="enter_email_address">enter email address</string>
+    <string name="your_name">enter your name</string>
+    <string name="login">Login</string>
     <string name="password">Password</string>
     <string name="please_enter_your_new_password">Please enter your new password</string>
     <string name="new_password">New Password</string>
