@@ -5,19 +5,24 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.rahul.olx.BikesResponseClasses.DataClass;
 import com.rahul.olx.CarResponseClasses.DataCarClasses;
+import com.rahul.olx.ClickListeners.BikeClickListener;
 import com.rahul.olx.R;
 
 public class BikesViewHolder extends RecyclerView.ViewHolder {
 
     private TextView tvBikePrice, tvBikeTitle, tvBikeTown, tvBikeCity ,tvExtraBike;
     private ImageView imgBikeCoverImage, imgBikeheart;
-    public BikesViewHolder(@NonNull View itemView) {
+    private ConstraintLayout constraintLayout;
+    private BikeClickListener bikeClickListener;
+    public BikesViewHolder(@NonNull View itemView, BikeClickListener bikeClickListener) {
         super(itemView);
+        this.bikeClickListener = bikeClickListener;
         initView(itemView);
     }
 
@@ -25,6 +30,7 @@ public class BikesViewHolder extends RecyclerView.ViewHolder {
         tvBikePrice = itemView.findViewById(R.id.PriceOfBrowseCategory);
         tvBikeTitle = itemView.findViewById(R.id.TitleOfBrowseCategory);
         tvExtraBike = itemView.findViewById(R.id.ExtrasOfBrowseCategory);
+        constraintLayout = itemView.findViewById(R.id.constraintLayout);
         tvBikeTown = itemView.findViewById(R.id.tvTownOfBrowseCategory);
         tvBikeCity = itemView.findViewById(R.id.CityOfBrowseCategory);
         imgBikeCoverImage = itemView.findViewById(R.id.imgInBrowseCategory);
@@ -49,5 +55,11 @@ public class BikesViewHolder extends RecyclerView.ViewHolder {
         {
             tvExtraBike.setText("");
         }
+        constraintLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bikeClickListener.onClick(dataClass);
+            }
+        });
     }
 }

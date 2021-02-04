@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.rahul.olx.ApiCallInterfaces.BangaloreApiClient;
 import com.rahul.olx.ApiCallInterfaces.DelhiApiClient;
@@ -15,6 +17,10 @@ import com.rahul.olx.ApiCallInterfaces.KolkataApiCient;
 import com.rahul.olx.ApiCallInterfaces.MumbaiApiClient;
 import com.rahul.olx.BangaloreResponseClasses.DataBangaloreClasses;
 import com.rahul.olx.BangaloreResponseClasses.ResponseBangaloreClasses;
+import com.rahul.olx.ClickListeners.BangaloreClickListener;
+import com.rahul.olx.ClickListeners.DelhiClickListener;
+import com.rahul.olx.ClickListeners.KolkataClickListener;
+import com.rahul.olx.ClickListeners.MumbaiClickListener;
 import com.rahul.olx.DelhiResponseClasses.DataDelhiClasses;
 import com.rahul.olx.DelhiResponseClasses.ResponseDelhiClasses;
 import com.rahul.olx.KolKataResponseClasses.DataKolkataClasses;
@@ -31,11 +37,13 @@ import com.rahul.olx.ViewAdatpers.MumbaiViewAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
+import es.dmoral.toasty.Toasty;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class LocationSearchActivity extends AppCompatActivity {
+public class LocationSearchActivity extends AppCompatActivity implements MumbaiClickListener, BangaloreClickListener,
+        DelhiClickListener, KolkataClickListener {
     private TextView tvLocation;
     private RecyclerView rv;
     private String location;
@@ -96,7 +104,7 @@ public class LocationSearchActivity extends AppCompatActivity {
     }
 
     private void setKolkataAdapter() {
-        kolkataViewAdapter = new KolkataViewAdapter(dataKolkataClassesList);
+        kolkataViewAdapter = new KolkataViewAdapter(dataKolkataClassesList,this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         rv.setLayoutManager(linearLayoutManager);
         rv.setAdapter(kolkataViewAdapter);
@@ -123,7 +131,7 @@ public class LocationSearchActivity extends AppCompatActivity {
     }
 
     private void setBangaloreAdapter() {
-        bangaloreViewAdapter = new BangaloreViewAdapter(dataBangaloreClassesList);
+        bangaloreViewAdapter = new BangaloreViewAdapter(dataBangaloreClassesList,this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         rv.setLayoutManager(linearLayoutManager);
         rv.setAdapter(bangaloreViewAdapter);
@@ -150,7 +158,7 @@ public class LocationSearchActivity extends AppCompatActivity {
     }
 
     private void setDelhiAdapter() {
-        delhiViewAdapter = new DelhiViewAdapter(dataDelhiClassesList);
+        delhiViewAdapter = new DelhiViewAdapter(dataDelhiClassesList,this);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         rv.setLayoutManager(linearLayoutManager);
@@ -180,7 +188,7 @@ public class LocationSearchActivity extends AppCompatActivity {
 
     private void setMumbaiAdapter() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        adapter = new MumbaiViewAdapter(dataMumbaiClassesList);
+        adapter = new MumbaiViewAdapter(dataMumbaiClassesList,this);
         rv.setLayoutManager(linearLayoutManager);
         rv.setAdapter(adapter);
     }
@@ -202,5 +210,85 @@ public class LocationSearchActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public void onClick(DataMumbaiClasses dataMumbaiClasses) {
+        try {
+            Intent intent = new Intent(LocationSearchActivity.this, ItemDetails.class);
+            intent.putExtra("price", dataMumbaiClasses.getPrice().getValue().getDisplay());
+            intent.putExtra("title", dataMumbaiClasses.getTitle());
+            intent.putExtra("extras", dataMumbaiClasses.getMainInfo());
+            intent.putExtra("image1", dataMumbaiClasses.getImages().get(0).getUrl());
+            intent.putExtra("image2", dataMumbaiClasses.getImages().get(1).getUrl());
+            intent.putExtra("town", dataMumbaiClasses.getLocationsResolved().getADMINLEVEL3Name());
+            intent.putExtra("city", dataMumbaiClasses.getLocationsResolved().getADMINLEVEL1Name());
+            intent.putExtra("description", dataMumbaiClasses.getDescription());
+            startActivity(intent);
+        }
+        catch (Exception e)
+        {
+            Toasty.info(LocationSearchActivity.this,"Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @Override
+    public void onClick(DataBangaloreClasses dataBangaloreClasses) {
+        try {
+            Intent intent = new Intent(LocationSearchActivity.this, ItemDetails.class);
+            intent.putExtra("price", dataBangaloreClasses.getPrice().getValue().getDisplay());
+            intent.putExtra("title", dataBangaloreClasses.getTitle());
+            intent.putExtra("extras", dataBangaloreClasses.getMainInfo());
+            intent.putExtra("image1", dataBangaloreClasses.getImages().get(0).getUrl());
+            intent.putExtra("image2", dataBangaloreClasses.getImages().get(1).getUrl());
+            intent.putExtra("town", dataBangaloreClasses.getLocationsResolved().getADMINLEVEL3Name());
+            intent.putExtra("city", dataBangaloreClasses.getLocationsResolved().getADMINLEVEL1Name());
+            intent.putExtra("description", dataBangaloreClasses.getDescription());
+            startActivity(intent);
+        }
+        catch (Exception e)
+        {
+            Toasty.info(LocationSearchActivity.this,"Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @Override
+    public void onClick(DataDelhiClasses dataDelhiClasses) {
+        try {
+            Intent intent = new Intent(LocationSearchActivity.this, ItemDetails.class);
+            intent.putExtra("price", dataDelhiClasses.getPrice().getValue().getDisplay());
+            intent.putExtra("title", dataDelhiClasses.getTitle());
+            intent.putExtra("extras", dataDelhiClasses.getMainInfo());
+            intent.putExtra("image1", dataDelhiClasses.getImages().get(0).getUrl());
+            intent.putExtra("image2", dataDelhiClasses.getImages().get(1).getUrl());
+            intent.putExtra("town", dataDelhiClasses.getLocationsResolved().getADMINLEVEL3Name());
+            intent.putExtra("city", dataDelhiClasses.getLocationsResolved().getADMINLEVEL1Name());
+            intent.putExtra("description", dataDelhiClasses.getDescription());
+            startActivity(intent);
+        }
+        catch (Exception e)
+        {
+            Toasty.info(LocationSearchActivity.this,"Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @Override
+    public void onClick(DataKolkataClasses dataKolkataClasses) {
+        try {
+            Intent intent = new Intent(LocationSearchActivity.this, ItemDetails.class);
+            intent.putExtra("price", dataKolkataClasses.getPrice().getValue().getDisplay());
+            intent.putExtra("title", dataKolkataClasses.getTitle());
+            intent.putExtra("extras", dataKolkataClasses.getMainInfo());
+            intent.putExtra("image1", dataKolkataClasses.getImages().get(0).getUrl());
+            intent.putExtra("image2", dataKolkataClasses.getImages().get(1).getUrl());
+            intent.putExtra("town", dataKolkataClasses.getLocationsResolved().getADMINLEVEL3Name());
+            intent.putExtra("city", dataKolkataClasses.getLocationsResolved().getADMINLEVEL1Name());
+            intent.putExtra("description", dataKolkataClasses.getDescription());
+            startActivity(intent);
+        }
+        catch (Exception e)
+        {
+            Toasty.info(LocationSearchActivity.this,"Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
+        }
     }
 }

@@ -6,26 +6,32 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.rahul.olx.Activities.Homepage;
 import com.rahul.olx.AllInOneResponseClasses.DataClasses;
 import com.rahul.olx.BikesResponseClasses.DataClass;
+import com.rahul.olx.ClickListeners.AllInOneClickListener;
 import com.rahul.olx.R;
 
 public class AllInOneViewHolder extends RecyclerView.ViewHolder {
     private TextView tvAllPrice, tvAllTitle, tvAllTown, tvAllCity;
     private ImageView imgAllCoverImage, imgAllheart;
+    private CardView cardView;
+    private AllInOneClickListener allInOneClickListener;
 
-    public AllInOneViewHolder(@NonNull View itemView) {
+    public AllInOneViewHolder(@NonNull View itemView , AllInOneClickListener allInOneClickListener ) {
         super(itemView);
+        this.allInOneClickListener = allInOneClickListener;
         initViewsAndListeners(itemView);
     }
 
     private void initViewsAndListeners(View itemView) {
         tvAllPrice = itemView.findViewById(R.id.tvAllPrice);
         tvAllTitle = itemView.findViewById(R.id.tvAllTitle);
+        cardView = itemView.findViewById(R.id.CardView);
         tvAllTown = itemView.findViewById(R.id.tvAllTown);
         tvAllCity = itemView.findViewById(R.id.tvAllCity);
         imgAllCoverImage = itemView.findViewById(R.id.ImgAllCoverPhoto);
@@ -56,5 +62,15 @@ public class AllInOneViewHolder extends RecyclerView.ViewHolder {
         } catch (Exception e) {
             tvAllPrice.setText(R.string.price_not_mentioned);
         }
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = getAdapterPosition();
+                if(position != RecyclerView.NO_POSITION)
+                {
+                    allInOneClickListener.onItemClick(dataClasses);
+                }
+            }
+        });
     }
 }

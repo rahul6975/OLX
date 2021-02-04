@@ -5,9 +5,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.rahul.olx.ClickListeners.KolkataClickListener;
 import com.rahul.olx.KolKataResponseClasses.DataKolkataClasses;
 import com.rahul.olx.MumbaiResponseClasses.DataMumbaiClasses;
 import com.rahul.olx.R;
@@ -15,15 +17,19 @@ import com.rahul.olx.R;
 public class KolkataViewHolder extends RecyclerView.ViewHolder {
 
     private TextView tvKolkataPrice, tvKolkataTitle, tvKolkataTown, tvKolkataCity ,tvExtraKolkata;
+    private KolkataClickListener kolkataClickListener;
+    private ConstraintLayout constraintLayout;
     private ImageView imgKolkataCoverImage, imgKolkataheart;
 
-    public KolkataViewHolder(@NonNull View itemView) {
+    public KolkataViewHolder(@NonNull View itemView, KolkataClickListener kolkataClickListener) {
         super(itemView);
+        this.kolkataClickListener = kolkataClickListener;
         itemView(itemView);
     }
 
     private void itemView(View itemView) {
         tvKolkataPrice = itemView.findViewById(R.id.PriceOfMumbai);
+        constraintLayout = itemView.findViewById(R.id.constraintLayout2);
         tvKolkataTitle = itemView.findViewById(R.id.TitleOfMumbai);
         tvExtraKolkata = itemView.findViewById(R.id.ExtrasOfMumbai);
         tvKolkataTown = itemView.findViewById(R.id.tvTownOfMumbai);
@@ -51,6 +57,12 @@ public class KolkataViewHolder extends RecyclerView.ViewHolder {
         {
             tvExtraKolkata.setText("");
         }
+        constraintLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                kolkataClickListener.onClick(dataKolkataClasses);
+            }
+        });
     }
     }
 

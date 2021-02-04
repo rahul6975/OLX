@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.Help_and_Support">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/helpAndSupportCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/dp_40"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_15">
+
+
+            <ImageView
+                android:id="@+id/ivhelpAndSupportBackArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/dp_20"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/tvhelpAndsupportHead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:drawablePadding="@dimen/dp_20"
+                android:padding="@dimen/dp_10"
+                android:text="@string/Help_and_support"
+                android:textColor="@color/marine_blue"
+                android:textSize="@dimen/sp_22"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/TvHelpCenter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:drawablePadding="@dimen/dp_15"
+        android:text="@string/help"
+        android:textColor="@color/marine_blue"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/helpAndSupportCardView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/helpAndSupportCardView"
+        app:layout_constraintTop_toBottomOf="@+id/helpAndSupportCardView" />
+
+    <TextView
+        android:id="@+id/tvHelpCenterDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:text="@string/faq"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/TvHelpCenter"
+        app:layout_constraintTop_toBottomOf="@+id/TvHelpCenter" />
+
+    <View
+        android:id="@+id/view_FullUnderLine_hc"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/dp_15"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="@+id/TvHelpCenter"
+        app:layout_constraintStart_toStartOf="@+id/TvHelpCenter"
+        app:layout_constraintTop_toBottomOf="@+id/tvHelpCenterDetails" />
+
+    <TextView
+        android:id="@+id/tvRateUs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:drawablePadding="@dimen/dp_15"
+        android:text="@string/rate_us"
+        android:textColor="@color/marine_blue"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/view_FullUnderLine_hc"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view_FullUnderLine_hc"
+        app:layout_constraintTop_toBottomOf="@+id/view_FullUnderLine_hc" />
+
+    <TextView
+        android:id="@+id/tvRateUsDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:text="@string/rate"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvRateUs"
+        app:layout_constraintTop_toBottomOf="@+id/tvRateUs" />
+
+    <View
+        android:id="@+id/view_FullUnderLine_ru"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/dp_15"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="@+id/tvRateUs"
+        app:layout_constraintStart_toStartOf="@+id/tvRateUs"
+        app:layout_constraintTop_toBottomOf="@+id/tvRateUsDetails" />
+
+    <TextView
+        android:id="@+id/TvBetaTester"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:drawablePadding="@dimen/dp_15"
+        android:text="@string/become_a_beta_tester"
+        android:textColor="@color/marine_blue"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/view_FullUnderLine_ru"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view_FullUnderLine_ru"
+        app:layout_constraintTop_toBottomOf="@+id/view_FullUnderLine_ru" />
+
+    <TextView
+        android:id="@+id/tvBetaTesterDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:text="@string/test_new_features_in_advance"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/TvBetaTester"
+        app:layout_constraintTop_toBottomOf="@+id/TvBetaTester" />
+
+    <View
+        android:id="@+id/view_FullUnderLine_bt"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/dp_15"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="@+id/TvBetaTester"
+        app:layout_constraintStart_toStartOf="@+id/TvBetaTester"
+        app:layout_constraintTop_toBottomOf="@+id/tvBetaTesterDetails" />
+
+    <TextView
+        android:id="@+id/TvInvite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:drawablePadding="@dimen/dp_15"
+        android:text="@string/invite_friends_to_olx"
+        android:textColor="@color/marine_blue"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/view_FullUnderLine_bt"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view_FullUnderLine_bt"
+        app:layout_constraintTop_toBottomOf="@+id/view_FullUnderLine_bt" />
+
+    <TextView
+        android:id="@+id/tvInviteDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:text="Invite your friends to buy and sell"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/TvInvite"
+        app:layout_constraintTop_toBottomOf="@+id/TvInvite" />
+
+    <View
+        android:id="@+id/view_FullUnderLine_IN"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/dp_15"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="@+id/TvInvite"
+        app:layout_constraintStart_toStartOf="@+id/TvInvite"
+        app:layout_constraintTop_toBottomOf="@+id/tvInviteDetails" />
+    <TextView
+        android:id="@+id/TvVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:drawablePadding="@dimen/dp_15"
+        android:text="@string/version"
+        android:textColor="@color/marine_blue"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/view_FullUnderLine_IN"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view_FullUnderLine_IN"
+        app:layout_constraintTop_toBottomOf="@+id/view_FullUnderLine_IN" />
+
+    <TextView
+        android:id="@+id/tvVersionDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:text="@string/_14_9_004"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/TvVersion"
+        app:layout_constraintTop_toBottomOf="@+id/TvVersion" />
+
+    <View
+        android:id="@+id/view_FullUnderLine_vn"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/dp_15"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="@+id/TvVersion"
+        app:layout_constraintStart_toStartOf="@+id/TvVersion"
+        app:layout_constraintTop_toBottomOf="@+id/tvVersionDetails" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

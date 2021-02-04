@@ -5,24 +5,30 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.rahul.olx.CarResponseClasses.DataCarClasses;
+import com.rahul.olx.ClickListeners.MobileClickListener;
 import com.rahul.olx.MobilesResponseClasses.DataMobileClasses;
 import com.rahul.olx.R;
 
 public class MobileViewHolder extends RecyclerView.ViewHolder {
     private TextView tvMobilePrice, tvMobileTitle, tvMobileTown, tvMobileCity ,tvExtraMobile;
     private ImageView imgMobileCoverImage, imgMobileheart;
+    private MobileClickListener mobileClickListener;
+    private ConstraintLayout constraintLayout;
 
 
-    public MobileViewHolder(@NonNull View itemView) {
+    public MobileViewHolder(@NonNull View itemView, MobileClickListener mobileClickListener) {
         super(itemView);
+        this.mobileClickListener = mobileClickListener;
         initView(itemView);
     }
     private void initView(View itemView) {
         tvMobilePrice = itemView.findViewById(R.id.PriceOfBrowseCategory);
+        constraintLayout = itemView.findViewById(R.id.constraintLayout);
         tvMobileTitle = itemView.findViewById(R.id.TitleOfBrowseCategory);
          tvExtraMobile= itemView.findViewById(R.id.ExtrasOfBrowseCategory);
         tvMobileTown = itemView.findViewById(R.id.tvTownOfBrowseCategory);
@@ -48,5 +54,11 @@ public class MobileViewHolder extends RecyclerView.ViewHolder {
         {
             tvExtraMobile.setText("");
         }
+        constraintLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mobileClickListener.onClick(dataMobileClasses);
+            }
+        });
     }
 }

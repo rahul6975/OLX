@@ -97,4 +97,24 @@
     <string name="required_fields">*Required fields</string>
     <string name="includes_some_details">Include some details</string>
     <string name="Next">Next</string>
+
+    <string name="_14_9_004">14.9.004</string>
+    <string name="version">Version</string>
+    <string name="invite_friends_to_olx">Invite friends to OLX</string>
+    <string name="test_new_features_in_advance">Test new features in advance</string>
+    <string name="become_a_beta_tester">Become a beta tester</string>
+    <string name="rate_us">Rate us</string>
+    <string name="rate">If you love our app, please take a moment to rate it.</string>
+    <string name="help">Help Center</string>
+    <string name="privacy">Privacy</string>
+    <string name="faq">See FAQ and contact Support</string>
+    <string name="create_password">Create password</string>
+    <string name="notifications">Notifications</string>
+    <string name="logout">Logout</string>
+    <string name="deactivate_account_and_delete_my_data">Deactivate account and delete my data</string>
+    <string name="logout_from_all_devices">Logout from all devices</string>
+    <string name="password">Password</string>
+    <string name="please_enter_your_new_password">Please enter your new password</string>
+    <string name="new_password">New Password</string>
+
 </resources>

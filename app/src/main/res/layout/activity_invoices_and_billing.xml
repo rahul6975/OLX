@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.Invoices_and_billing"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Activities.Invoices_and_billing">
+
     <androidx.cardview.widget.CardView
         android:id="@+id/invoicesCardView"
         android:layout_width="match_parent"
@@ -14,6 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,9 +40,9 @@
                 android:drawablePadding="@dimen/dp_20"
                 android:padding="@dimen/dp_10"
                 android:text="Invoices and Billing"
-                android:textStyle="bold"
                 android:textColor="@color/marine_blue"
-                android:textSize="@dimen/sp_22" />
+                android:textSize="@dimen/sp_22"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -49,28 +51,28 @@
         android:id="@+id/TvBuyPacks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_15"
         android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
         android:drawablePadding="@dimen/dp_15"
-        android:layout_marginTop="@dimen/dp_20"
-        android:layout_marginStart="@dimen/dp_15"
-        android:layout_marginEnd="@dimen/dp_15"
         android:text="@string/buy_packages"
         android:textColor="@color/marine_blue"
         android:textSize="@dimen/sp_18"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/logincardView"
+        app:layout_constraintEnd_toEndOf="@+id/invoicesCardView"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/logincardView"
-        app:layout_constraintTop_toBottomOf="@+id/logincardView" />
+        app:layout_constraintStart_toStartOf="@+id/invoicesCardView"
+        app:layout_constraintTop_toBottomOf="@+id/invoicesCardView" />
 
     <TextView
         android:id="@+id/tvBuypacksDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/buy_details"
-        android:textColor="@color/gray"
         android:layout_marginStart="@dimen/dp_15"
         android:layout_marginEnd="@dimen/dp_15"
+        android:text="@string/buy_details"
+        android:textColor="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/TvBuyPacks"
         app:layout_constraintTop_toBottomOf="@+id/TvBuyPacks" />
@@ -89,11 +91,11 @@
         android:id="@+id/TvMyOrders"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_15"
         android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
         android:drawablePadding="@dimen/dp_15"
-        android:layout_marginTop="@dimen/dp_20"
-        android:layout_marginStart="@dimen/dp_15"
-        android:layout_marginEnd="@dimen/dp_15"
         android:text="@string/my_orders"
         android:textColor="@color/marine_blue"
         android:textSize="@dimen/sp_18"
@@ -107,10 +109,10 @@
         android:id="@+id/tvMyOrdersDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/myorder_details"
-        android:textColor="@color/gray"
         android:layout_marginStart="@dimen/dp_15"
         android:layout_marginEnd="@dimen/dp_15"
+        android:text="@string/myorder_details"
+        android:textColor="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/TvMyOrders"
         app:layout_constraintTop_toBottomOf="@+id/TvMyOrders" />
@@ -129,11 +131,11 @@
         android:id="@+id/TvInvoices"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_15"
         android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
         android:drawablePadding="@dimen/dp_15"
-        android:layout_marginTop="@dimen/dp_20"
-        android:layout_marginStart="@dimen/dp_15"
-        android:layout_marginEnd="@dimen/dp_15"
         android:text="@string/invoices"
         android:textColor="@color/marine_blue"
         android:textSize="@dimen/sp_18"
@@ -147,10 +149,10 @@
         android:id="@+id/tvInvoicesDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/invoice_details"
-        android:textColor="@color/gray"
         android:layout_marginStart="@dimen/dp_15"
         android:layout_marginEnd="@dimen/dp_15"
+        android:text="@string/invoice_details"
+        android:textColor="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/TvInvoices"
         app:layout_constraintTop_toBottomOf="@+id/TvInvoices" />
@@ -164,15 +166,16 @@
         app:layout_constraintEnd_toEndOf="@+id/TvMyOrders"
         app:layout_constraintStart_toStartOf="@+id/TvInvoices"
         app:layout_constraintTop_toBottomOf="@+id/tvInvoicesDetails" />
+
     <TextView
         android:id="@+id/TvBillingInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_15"
         android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
         android:drawablePadding="@dimen/dp_15"
-        android:layout_marginTop="@dimen/dp_20"
-        android:layout_marginStart="@dimen/dp_15"
-        android:layout_marginEnd="@dimen/dp_15"
         android:text="@string/billing_information"
         android:textColor="@color/marine_blue"
         android:textSize="@dimen/sp_18"
@@ -186,10 +189,10 @@
         android:id="@+id/tvBillingInfoDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/bill_details"
-        android:textColor="@color/gray"
         android:layout_marginStart="@dimen/dp_15"
         android:layout_marginEnd="@dimen/dp_15"
+        android:text="@string/bill_details"
+        android:textColor="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/TvBillingInfo"
         app:layout_constraintTop_toBottomOf="@+id/TvBillingInfo" />

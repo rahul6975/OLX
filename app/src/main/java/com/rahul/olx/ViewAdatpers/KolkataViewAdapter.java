@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.rahul.olx.ClickListeners.KolkataClickListener;
 import com.rahul.olx.KolKataResponseClasses.DataKolkataClasses;
 import com.rahul.olx.MumbaiResponseClasses.DataMumbaiClasses;
 import com.rahul.olx.R;
@@ -16,9 +17,11 @@ import java.util.List;
 
 public class KolkataViewAdapter extends RecyclerView.Adapter<KolkataViewHolder> {
     private List<DataKolkataClasses> dataKolkataClassesList;
+    private KolkataClickListener kolkataClickListener;
 
-    public KolkataViewAdapter(List<DataKolkataClasses> dataKolkataClassesList) {
+    public KolkataViewAdapter(List<DataKolkataClasses> dataKolkataClassesList,KolkataClickListener kolkataClickListener) {
         this.dataKolkataClassesList = dataKolkataClassesList;
+        this.kolkataClickListener = kolkataClickListener;
     }
 
     @NonNull
@@ -26,7 +29,7 @@ public class KolkataViewAdapter extends RecyclerView.Adapter<KolkataViewHolder> 
     public KolkataViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_for_mumbai,parent,false);
 
-        return new KolkataViewHolder(view);
+        return new KolkataViewHolder(view, kolkataClickListener);
     }
 
     @Override

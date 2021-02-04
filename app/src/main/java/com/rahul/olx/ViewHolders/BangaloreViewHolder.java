@@ -5,23 +5,29 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.rahul.olx.BangaloreResponseClasses.DataBangaloreClasses;
+import com.rahul.olx.ClickListeners.BangaloreClickListener;
 import com.rahul.olx.MumbaiResponseClasses.DataMumbaiClasses;
 import com.rahul.olx.R;
 
 public class BangaloreViewHolder extends RecyclerView.ViewHolder {
+    private BangaloreClickListener bangaloreClickListener;
+    private ConstraintLayout constraintLayout;
     private TextView tvBangalorePrice, tvBangaloreTitle, tvBangaloreTown, tvBangaloreCity ,tvExtraBangalore;
     private ImageView imgBangaloreCoverImage, imgBangaloreHeart;
-    public BangaloreViewHolder(@NonNull View itemView) {
+    public BangaloreViewHolder(@NonNull View itemView, BangaloreClickListener bangaloreClickListener) {
         super(itemView);
+        this.bangaloreClickListener = bangaloreClickListener;
         initView(itemView);
     }
 
     private void initView(View itemView) {
         tvBangalorePrice = itemView.findViewById(R.id.PriceOfMumbai);
+        constraintLayout = itemView.findViewById(R.id.constraintLayout2);
         tvBangaloreTitle = itemView.findViewById(R.id.TitleOfMumbai);
         tvExtraBangalore = itemView.findViewById(R.id.ExtrasOfMumbai);
         tvBangaloreTown = itemView.findViewById(R.id.tvTownOfMumbai);
@@ -49,6 +55,13 @@ public class BangaloreViewHolder extends RecyclerView.ViewHolder {
         {
             tvExtraBangalore.setText("");
         }
+        constraintLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bangaloreClickListener.onClick(dataBangaloreClasses);
+            }
+        });
     }
+
 
 }
