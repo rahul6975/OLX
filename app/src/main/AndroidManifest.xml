@@ -11,10 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OLX">
+
+        <activity android:name=".Activities.Settings"></activity>
+        <activity android:name=".Activities.ChatActivity" />
+        <activity android:name=".Activities.Homepage" />
+        <activity android:name=".Activities.AccountPageActivity" />
         <activity android:name=".Activities.ItemDetails"/>
         <activity android:name=".Activities.Invoices"/>
         <activity android:name=".Activities.MyAdsActivity"/>
-        <activity android:name=".Activities.AccountPageActivity"/>
         <activity android:name=".Activities.Categories" />
         <activity android:name=".Activities.my_offers_menu" />
         <activity android:name=".Activities.BrowseCategoryDisplayer" />
@@ -29,14 +33,14 @@
         <activity android:name=".Activities.MainActivity" />
         <activity android:name=".Activities.MyOrdersActivity" />
         <activity android:name=".Activities.maps_and_location" />
-        <activity android:name=".Activities.ChatActivity" />
-        <activity android:name=".Activities.Homepage">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".Activities.Help_and_Support" />
 
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
-        </activity>
 
         <meta-data
             android:name="preloaded_fonts"
