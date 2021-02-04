@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activities.Buy_packages">
+
     <androidx.cardview.widget.CardView
         android:id="@+id/buyPackagesCardView"
         android:layout_width="match_parent"
@@ -13,6 +14,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -37,9 +39,9 @@
                 android:drawablePadding="@dimen/dp_20"
                 android:padding="@dimen/dp_10"
                 android:text="@string/buy_packages"
-                android:textStyle="bold"
                 android:textColor="@color/marine_blue"
-                android:textSize="@dimen/sp_22" />
+                android:textSize="@dimen/sp_22"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -48,28 +50,28 @@
         android:id="@+id/tvBuyPackagesTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="@dimen/dp_10"
         android:gravity="center"
         android:text="SELECT OPTIONS TO SHOW PACKAGES"
+        android:textColor="@color/marine_blue"
         android:textSize="@dimen/sp_18"
         android:textStyle="bold"
-        android:textColor="@color/marine_blue"
-        app:layout_constraintEnd_toEndOf="@+id/logincardView"
+        app:layout_constraintEnd_toEndOf="@+id/buyPackagesCardView"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/logincardView"
-        app:layout_constraintTop_toBottomOf="@+id/logincardView" />
+        app:layout_constraintStart_toStartOf="@+id/buyPackagesCardView"
+        app:layout_constraintTop_toBottomOf="@+id/buyPackagesCardView" />
 
     <TextView
         android:id="@+id/tvCategories"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_30"
         android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_30"
         android:layout_marginEnd="@dimen/dp_20"
-        android:text="Categories"
         android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:text="Categories"
         android:textColor="@color/marine_blue"
         android:textSize="@dimen/sp_16"
         android:textStyle="bold"
@@ -84,8 +86,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_20"
         android:layout_marginEnd="@dimen/dp_20"
-        android:textColor="@color/gray"
         android:text="@string/delivery_and_collection"
+        android:textColor="@color/gray"
         app:layout_constraintEnd_toEndOf="@+id/tvCategories"
         app:layout_constraintStart_toStartOf="@+id/tvCategories"
         app:layout_constraintTop_toBottomOf="@+id/tvCategories" />
@@ -104,13 +106,13 @@
         android:id="@+id/tvLocation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_15"
         android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_15"
         android:layout_marginEnd="@dimen/dp_20"
+        android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
         android:text="@string/location"
         android:textColor="@color/marine_blue"
         android:textStyle="bold"
-        android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
         app:layout_constraintEnd_toEndOf="@+id/view_FullUnderLine"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/view_FullUnderLine"
@@ -142,15 +144,15 @@
         android:id="@+id/buttonBuyPackages"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:padding="@dimen/dp_15"
-        android:textSize="@dimen/sp_18"
         android:layout_marginStart="@dimen/dp_20"
         android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginBottom="30dp"
         android:backgroundTint="@color/marine_blue"
+        android:padding="@dimen/dp_15"
         android:text="@string/show_packages"
         android:textAllCaps="false"
         android:textColor="@color/white"
+        android:textSize="@dimen/sp_18"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

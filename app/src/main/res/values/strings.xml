@@ -15,6 +15,7 @@
     <string name="Help_and_support">Help and support</string>
     <string name="Help_center">Help center and legal terms</string>
     <string name="next">Next</string>
+    <string name="Chat">Chats</string>
     <string name="select_language">Select Language</string>
     <string name="English">English</string>
     <string name="country_code">+91</string>
@@ -40,6 +41,11 @@
     <string name="view_edit_profile">View and edit profile</string>
     <string name="buy_packages_my_orders">Buy Packages and My Orders</string>
     <string name="packages_orders">Packages,orders,billing and invoices</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_messages_yet">No messages, yet?</string>
+    <string name="keep_messages">We will keep messages for any items you are trying to buy in here</string>
+    <string name="explore">Explore the latest ads</string>
+    <string name="start_selling">Start selling</string>
     <string name="search">search</string>
     <string name="showing_results_for">Showing results for :</string>
     <string name="cars">Cars</string>
@@ -48,7 +54,6 @@
     <string name="billing_information">Billing Information</string>
     <string name="bill_details">Edit your billing name, address, etc.</string>
     <string name="invoice_details">See and download your invoices.</string>
-    <string name="invoices">Invoices</string>
     <string name="myorder_details">Active, scheduled and expired orders.</string>
     <string name="my_orders">My Orders</string>
     <string name="buy_details">Sell faster, more and at higher margins with packages.</string>
@@ -68,6 +73,18 @@
     <string name="fashion">Fashion</string>
     <string name="books_sports_hobbies_and_more">Books, Sports, Hobbies and More</string>
     <string name="pets">Pets</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nothing_here">Nothing here...</string>
+    <string name="active_package">you dont have any active package</string>
+    <string name="what_are_you_offering">What are you offering ?</string>
+    <string name="invoices">Invoices</string>
+    <string name="haven_t_you_triied_our_featured_ads_yet_increase_your_views">Haven\'t you tried our featured ads yet ? Increase your views</string>
+    <string name="you_don_t_have_invoices">You don\'t have invoices</string>
+    <string name="My_Ads">My Ads</string>
+    <string name="you_havent_listed">You havent listed anything yet</string>
+    <string name="let_go">Let go of what you dont use anymore</string>
+    <string name="post">Post</string>
+    <string name="you_havent_liked">You havent liked anything yet</string>
+    <string name="collect">Collect all the things you like in one place</string>
+    <string name="Discover">Discover</string>
+    <string name="more_categories">More categories</string>
 </resources>

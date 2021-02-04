@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Invoices">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/InvoicesCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/dp_40"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_15">
+
+
+            <ImageView
+                android:id="@+id/ivInvoiceBackArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/dp_20"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/tvInvoicesHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:drawablePadding="@dimen/dp_20"
+                android:padding="@dimen/dp_10"
+                android:text="@string/invoices"
+                android:textColor="@color/marine_blue"
+                android:textSize="@dimen/sp_22"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/InvoicesCardView"
+        app:layout_constraintStart_toStartOf="@+id/InvoicesCardView"
+        app:layout_constraintTop_toBottomOf="@+id/InvoicesCardView">
+
+        <ImageView
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_150"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_200"
+            android:src="@drawable/ic_receipt"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_25"
+            android:gravity="center"
+            android:text="@string/you_don_t_have_invoices"
+            android:textColor="@color/marine_blue"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_50"
+            android:gravity="center"
+            android:text="@string/haven_t_you_triied_our_featured_ads_yet_increase_your_views"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
