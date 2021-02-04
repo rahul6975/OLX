@@ -130,5 +130,8 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="mobile_phones">Mobile Phones</string>
+    <string name="commercial_vehicles">Commercial Vehicle and Spares</string>
+    <string name="commercial_other">Commercial and Other Vehicles</string>
     <string name="type">Type *</string>
+    <string name="spare_parts">Spare Parts</string>
 </resources>
