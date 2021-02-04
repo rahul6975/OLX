@@ -77,7 +77,7 @@
     <string name="active_package">you dont have any active package</string>
     <string name="what_are_you_offering">What are you offering ?</string>
     <string name="invoices">Invoices</string>
-    <string name="haven_t_you_triied_our_featured_ads_yet_increase_your_views">Haven\'t you triied our featured ads yet ? Increase your views</string>
+    <string name="haven_t_you_triied_our_featured_ads_yet_increase_your_views">Haven\'t you tried our featured ads yet ? Increase your views</string>
     <string name="you_don_t_have_invoices">You don\'t have invoices</string>
     <string name="My_Ads">My Ads</string>
     <string name="you_havent_listed">You havent listed anything yet</string>
@@ -86,4 +86,8 @@
     <string name="you_havent_liked">You havent liked anything yet</string>
     <string name="collect">Collect all the things you like in one place</string>
     <string name="Discover">Discover</string>
+    <string name="more_categories">More categories</string>
+
+
+
 </resources>
