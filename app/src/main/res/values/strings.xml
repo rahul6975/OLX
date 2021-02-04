@@ -54,7 +54,6 @@
     <string name="billing_information">Billing Information</string>
     <string name="bill_details">Edit your billing name, address, etc.</string>
     <string name="invoice_details">See and download your invoices.</string>
-    <string name="invoices">Invoices</string>
     <string name="myorder_details">Active, scheduled and expired orders.</string>
     <string name="my_orders">My Orders</string>
     <string name="buy_details">Sell faster, more and at higher margins with packages.</string>
@@ -74,5 +73,9 @@
     <string name="fashion">Fashion</string>
     <string name="books_sports_hobbies_and_more">Books, Sports, Hobbies and More</string>
     <string name="pets">Pets</string>
+    <string name="what_are_you_offering">What are you offering ?</string>
+    <string name="invoices">Invoices</string>
+    <string name="haven_t_you_triied_our_featured_ads_yet_increase_your_views">Haven\'t you triied our featured ads yet ? Increase your views</string>
+    <string name="you_don_t_have_invoices">You don\'t have invoices</string>
 
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.rahul.olx" >
+    package="com.rahul.olx">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,30 +10,24 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-
-        android:theme="@style/Theme.OLX" >
-        <activity android:name=".Activities.AccountPageActivity" >
-
-        </activity>
-        <activity android:name=".Activities.BrowseCategoryDisplayer"></activity>
+        android:theme="@style/Theme.OLX">
+        <activity android:name=".Activities.Categories"></activity>
+        <activity android:name=".Activities.my_offers_menu" />
+        <activity android:name=".Activities.AccountPageActivity" />
+        <activity android:name=".Activities.BrowseCategoryDisplayer" />
         <activity android:name=".Activities.LocationSearchActivity" />
         <activity android:name=".Activities.NamePageActivity" />
-        <activity android:name=".Activities.Buy_packages"></activity>
+        <activity android:name=".Activities.Buy_packages" />
         <activity android:name=".Activities.Invoices_and_billing" />
         <activity android:name=".Activities.confirmation_code" />
         <activity android:name=".Activities.Welcome_Splash_Screen" />
         <activity android:name=".Activities.LoginActivity" />
-
         <activity android:name=".Activities.PhoneDetails" />
         <activity android:name=".Activities.MainActivity" />
-
         <activity android:name=".Activities.ChatActivity" />
-
-
-
         <activity android:name=".Activities.maps_and_location" />
-        <activity android:name=".Activities.Homepage"/>
-        <activity android:name=".Activities.Categories">
+        <activity android:name=".Activities.Homepage" />
+        <activity android:name=".Activities.Invoices">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
