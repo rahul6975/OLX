@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/TvInclude_Details_Mobile"
+            android:id="@+id/TvInclude_Details_Tablet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp_15"
@@ -22,12 +22,12 @@
             android:textSize="@dimen/sp_25"
             android:textStyle="bold" />
         <View
-            android:id="@+id/view_FullUnderLine1_mobile"
+            android:id="@+id/view_FullUnderLine1_Tablet"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_marginTop="@dimen/dp_10"
             android:background="@color/gray"
-             android:layout_below="@id/TvInclude_Details_Mobile"/>
+            android:layout_below="@id/TvInclude_Details_Tablet"/>
 
         <ImageView
             android:id="@+id/IvBackwardArrow"
@@ -38,17 +38,17 @@
     </RelativeLayout>
 
     <EditText
-        android:id="@+id/EtBrand_Mobile"
+        android:id="@+id/EtBrand_Tablet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/Brands"
+        android:hint="@string/type"
         android:layout_marginTop="@dimen/dp_20"
         android:layout_marginStart="@dimen/dp_20"
         android:layout_marginEnd="@dimen/dp_20"/>
 
 
     <EditText
-        android:id="@+id/EtAddTitle_Mobile"
+        android:id="@+id/EtAddTitle_Tablet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/Add_title"
@@ -63,7 +63,7 @@
         android:layout_marginStart="@dimen/dp_20"
         android:layout_marginEnd="@dimen/dp_20"/>
     <EditText
-        android:id="@+id/EtWhatYouSelling_mobile"
+        android:id="@+id/EtWhatYouSelling_Tablet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/Describe_selling"
@@ -90,7 +90,7 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/btnNext_Mobile"
+            android:id="@+id/btnNext_Tablet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rectangle_for_tab_layout"

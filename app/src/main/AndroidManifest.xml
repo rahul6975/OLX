@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OLX">
-        <activity android:name=".Activities.MobilePhoneDetailsActivity"></activity>
+        <activity android:name=".Activities.PhoneDetails_TabletActivity"></activity>
+        <activity android:name=".Activities.MobilePhoneDetailsActivity" />
         <activity android:name=".Activities.Welcome_Splash_Screen" />
         <activity android:name=".Activities.MobileDetailesActivity" />
         <activity
