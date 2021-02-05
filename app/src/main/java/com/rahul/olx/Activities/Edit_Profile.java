@@ -18,13 +18,6 @@ public class Edit_Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit__profile);
 
-        tvPhone = findViewById(R.id.epPhone);
 
-        tvPhone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(this);
-            }
-        });
     }
 }
