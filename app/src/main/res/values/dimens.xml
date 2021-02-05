@@ -8,7 +8,6 @@
     <dimen name="sp_16">16sp</dimen>
     <dimen name="dp_250">250dp</dimen>
     <dimen name="dp_100">100dp</dimen>
-    <dimen name="sp_22">22sp</dimen>
     <dimen name="sp_14">14sp</dimen>
     <dimen name="dp_220">220dp</dimen>
     <dimen name="dp_90">90dp</dimen>
@@ -47,9 +46,15 @@
     <dimen name="sp_6">6sp</dimen>
     <dimen name="dp_65">65dp</dimen>
     <dimen name="dp_120">120dp</dimen>
-    <dimen name="dp_1">1dp</dimen>
     <dimen name="dp_45">45dp</dimen>
+    <dimen name="sp_22">22sp</dimen>
+    <dimen name="dp_1">1dp</dimen>
+    <dimen name="dp_22">22dp</dimen>
+    <dimen name="dp_17">17dp</dimen>
+    <dimen name="dp_290">290dp</dimen>
+    <dimen name="dp_130">130dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="dp_0.5">0.5dp</dimen>
+
 
 </resources>

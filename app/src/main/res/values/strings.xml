@@ -121,6 +121,15 @@
     <string name="password">Password</string>
     <string name="please_enter_your_new_password">Please enter your new password</string>
     <string name="new_password">New Password</string>
+    <string name="save">Save</string>
+    <string name="say_something_here">say something here</string>
+    <string name="contact_information">Contact information</string>
+    <string name="_91">+91</string>
+    <string name="verification">You have verified your email. It\'s important to allow us to securely communicate with you.</string>
+    <string name="facebook">Facebook</string>
+    <string name="sign_in_fb">Sign in to Facebook and discover your trusted connections to buyers.</string>
+    <string name="connect">Connect</string>
+    <string name="connect_google">Connect you OLX account to google, for simplicity and ease.</string>
     <string name="title_activity_mobile">MobileActivity</string>
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -134,4 +143,7 @@
     <string name="commercial_other">Commercial and Other Vehicles</string>
     <string name="type">Type *</string>
     <string name="spare_parts">Spare Parts</string>
+    <string name="verify_your_phone">Verify your phone</string>
+    <string name="we_will_send_a_confirmation_code_to_your_phone">We will send a confirmation code to your phone</string>
+
 </resources>
