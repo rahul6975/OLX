@@ -116,6 +116,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_10"
             android:layout_marginEnd="@dimen/dp_10"
+            android:inputType="number"
             android:textColor="@color/black" />
     </LinearLayout>
 

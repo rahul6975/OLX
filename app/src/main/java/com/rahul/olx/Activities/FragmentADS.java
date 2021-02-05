@@ -1,6 +1,7 @@
 package com.rahul.olx.Activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -17,7 +18,7 @@ import com.rahul.olx.R;
 
 public class FragmentADS extends Fragment {
 
-        private Button mBtnDiscoverAds;
+        private Button mBtnDiscoverAds, btnAdd;
         private MyAdsActivity myAdsActivity;
 
         public FragmentADS() {
@@ -44,6 +45,14 @@ public class FragmentADS extends Fragment {
         public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
             super.onViewCreated(view, savedInstanceState);
             initViews(view);
+            btnAdd = view.findViewById(R.id.btnDiscover_ads);
+            btnAdd.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getContext(), my_offers_menu.class);
+                    startActivity(intent);
+                }
+            });
         }
 
         private void initViews(View view) {

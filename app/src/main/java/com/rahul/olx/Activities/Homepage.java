@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -39,6 +40,7 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
     private List<DataClasses> dataClassesArrayList = new ArrayList<>();
     private AllInOneViewAdapter adapter;
     private ProgressBar pb;
+    private ImageView ivHome, ivChat, ivSell, ivHeart, ivAccount;
     private EditText etSearch;
     private Button btnSearch;
 
@@ -91,6 +93,11 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
         rvBrowseCategories = findViewById(R.id.rvBrowseCategories);
         rvForAll = findViewById(R.id.RVForAll);
         pb = findViewById(R.id.ProgressBar);
+        ivHome = findViewById(R.id.ibRefresh);
+        ivChat = findViewById(R.id.ibLocation);
+        ivSell = findViewById(R.id.ibHeart);
+        ivHeart = findViewById(R.id.ibChat);
+        ivAccount = findViewById(R.id.ibUser);
         etSearch = findViewById(R.id.etSearch);
         btnSearch = findViewById(R.id.btnSearch);
         BrowseCategoriesAdapter adapter = new BrowseCategoriesAdapter(modelClassArrayList, this);
@@ -114,6 +121,46 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
                 String location = etSearch.getText().toString();
                 Intent intent = new Intent(Homepage.this, LocationSearchActivity.class);
                 intent.putExtra("location", location);
+                startActivity(intent);
+            }
+        });
+
+        ivHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Homepage.this,Homepage.class);
+                startActivity(intent);
+            }
+        });
+
+        ivChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Homepage.this,ChatActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ivSell.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Homepage.this,my_offers_menu.class);
+                startActivity(intent);
+            }
+        });
+
+        ivHeart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Homepage.this,MyAdsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ivAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Homepage.this,AccountPageActivity.class);
                 startActivity(intent);
             }
         });

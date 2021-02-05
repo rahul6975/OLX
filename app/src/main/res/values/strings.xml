@@ -142,6 +142,9 @@
     <string name="commercial_vehicles">Commercial Vehicle and Spares</string>
     <string name="commercial_other">Commercial and Other Vehicles</string>
     <string name="type">Type *</string>
+    <string name="Edit_profile">Edit Profile</string>
+    <string name="following">following</string>
+    <string name="followers">followers</string>
     <string name="spare_parts">Spare Parts</string>
     <string name="verify_your_phone">Verify your phone</string>
     <string name="we_will_send_a_confirmation_code_to_your_phone">We will send a confirmation code to your phone</string>

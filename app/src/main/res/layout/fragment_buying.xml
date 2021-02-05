@@ -29,7 +29,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textColor="@color/darkGreen"
         android:layout_marginTop="@dimen/dp_10"
         android:text="@string/keep_messages"
         android:textSize="@dimen/sp_18"

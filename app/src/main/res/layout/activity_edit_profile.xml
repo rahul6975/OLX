@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.EditProfileActivity">
+
+    <ImageView
+        android:id="@+id/IvBackArrow_EditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/backarrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_FullUnderLine1_EditProfile"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/IvBackArrow_EditProfile" />
+
+    <ImageView
+        android:id="@+id/IvBackArrow_commercial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        android:background="@drawable/ic_share"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/IvEdit_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        android:background="@drawable/edit_profile_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_FullUnderLine1_EditProfile" />
+
+    <TextView
+        android:id="@+id/Tv_0_following"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_60"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="0"
+        android:textColor="@color/darkGreen"
+        android:textSize="@dimen/sp_30"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/IvEdit_profile"
+        app:layout_constraintTop_toBottomOf="@id/view_FullUnderLine1_EditProfile"/>
+
+    <TextView
+        android:id="@+id/TvFollowing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_30"
+        android:text="@string/following"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintStart_toEndOf="@id/IvEdit_profile"
+        app:layout_constraintTop_toBottomOf="@id/Tv_0_following" />
+
+    <View
+        android:id="@+id/view_vertical_line"
+        android:layout_width="@dimen/dp_0.5"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginStart="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/gray"
+        app:layout_constraintStart_toEndOf="@id/Tv_0_following"
+        app:layout_constraintTop_toBottomOf="@id/view_FullUnderLine1_EditProfile" />
+    <TextView
+        android:id="@+id/Tv_0_followers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="0"
+        android:textColor="@color/darkGreen"
+        android:textSize="@dimen/sp_30"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/view_vertical_line"
+        app:layout_constraintTop_toBottomOf="@id/view_FullUnderLine1_EditProfile"/>
+
+    <TextView
+        android:id="@+id/TvFollowers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_30"
+        android:text="@string/followers"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintStart_toEndOf="@id/view_vertical_line"
+        app:layout_constraintTop_toBottomOf="@id/Tv_0_followers" />
+    <TextView
+        android:id="@+id/TvDhanashree_rane"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/IvEdit_profile"
+        android:text="@string/dhanashree_rane"
+        android:layout_margin="@dimen/dp_30"
+        android:textSize="@dimen/sp_25"
+        android:textStyle="bold"
+        android:textColor="@color/darkGreen"/>
+    <Button
+        android:id="@+id/btnEditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/view_vertical_line"
+        app:layout_constraintStart_toEndOf="@id/IvEdit_profile"
+        android:background="@drawable/rectangle_buttton2"
+        android:layout_marginStart="@dimen/dp_30"
+        android:text="@string/Edit_profile"
+        android:textAllCaps="false"
+        android:layout_marginTop="@dimen/dp_10"/>
+    <View
+    android:id="@+id/view_FullUnderLine5_EditProfile"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_1"
+    android:layout_marginTop="@dimen/dp_20"
+    android:background="@color/gray"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/TvDhanashree_rane" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

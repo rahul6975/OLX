@@ -77,6 +77,4 @@
         app:layout_constraintStart_toStartOf="@+id/TvPrivacy"
         app:layout_constraintTop_toBottomOf="@+id/TvPrivacy" />
 
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
