@@ -16,12 +16,11 @@
             android:text="Hello"
             android:layout_marginTop="@dimen/dp_20"
             android:layout_marginStart="@dimen/dp_10"
-            android:background="@drawable/rectangle_button_3"
-            android:padding="@dimen/dp_10"/>
+            android:background="@drawable/rectangle_button_3" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="is it available ?"
+            android:text="is it available?"
             android:layout_marginTop="@dimen/dp_20"
             android:layout_marginStart="@dimen/dp_10"
             android:background="@drawable/rectangle_button_3"
@@ -29,7 +28,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="are you there ?"
+            android:text="are you there?"
             android:layout_marginTop="@dimen/dp_20"
             android:layout_marginStart="@dimen/dp_10"
             android:background="@drawable/rectangle_button_3"
@@ -43,7 +42,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="make an offer"
+            android:text="make offer"
             android:layout_marginTop="@dimen/dp_20"
             android:layout_marginStart="@dimen/dp_10"
             android:background="@drawable/rectangle_button_3"
@@ -59,7 +58,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="are you busy ?"
+            android:text="are you busy?"
             android:layout_marginTop="@dimen/dp_20"
             android:layout_marginStart="@dimen/dp_10"
             android:background="@drawable/rectangle_button_3"
