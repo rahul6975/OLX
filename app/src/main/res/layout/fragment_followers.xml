@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.FragmentFollowing">
+    <TextView
+        android:id="@+id/TvDontFollwers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:textColor="@color/darkGreen"
+        android:layout_marginTop="@dimen/dp_30"
+        android:text="@string/you_are_not_followers"
+        android:textSize="@dimen/sp_25"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/IvSadAvtar_followers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sad_avatar"
+        android:layout_margin="@dimen/dp_60"
+        android:layout_gravity="center_horizontal"/>
+    <TextView
+        android:id="@+id/TvChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/chat_post_find_you"
+        android:textSize="@dimen/sp_18"
+        android:layout_margin="@dimen/dp_10"/>
+
+    <Button
+        android:id="@+id/btnInviteFriends_Followers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        android:background="@drawable/rectangle_for_tab_layout"
+        android:text="@string/Invite_friends"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:padding="@dimen/dp_10"
+        android:textStyle="bold"
+        android:textSize="@dimen/sp_18"
+        android:layout_marginTop="@dimen/dp_10"/>
+
+
+</LinearLayout>
