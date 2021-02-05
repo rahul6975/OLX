@@ -27,7 +27,7 @@ public class CommercialVehiclesSparesActivity extends AppCompatActivity {
         tvCoomm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(CommercialVehiclesSparesActivity.this,ProductDetailsActivity.class);
+                Intent intent = new Intent(CommercialVehiclesSparesActivity.this, ProductDetailsActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -36,7 +36,7 @@ public class CommercialVehiclesSparesActivity extends AppCompatActivity {
         tvSpare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(CommercialVehiclesSparesActivity.this,ProductDetailsActivity.class);
+                Intent intent = new Intent(CommercialVehiclesSparesActivity.this, ProductDetailsActivity.class);
                 startActivity(intent);
                 finish();
             }

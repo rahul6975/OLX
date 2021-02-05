@@ -157,5 +157,11 @@
     <string name="view_dicounts_here">View dicounts here</string>
     <string name="post_more_ads_and_aut_boost">Post more Ads and Aut boost</string>
     <string name="post_more_ads_and_ads_get_boosted_to_the_top_every_few_days">Post more ads and ads get boosted to the top every few days</string>
+    <string name="package_available_for_30_days">Package available for 30 days</string>
+    <string name="post_more_ads">Post more ads</string>
+    <string name="boost_to_top">Boost to top</string>
+    <string name="back_on_top_like_a_new_ad">Back on top like a new ad</string>
+    <string name="feature">Get noticed with FEATURED tag in a top position</string>
+    <string name="sorry_no_offers_available_right_now">Sorry ! No offers available right now.</string>
 
 </resources>

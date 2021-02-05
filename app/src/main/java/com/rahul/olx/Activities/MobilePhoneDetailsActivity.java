@@ -34,9 +34,8 @@ public class MobilePhoneDetailsActivity extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(isValid())
-                {
-                    Toasty.error(MobilePhoneDetailsActivity.this,"Application received, you'll receive a confirmation call",
+                if (isValid()) {
+                    Toasty.info(MobilePhoneDetailsActivity.this, "Application received, you'll receive a confirmation call",
                             Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(MobilePhoneDetailsActivity.this, Homepage.class);
                     startActivity(intent);
@@ -48,21 +47,17 @@ public class MobilePhoneDetailsActivity extends AppCompatActivity {
 
     }
 
-    private boolean isValid()
-    {
+    private boolean isValid() {
         boolean condition = true;
-        if(etBrand.getText().toString().isEmpty())
-        {
+        if (etBrand.getText().toString().isEmpty()) {
             etBrand.setError("Please enter the brand name");
             condition = false;
         }
-        if(etTitle.getText().toString().isEmpty())
-        {
+        if (etTitle.getText().toString().isEmpty()) {
             etTitle.setError("Please enter the title");
             condition = false;
         }
-        if(etSelling.getText().toString().isEmpty())
-        {
+        if (etSelling.getText().toString().isEmpty()) {
             etSelling.setError("Please describe your application");
             condition = false;
         }

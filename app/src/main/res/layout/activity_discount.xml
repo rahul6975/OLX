@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Discount">
+
+
+    <Button
+        android:id="@+id/btnDiscounts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:background="@color/marine_blue"
+        android:padding="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="View Discounts"
+        android:layout_marginStart="@dimen/dp_30"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintTop_toBottomOf="@id/discountScrollView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:id="@+id/discountScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnDiscounts">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivDiscountBackArow"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.043"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivSearchDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/discount_finder" />
+            <TextView
+                android:id="@+id/tvDiscountDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/view_dicounts_here"
+                android:textAlignment="center"
+                android:textSize="@dimen/sp_20"
+                android:textStyle="bold"
+                android:textColor="@color/marine_blue"
+                app:layout_constraintTop_toBottomOf="@+id/ivSearchDiscount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/dicountLine1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/gray"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                app:layout_constraintTop_toBottomOf="@id/tvDiscountDetails"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvPostMore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/marine_blue"
+                android:layout_marginStart="@dimen/sp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/post_more_ads_and_aut_boost"
+                app:layout_constraintTop_toBottomOf="@id/dicountLine1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="@dimen/sp_20"/>
+
+            <TextView
+                android:id="@+id/postDetails1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/post_more_ads_and_ads_get_boosted_to_the_top_every_few_days"
+                app:layout_constraintTop_toBottomOf="@+id/tvPostMore"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/dp_25"
+                android:layout_marginEnd="@dimen/dp_25"
+                android:drawablePadding="@dimen/dp_10"
+                android:drawableStart="@drawable/ic_tick_discount"/>
+
+            <TextView
+                android:id="@+id/postDetails2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/package_available_for_30_days"
+                app:layout_constraintTop_toBottomOf="@+id/postDetails1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/dp_25"
+                android:layout_marginEnd="@dimen/dp_25"
+                android:drawablePadding="@dimen/dp_10"
+                android:drawableStart="@drawable/ic_tick_discount"/>
+
+
+            <TextView
+                android:id="@+id/dicountLine2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/gray"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                app:layout_constraintTop_toBottomOf="@id/postDetails2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+<TextView
+    android:id="@+id/postMoreAds"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/post_more_ads"
+    android:textColor="@color/marine_blue"
+    app:layout_constraintTop_toBottomOf="@id/dicountLine2"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:textSize="@dimen/sp_20"
+    android:textStyle="bold"
+    android:layout_marginStart="@dimen/dp_20"/>
+
+
+            <TextView
+                android:id="@+id/postMoreDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reach upto 2 times more buyers"
+                app:layout_constraintTop_toBottomOf="@+id/postMoreAds"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/dp_25"
+                android:layout_marginEnd="@dimen/dp_25"
+                android:drawablePadding="@dimen/dp_10"
+                android:drawableStart="@drawable/ic_tick_discount"/>
+
+            <TextView
+                android:id="@+id/dicountLine3"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/gray"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                app:layout_constraintTop_toBottomOf="@id/postMoreDetails"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/BoostToTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/boost_to_top"
+                android:textColor="@color/marine_blue"
+                app:layout_constraintTop_toBottomOf="@id/dicountLine3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="@dimen/sp_20"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/dp_20"/>
+
+
+            <TextView
+                android:id="@+id/backOnTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/back_on_top_like_a_new_ad"
+                app:layout_constraintTop_toBottomOf="@+id/BoostToTop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/dp_25"
+                android:layout_marginEnd="@dimen/dp_25"
+                android:drawablePadding="@dimen/dp_10"
+                android:drawableStart="@drawable/ic_tick_discount"/>
+
+
+
+            <TextView
+                android:id="@+id/availFor30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/package_available_for_30_days"
+                app:layout_constraintTop_toBottomOf="@+id/backOnTop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/dp_25"
+                android:layout_marginEnd="@dimen/dp_25"
+                android:drawablePadding="@dimen/dp_10"
+                android:drawableStart="@drawable/ic_tick_discount"/>
+
+
+            <TextView
+                android:id="@+id/dicountLine4"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/gray"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                app:layout_constraintTop_toBottomOf="@id/availFor30"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+            <TextView
+                android:id="@+id/featuredAd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Featured Ad"
+                android:textColor="@color/marine_blue"
+                app:layout_constraintTop_toBottomOf="@id/dicountLine4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="@dimen/sp_20"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/dp_20"/>
+
+
+            <TextView
+                android:id="@+id/Featured"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/feature"
+                app:layout_constraintTop_toBottomOf="@+id/featuredAd"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/dp_25"
+                android:layout_marginEnd="@dimen/dp_25"
+                android:drawablePadding="@dimen/dp_10"
+                android:drawableStart="@drawable/ic_tick_discount"/>
+
+
+
+            <TextView
+                android:id="@+id/featured"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/package_available_for_30_days"
+                app:layout_constraintTop_toBottomOf="@+id/Featured"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/dp_25"
+                android:layout_marginEnd="@dimen/dp_25"
+                android:drawablePadding="@dimen/dp_10"
+                android:drawableStart="@drawable/ic_tick_discount"/>
+
+
+            <TextView
+                android:id="@+id/dicountLine5"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/gray"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                app:layout_constraintTop_toBottomOf="@id/featured"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

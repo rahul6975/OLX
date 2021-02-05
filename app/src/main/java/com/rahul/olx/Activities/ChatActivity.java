@@ -41,7 +41,7 @@ public class ChatActivity extends AppCompatActivity {
         ivHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ChatActivity.this,Homepage.class);
+                Intent intent = new Intent(ChatActivity.this, Homepage.class);
                 startActivity(intent);
                 finish();
             }
@@ -50,7 +50,7 @@ public class ChatActivity extends AppCompatActivity {
         ivChat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ChatActivity.this,ChatActivity.class);
+                Intent intent = new Intent(ChatActivity.this, ChatActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -59,7 +59,7 @@ public class ChatActivity extends AppCompatActivity {
         ivSell.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ChatActivity.this,my_offers_menu.class);
+                Intent intent = new Intent(ChatActivity.this, my_offers_menu.class);
                 startActivity(intent);
                 finish();
             }
@@ -68,7 +68,7 @@ public class ChatActivity extends AppCompatActivity {
         ivHeart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ChatActivity.this,MyAdsActivity.class);
+                Intent intent = new Intent(ChatActivity.this, MyAdsActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -77,7 +77,7 @@ public class ChatActivity extends AppCompatActivity {
         ivAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ChatActivity.this,AccountPageActivity.class);
+                Intent intent = new Intent(ChatActivity.this, AccountPageActivity.class);
                 startActivity(intent);
                 finish();
             }
