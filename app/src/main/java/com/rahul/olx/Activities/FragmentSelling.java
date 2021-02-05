@@ -1,6 +1,7 @@
 package com.rahul.olx.Activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -18,6 +19,7 @@ import com.rahul.olx.R;
 public class FragmentSelling extends Fragment {
     private Button mBtnExploreTheADS_selling;
     private ChatActivity chatActivity;
+    private Button btnExplore;
 
     public FragmentSelling() {
         // Required empty public constructor
@@ -49,7 +51,17 @@ public class FragmentSelling extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initViews(view);
+
+        btnExplore = view.findViewById(R.id.btnStartSelling_selling);
+        btnExplore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), my_offers_menu.class);
+                startActivity(intent);
+            }
+        });
     }
+
 
     private void initViews(View view) {
         mBtnExploreTheADS_selling = view.findViewById(R.id.btnStartSelling_selling);

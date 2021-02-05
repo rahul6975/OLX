@@ -42,9 +42,12 @@
         app:layout_constraintTop_toBottomOf="@id/tvWhatsYourName" />
 
     <EditText
+        android:id="@+id/etUserName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp_20"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:hint="@string/enter_your_name"
         android:textColorHint="@color/gray"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,6 +59,7 @@
         android:layout_margin="@dimen/dp_20"
         android:background="@color/darkGreen"
         android:text="Next"
+        android:id="@+id/btnNextPage"
         android:textAllCaps="false"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"

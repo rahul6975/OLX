@@ -70,6 +70,7 @@
                 android:elevation="@dimen/dp_40">
 
                 <LinearLayout
+                    android:id="@+id/LLCars"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -102,6 +103,7 @@
                 android:elevation="@dimen/dp_40">
 
                 <LinearLayout
+                    android:id="@+id/LLProperties"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -141,6 +143,7 @@
                 android:elevation="@dimen/dp_40">
 
                 <LinearLayout
+                    android:id="@+id/LLMobiles"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -174,6 +177,7 @@
                 android:padding="@dimen/dp_100">
 
                 <LinearLayout
+                    android:id="@+id/LLJobs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -213,6 +217,7 @@
                 android:elevation="@dimen/dp_40">
 
                 <LinearLayout
+                    android:id="@+id/LLBikes"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -245,6 +250,7 @@
                 android:elevation="@dimen/dp_40">
 
                 <LinearLayout
+                    android:id="@+id/LLElectronics"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -284,6 +290,7 @@
                 android:elevation="@dimen/dp_40">
 
                 <LinearLayout
+                    android:id="@+id/LLVehicals"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -316,6 +323,7 @@
                 android:elevation="@dimen/dp_40">
 
                 <LinearLayout
+                    android:id="@+id/LLMore"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

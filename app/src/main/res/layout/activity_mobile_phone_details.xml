@@ -93,16 +93,15 @@
             android:id="@+id/btnNext_Mobile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginBottom="43dp"
             android:background="@drawable/rectangle_for_tab_layout"
             android:text="@string/Next"
             android:textColor="@color/white"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/dp_40"
-            android:layout_marginStart="@dimen/dp_20"
-            android:layout_marginEnd="@dimen/dp_20"
-            android:textStyle="bold"
             android:textSize="@dimen/sp_18"
-            />
+            android:textStyle="bold" />
     </RelativeLayout>
 
 </LinearLayout>

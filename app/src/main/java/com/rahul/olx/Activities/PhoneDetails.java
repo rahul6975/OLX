@@ -36,7 +36,6 @@ public class PhoneDetails extends AppCompatActivity {
             public void onClick(View v) {
                 if (checkPhoneNumber()) {
                     Intent intent = new Intent(PhoneDetails.this, confirmation_code.class);
-                    setPreference();
                     startActivity(intent);
                     finish();
                 }
@@ -45,16 +44,12 @@ public class PhoneDetails extends AppCompatActivity {
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PhoneDetails.this,LoginActivity.class);
+                Intent intent = new Intent(PhoneDetails.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
 
-    }
-
-    private void setPreference() {
-        SavePreference.setStringToPre(PhoneDetails.this, PHONE, etPhone.getText().toString());
     }
 
     private boolean checkPhoneNumber() {
