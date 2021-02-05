@@ -52,7 +52,7 @@
         android:id="@+id/etEnterEmail"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_40"
-        android:hint="Email"
+        android:hint="@string/email"
         android:background="@drawable/search_bg"
         android:textSize="@dimen/sp_20"
         android:textColor="@color/marine_blue"
