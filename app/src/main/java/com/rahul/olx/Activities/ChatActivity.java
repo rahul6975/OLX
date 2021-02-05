@@ -12,6 +12,7 @@ import com.rahul.olx.R;
 public class ChatActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private TabLayout tabLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

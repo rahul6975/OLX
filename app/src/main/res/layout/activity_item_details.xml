@@ -160,6 +160,7 @@
             android:layout_weight="1"
             android:background="#003034"
             android:text="Chat"
+            android:drawableLeft="@drawable/ic_chat"
             android:textAllCaps="false"
             android:textColor="@color/white" />
 
@@ -168,6 +169,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp_10"
             android:layout_weight="1"
+            android:drawableLeft="@drawable/make_offfer"
             android:background="#003034"
             android:text="Make Offer"
             android:textAllCaps="false"

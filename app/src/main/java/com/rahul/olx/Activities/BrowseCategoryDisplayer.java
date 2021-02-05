@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -53,10 +55,11 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class BrowseCategoryDisplayer extends AppCompatActivity implements CarClickListener , BikeClickListener ,
+public class BrowseCategoryDisplayer extends AppCompatActivity implements CarClickListener, BikeClickListener,
         PropertyClickListener, JobClickListener, MobileClickListener, ElectronicsClickListener {
     private RecyclerView rv;
     private int position;
+    private Animation topAnim, bottomAnim;
     private TextView tvCategoryName;
     private CarViewAdapter carViewAdapter;
     private ProgressBar pb;
@@ -83,6 +86,8 @@ public class BrowseCategoryDisplayer extends AppCompatActivity implements CarCli
 
     private void initViews() {
         rv = findViewById(R.id.RVBC);
+        topAnim = AnimationUtils.loadAnimation(this, R.anim.top_animation);
+        bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
         tvCategoryName = findViewById(R.id.tvCategoryNameBC);
         pb = findViewById(R.id.ProgressBarBC);
     }
@@ -122,9 +127,10 @@ public class BrowseCategoryDisplayer extends AppCompatActivity implements CarCli
 
     private void setElectronicsAdapter() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        electronicsViewAdapter = new ElectronicsViewAdapter(dataElectronicClassesArrayList,this);
+        electronicsViewAdapter = new ElectronicsViewAdapter(dataElectronicClassesArrayList, this);
         rv.setLayoutManager(linearLayoutManager);
         rv.setAdapter(electronicsViewAdapter);
+        rv.setAnimation(topAnim);
     }
 
     private void setElectronicsRecyclerView() {
@@ -149,9 +155,10 @@ public class BrowseCategoryDisplayer extends AppCompatActivity implements CarCli
 
     private void setBikesAdapter() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        bikeViewAdapter = new BikesViewAdapter(bikeDataClassList,this);
+        bikeViewAdapter = new BikesViewAdapter(bikeDataClassList, this);
         rv.setLayoutManager(linearLayoutManager);
         rv.setAdapter(bikeViewAdapter);
+        rv.setAnimation(topAnim);
     }
 
     private void setBikesRecyclerView() {
@@ -176,9 +183,10 @@ public class BrowseCategoryDisplayer extends AppCompatActivity implements CarCli
 
     private void setJobsAdapter() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        jobsViewAdapter = new JobsViewAdapter(dataJobClassesArrayList,this);
+        jobsViewAdapter = new JobsViewAdapter(dataJobClassesArrayList, this);
         rv.setLayoutManager(linearLayoutManager);
         rv.setAdapter(jobsViewAdapter);
+        rv.setAnimation(topAnim);
     }
 
     private void setJobsRecyclerView() {
@@ -203,7 +211,7 @@ public class BrowseCategoryDisplayer extends AppCompatActivity implements CarCli
 
     private void setMobileAdapter() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        mobileViewAdapter = new MobileViewAdapter(dataMobileClassesArrayList,this);
+        mobileViewAdapter = new MobileViewAdapter(dataMobileClassesArrayList, this);
         rv.setLayoutManager(linearLayoutManager);
         rv.setAdapter(mobileViewAdapter);
     }
@@ -230,7 +238,7 @@ public class BrowseCategoryDisplayer extends AppCompatActivity implements CarCli
 
     private void setPropertyAdapter() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        propertyViewAdapter = new PropertyViewAdapter(dataPropertyClassesArrayList,this);
+        propertyViewAdapter = new PropertyViewAdapter(dataPropertyClassesArrayList, this);
         rv.setLayoutManager(linearLayoutManager);
         rv.setAdapter(propertyViewAdapter);
     }
@@ -257,7 +265,7 @@ public class BrowseCategoryDisplayer extends AppCompatActivity implements CarCli
 
     private void setCarAdapter() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        carViewAdapter = new CarViewAdapter(dataCarClassesArrayList,this);
+        carViewAdapter = new CarViewAdapter(dataCarClassesArrayList, this);
         rv.setLayoutManager(linearLayoutManager);
         rv.setAdapter(carViewAdapter);
     }
@@ -301,10 +309,8 @@ public class BrowseCategoryDisplayer extends AppCompatActivity implements CarCli
             intent.putExtra("city", dataCarClasses.getLocationsResolved().getADMINLEVEL1Name());
             intent.putExtra("description", dataCarClasses.getDescription());
             startActivity(intent);
-        }
-        catch (Exception e)
-        {
-            Toasty.info(BrowseCategoryDisplayer.this,"Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            Toasty.info(BrowseCategoryDisplayer.this, "Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -321,10 +327,8 @@ public class BrowseCategoryDisplayer extends AppCompatActivity implements CarCli
             intent.putExtra("city", dataClass.getLocationsResolved().getADMINLEVEL1Name());
             intent.putExtra("description", dataClass.getDescription());
             startActivity(intent);
-        }
-        catch (Exception e)
-        {
-            Toasty.info(BrowseCategoryDisplayer.this,"Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            Toasty.info(BrowseCategoryDisplayer.this, "Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
         }
 
     }
@@ -342,10 +346,8 @@ public class BrowseCategoryDisplayer extends AppCompatActivity implements CarCli
             intent.putExtra("city", dataPropertyClasses.getLocationsResolved().getADMINLEVEL1Name());
             intent.putExtra("description", dataPropertyClasses.getDescription());
             startActivity(intent);
-        }
-        catch (Exception e)
-        {
-            Toasty.info(BrowseCategoryDisplayer.this,"Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            Toasty.info(BrowseCategoryDisplayer.this, "Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -362,10 +364,8 @@ public class BrowseCategoryDisplayer extends AppCompatActivity implements CarCli
             intent.putExtra("city", dataJobClasses.getLocationsResolved().getADMINLEVEL1Name());
             intent.putExtra("description", dataJobClasses.getDescription());
             startActivity(intent);
-        }
-        catch (Exception e)
-        {
-            Toasty.info(BrowseCategoryDisplayer.this,"Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            Toasty.info(BrowseCategoryDisplayer.this, "Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -382,10 +382,8 @@ public class BrowseCategoryDisplayer extends AppCompatActivity implements CarCli
             intent.putExtra("city", dataMobileClasses.getLocationsResolved().getADMINLEVEL1Name());
             intent.putExtra("description", dataMobileClasses.getDescription());
             startActivity(intent);
-        }
-        catch (Exception e)
-        {
-            Toasty.info(BrowseCategoryDisplayer.this,"Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            Toasty.info(BrowseCategoryDisplayer.this, "Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -402,10 +400,8 @@ public class BrowseCategoryDisplayer extends AppCompatActivity implements CarCli
             intent.putExtra("city", dataElectronicClasses.getLocationsResolved().getADMINLEVEL1Name());
             intent.putExtra("description", dataElectronicClasses.getDescription());
             startActivity(intent);
-        }
-        catch (Exception e)
-        {
-            Toasty.info(BrowseCategoryDisplayer.this,"Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            Toasty.info(BrowseCategoryDisplayer.this, "Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
         }
     }
 }

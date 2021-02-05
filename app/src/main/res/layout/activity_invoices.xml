@@ -60,7 +60,7 @@
             android:layout_height="@dimen/dp_150"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/dp_200"
-            android:src="@drawable/ic_receipt"/>
+            android:src="@drawable/ic_receipt" />
 
         <TextView
             android:layout_width="match_parent"

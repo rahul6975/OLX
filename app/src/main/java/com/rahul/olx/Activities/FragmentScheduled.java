@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.rahul.olx.R;
+
 public class FragmentScheduled extends Fragment {
 
 
@@ -20,7 +21,8 @@ public class FragmentScheduled extends Fragment {
     public FragmentScheduled() {
         // Required empty public constructor
     }
-    public static  FragmentScheduled newInstance() {
+
+    public static FragmentScheduled newInstance() {
         FragmentScheduled fragmentScheduled = new FragmentScheduled();
         return fragmentScheduled;
     }
@@ -34,7 +36,7 @@ public class FragmentScheduled extends Fragment {
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        myOrdersActivity =(MyOrdersActivity) context;
+        myOrdersActivity = (MyOrdersActivity) context;
     }
 
     @Override
