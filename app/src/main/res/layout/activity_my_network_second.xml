@@ -20,11 +20,11 @@
         android:id="@+id/IvSellerProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/IvBackArrow_detail"
-        android:background="@drawable/ic_profile_seller"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/dp_10"
         android:layout_marginTop="@dimen/dp_10"
-        android:layout_marginStart="@dimen/dp_10" />
+        android:background="@drawable/ic_profile_seller"
+        app:layout_constraintStart_toEndOf="@id/IvBackArrow_detail"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvSeller"
@@ -69,35 +69,36 @@
         app:tabGravity="fill"
         app:tabIndicatorColor="@color/darkGreen"
         app:tabMode="fixed" />
+
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPage"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/TbTabLayout"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteX="10dp"/>
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TbTabLayout"
+        tools:layout_editor_absoluteX="10dp" />
 
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" >
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:hint="Type here"
-        android:padding="@dimen/dp_20"
-        android:drawableEnd="@drawable/ic_mic"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_mic"
+            android:hint="Type here"
+            android:padding="@dimen/dp_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-</androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,14 +29,14 @@ public class AccountPageActivity extends AppCompatActivity {
         tvSettings = findViewById(R.id.TvSettings);
         tvEdit = findViewById(R.id.TvViewAndEdit);
         ivAccount = findViewById(R.id.ibUser);
-        tvName =findViewById(R.id.TvSettingsProfileName);
+        tvName = findViewById(R.id.TvSettingsProfileName);
 
-        tvName.setText(SavePreference.getStringFromPre(this,NAME));
+        tvName.setText(SavePreference.getStringFromPre(this, NAME));
 
         ivHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AccountPageActivity.this,Homepage.class);
+                Intent intent = new Intent(AccountPageActivity.this, Homepage.class);
                 startActivity(intent);
                 finish();
             }
@@ -45,7 +45,7 @@ public class AccountPageActivity extends AppCompatActivity {
         ivChat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AccountPageActivity.this,ChatActivity.class);
+                Intent intent = new Intent(AccountPageActivity.this, ChatActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -54,7 +54,7 @@ public class AccountPageActivity extends AppCompatActivity {
         ivSell.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AccountPageActivity.this,my_offers_menu.class);
+                Intent intent = new Intent(AccountPageActivity.this, my_offers_menu.class);
                 startActivity(intent);
                 finish();
             }
@@ -63,7 +63,7 @@ public class AccountPageActivity extends AppCompatActivity {
         ivHeart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AccountPageActivity.this,MyAdsActivity.class);
+                Intent intent = new Intent(AccountPageActivity.this, MyAdsActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -72,7 +72,7 @@ public class AccountPageActivity extends AppCompatActivity {
         tvEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AccountPageActivity.this,EditProfileActivity.class);
+                Intent intent = new Intent(AccountPageActivity.this, EditProfileActivity.class);
                 startActivity(intent);
             }
         });
@@ -80,7 +80,7 @@ public class AccountPageActivity extends AppCompatActivity {
         tvBuyPackages.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AccountPageActivity.this,Invoices_and_billing.class);
+                Intent intent = new Intent(AccountPageActivity.this, Invoices_and_billing.class);
                 startActivity(intent);
             }
         });
@@ -88,7 +88,7 @@ public class AccountPageActivity extends AppCompatActivity {
         tvSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AccountPageActivity.this,Settings.class);
+                Intent intent = new Intent(AccountPageActivity.this, Settings.class);
                 startActivity(intent);
             }
         });
@@ -96,7 +96,7 @@ public class AccountPageActivity extends AppCompatActivity {
         tvHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AccountPageActivity.this,Help_and_Support.class);
+                Intent intent = new Intent(AccountPageActivity.this, Help_and_Support.class);
                 startActivity(intent);
             }
         });
