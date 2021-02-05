@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/cream_color"
     android:layout_height="match_parent"
     tools:context=".Activities.Homepage">
 
@@ -14,7 +13,7 @@
         android:layout_margin="@dimen/dp_20"
         android:background="@drawable/search_bg"
         android:hint="Search from location"
-        android:textStyle="italic"
+        android:textStyle="normal"
         android:textAlignment="center"
         android:textColorHint="@color/black"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,8 +31,8 @@
         android:id="@+id/btnSearch"
         android:layout_width="@dimen/dp_30"
         android:layout_height="@dimen/dp_30"
-        android:layout_marginLeft="@dimen/dp_10"
-        android:background="@drawable/ic_search_invisible"
+        android:layout_marginLeft="@dimen/dp_7"
+        android:background="@drawable/ic_loupe"
         android:textSize="@dimen/sp_10"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@id/etSearch"
@@ -46,7 +45,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp_20"
-
         android:text="@string/browse_categories"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_15"
@@ -115,5 +113,19 @@
         app:layout_constraintRight_toRightOf="parent">
 
     </include>
+
+    <TextView
+        android:id="@+id/tvSeeAll_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="See All"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toEndOf="@+id/tvBrowseCategories"
+        app:layout_constraintTop_toBottomOf="@+id/etSearch" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
