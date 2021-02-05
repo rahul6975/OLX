@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.rahul.olx.R;
 
-public class Discount_packages extends AppCompatActivity {
+public class Team_Ivory extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_discount_packages);
+        setContentView(R.layout.activity_team__ivory);
     }
 }
