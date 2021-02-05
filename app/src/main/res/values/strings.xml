@@ -105,5 +105,14 @@
     <string name="password">Password</string>
     <string name="please_enter_your_new_password">Please enter your new password</string>
     <string name="new_password">New Password</string>
+    <string name="save">Save</string>
+    <string name="say_something_here">say something here</string>
+    <string name="contact_information">Contact information</string>
+    <string name="_91">+91</string>
+    <string name="verification">You have verified your email. It\'s important to allow us to securely communicate with you.</string>
+    <string name="facebook">Facebook</string>
+    <string name="sign_in_fb">Sign in to Facebook and discover your trusted connections to buyers.</string>
+    <string name="connect">Connect</string>
+    <string name="connect_google">Connect you OLX account to google, for simplicity and ease.</string>
 
 </resources>
