@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OLX">
-        <activity android:name=".Activities.Edit_Profile"></activity>
+        <activity android:name=".Activities.Discount_packages"></activity>
+        <activity android:name=".Activities.Edit_Profile" />
         <activity android:name=".Activities.Verify_your_phone" />
         <activity android:name=".Activities.Homepage" />
         <activity android:name=".Activities.CommercialVehiclesSparesActivity" />

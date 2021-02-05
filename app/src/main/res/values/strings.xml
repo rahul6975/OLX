@@ -145,5 +145,9 @@
     <string name="spare_parts">Spare Parts</string>
     <string name="verify_your_phone">Verify your phone</string>
     <string name="we_will_send_a_confirmation_code_to_your_phone">We will send a confirmation code to your phone</string>
+    <string name="email">Email</string>
+    <string name="view_dicounts_here">View dicounts here</string>
+    <string name="post_more_ads_and_aut_boost">Post more Ads and Aut boost</string>
+    <string name="post_more_ads_and_ads_get_boosted_to_the_top_every_few_days">Post more ads and ads get boosted to the top every few days</string>
 
 </resources>
