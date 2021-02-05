@@ -9,7 +9,6 @@
     <string name="whats_youe_name">Whats your name?</string>
     <string name="StrangerFeel">Stranger feel so impersonal, you know?</string>
     <string name="enter_your_name">Enter your Name</string>
-    <string name="login">Login</string>
     <string name="settings">Settings</string>
     <string name="privacy_logout">Privacy and logout</string>
     <string name="Help_and_support">Help and support</string>
@@ -87,6 +86,16 @@
     <string name="collect">Collect all the things you like in one place</string>
     <string name="Discover">Discover</string>
     <string name="more_categories">More categories</string>
+    <string name="Brands">Brand *</string>
+    <string name="years">Year *</string>
+    <string name="Owners">No. of Owners *</string>
+    <string name="Add_title">Add title *</string>
+    <string name="Describe_selling">Describe what you are selling *</string>
+    <string name="mention_the_key">Mention the key fratures of your item (e.g. brand, model, age, type)</string>
+    <string name="include_condition">Include condition, features and reason for selling</string>
+    <string name="required_fields">*Required fields</string>
+    <string name="includes_some_details">Include some details</string>
+    <string name="Next">Next</string>
     <string name="_14_9_004">14.9.004</string>
     <string name="version">Version</string>
     <string name="invite_friends_to_olx">Invite friends to OLX</string>
@@ -102,6 +111,13 @@
     <string name="logout">Logout</string>
     <string name="deactivate_account_and_delete_my_data">Deactivate account and delete my data</string>
     <string name="logout_from_all_devices">Logout from all devices</string>
+    <string name="continue_without_location">Continue without Location</string>
+    <string name="female">female</string>
+    <string name="male">male</string>
+    <string name="enter_password">enter password</string>
+    <string name="enter_email_address">enter email address</string>
+    <string name="your_name">enter your name</string>
+    <string name="login">Login</string>
     <string name="password">Password</string>
     <string name="please_enter_your_new_password">Please enter your new password</string>
     <string name="new_password">New Password</string>
@@ -114,5 +130,18 @@
     <string name="sign_in_fb">Sign in to Facebook and discover your trusted connections to buyers.</string>
     <string name="connect">Connect</string>
     <string name="connect_google">Connect you OLX account to google, for simplicity and ease.</string>
+    <string name="title_activity_mobile">MobileActivity</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+    <string name="tablets">Tablets</string>
+    <string name="Accessories">Accessories</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="mobile_phones">Mobile Phones</string>
+    <string name="commercial_vehicles">Commercial Vehicle and Spares</string>
+    <string name="commercial_other">Commercial and Other Vehicles</string>
+    <string name="type">Type *</string>
+    <string name="spare_parts">Spare Parts</string>
 
 </resources>

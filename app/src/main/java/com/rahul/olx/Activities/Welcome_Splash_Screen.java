@@ -39,7 +39,7 @@ public class Welcome_Splash_Screen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(Welcome_Splash_Screen.this, Homepage.class);
+                Intent intent = new Intent(Welcome_Splash_Screen.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }

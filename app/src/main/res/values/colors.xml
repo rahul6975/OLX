@@ -20,6 +20,20 @@
     <color name="yellow_bg">#F6FAD4</color>
     <color name="green_bg">#DCF9DB</color>
     <color name="red_bg">#FCEDED</color>
+    <color name="light_red">#ff6961</color>
+    <color name="light_green">#97EBF4</color>
+    <color name="light_blue">#B7E2FC</color>
+    <color name="light_gray">#E8E8E8</color>
+    <color name="voilet">#0c2743</color>
+    <color name="red">#ea656c</color>
+    <color name="orange_startup">#ff6961</color>
+    <color name="navyblue_body">#768ca0</color>
+    <color name="blue_main">#113759</color>
+    <color name="green_edit">#00af80</color>
+    <color name="white_startup">#ffffff</color>
+    <color name="raspberry">#d21f3c</color>
+    <color name="google_bg">#ededed</color>
+    <color name="golden_yellow">#ffd700</color>
 
 
 </resources>
