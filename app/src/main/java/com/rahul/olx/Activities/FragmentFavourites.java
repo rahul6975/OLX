@@ -1,6 +1,7 @@
 package com.rahul.olx.Activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -17,7 +18,7 @@ import com.rahul.olx.R;
 
 public class FragmentFavourites extends Fragment {
 
-    private Button mBtnDiscoverFav;
+    private Button mBtnDiscoverFav, btnDiscover;
     private MyAdsActivity myAdsActivity;
 
     public FragmentFavourites() {
@@ -44,6 +45,14 @@ public class FragmentFavourites extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initViews(view);
+         btnDiscover = view.findViewById(R.id.btnDiscover_fav);
+         btnDiscover.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Intent intent = new Intent(getContext(), Homepage.class);
+                 startActivity(intent);
+             }
+         });
     }
 
     private void initViews(View view) {

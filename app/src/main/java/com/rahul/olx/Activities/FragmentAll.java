@@ -1,6 +1,7 @@
 package com.rahul.olx.Activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -16,6 +17,8 @@ import com.rahul.olx.R;
 
 
 public class FragmentAll extends Fragment {
+
+    private Button btnExplore;
     private Button mBtnExploreTheADS_all;
 private ChatActivity chatActivity;
 
@@ -43,6 +46,14 @@ private ChatActivity chatActivity;
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initViews(view);
+        btnExplore = view.findViewById(R.id.btnExploreTheAds_all);
+        btnExplore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), Homepage.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initViews(View view) {

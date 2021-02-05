@@ -254,7 +254,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp_65"
                 android:layout_marginTop="@dimen/dp_5"
-                android:text="8790623742"
+                android:hint="your phone number"
                 android:textColor="@color/marine_blue"
                 android:textSize="@dimen/sp_18"
                 app:layout_constraintEnd_toEndOf="@id/epPhoneNo"

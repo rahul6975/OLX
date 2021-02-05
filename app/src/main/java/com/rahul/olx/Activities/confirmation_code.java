@@ -57,7 +57,7 @@ public class confirmation_code extends AppCompatActivity {
         btncontinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(confirmation_code.this, maps_and_location.class);
+                Intent intent = new Intent(confirmation_code.this, NamePageActivity.class);
                 startActivity(intent);
                 finish();
             }

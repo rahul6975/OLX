@@ -19,7 +19,7 @@
             android:layout_height="@dimen/dp_70"
             android:layout_marginStart="30dp"
             android:layout_marginTop="@dimen/dp_60"
-            android:background="@drawable/ic_user"
+            android:background="@drawable/edit_profile_icon"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -217,6 +217,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/TvEnglish" />
+
+    <include
+        android:id="@+id/bottom_bar"
+        layout="@layout/bottom_fragments"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+    </include>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
