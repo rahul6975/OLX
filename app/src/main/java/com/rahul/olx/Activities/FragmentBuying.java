@@ -53,7 +53,6 @@ private Button mBtnExploreTheADS_buying;
         initViews(view);
         btnExplore = view.findViewById(R.id.btnExploreTheAds_buying);
 
-        btnExplore = view.findViewById(R.id.btnExploreTheAds_all);
         btnExplore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

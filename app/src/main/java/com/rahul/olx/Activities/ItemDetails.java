@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +21,7 @@ public class ItemDetails extends AppCompatActivity {
             tvBrand, tvBrandName, tvDescription, tvDetails, tvDescriptionList;
     private ViewPager viewPager;
     private TabLayout tabLayout;
+    private Button btnChat, btnMakeOffer;
     private String price, title, extras, town, city, brand, brandName, description,
             image1, image2, image3;
 
@@ -72,6 +75,8 @@ public class ItemDetails extends AppCompatActivity {
 
     private void initViews() {
         tvPrice = findViewById(R.id.tvItemPrice);
+        btnChat = findViewById(R.id.btnChat);
+        btnMakeOffer = findViewById(R.id.btnMakeOffer);
         tvTitle = findViewById(R.id.tvItemTitle);
         tvDetails = findViewById(R.id.tvDetails);
         tvExtras = findViewById(R.id.tvItemExtras);
@@ -81,5 +86,13 @@ public class ItemDetails extends AppCompatActivity {
         tvDescription = findViewById(R.id.tvDescription);
         viewPager = findViewById(R.id.ViewPage);
         tabLayout = findViewById(R.id.tabLayout);
+
+        btnChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ItemDetails.this,MyNetworkSecondActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

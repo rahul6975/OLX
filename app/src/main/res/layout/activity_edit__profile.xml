@@ -119,7 +119,7 @@
                 app:layout_constraintStart_toEndOf="@+id/editProfileAvatar"
                 app:layout_constraintTop_toBottomOf="@+id/editProfileTextHead" />
 
-            <TextView
+            <EditText
                 android:id="@+id/editProfileLine"
                 android:layout_width="@dimen/dp_200"
                 android:layout_height="1dp"

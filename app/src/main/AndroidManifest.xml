@@ -14,11 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OLX">
 
-        <activity android:name=".Activities.No_Discounts"></activity>
-        <activity android:name=".Activities.Discount"></activity>
-        <activity android:name=".Activities.Welcome_Splash_Screen" />
+        <activity android:name=".Activities.MyNetworkActivity"/>
+        <activity android:name=".Activities.No_Discounts" />
+        <activity android:name=".Activities.Discount" />
+        <activity android:name=".Activities.maps_and_location" />
         <activity android:name=".Activities.Edit_Profile" />
-            <activity android:name=".Activities.MyNetworkSecondActivity"></activity>
+        <activity android:name=".Activities.MyNetworkSecondActivity" />
         <activity android:name=".Activities.LocationActivity" />
         <activity android:name=".Activities.EditProfileActivity" />
         <activity android:name=".Activities.Enter_your_email" />
@@ -56,15 +57,12 @@
         <activity android:name=".Activities.MainActivity" />
         <activity android:name=".Activities.MyOrdersActivity" />
         <activity android:name=".Activities.Password" />
-        <activity android:name=".Activities.maps_and_location" />
 
-        <activity android:name=".Activities.Team_Ivory"/>
-
-        <activity android:name=".Activities.MyNetworkActivity">
+        <activity android:name=".Activities.Team_Ivory" />
+        <activity android:name=".Activities.Welcome_Splash_Screen">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -73,5 +71,4 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-
 </manifest>

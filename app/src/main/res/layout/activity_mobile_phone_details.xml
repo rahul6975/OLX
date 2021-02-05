@@ -21,13 +21,14 @@
             android:textColor="@color/darkGreen"
             android:textSize="@dimen/sp_25"
             android:textStyle="bold" />
+
         <View
             android:id="@+id/view_FullUnderLine1_mobile"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
+            android:layout_below="@id/TvInclude_Details_Mobile"
             android:layout_marginTop="@dimen/dp_10"
-            android:background="@color/gray"
-             android:layout_below="@id/TvInclude_Details_Mobile"/>
+            android:background="@color/gray" />
 
         <ImageView
             android:id="@+id/IvBackwardArrow"
@@ -41,50 +42,53 @@
         android:id="@+id/EtBrand_Mobile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/Brands"
-        android:layout_marginTop="@dimen/dp_20"
         android:layout_marginStart="@dimen/dp_20"
-        android:layout_marginEnd="@dimen/dp_20"/>
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:hint="@string/Brands" />
 
 
     <EditText
         android:id="@+id/EtAddTitle_Mobile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/Add_title"
-        android:layout_marginTop="@dimen/dp_10"
         android:layout_marginStart="@dimen/dp_20"
-        android:layout_marginEnd="@dimen/dp_20"/>
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:hint="@string/Add_title" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/mention_the_key"
-        android:textColor="@color/darkGreen"
         android:layout_marginStart="@dimen/dp_20"
-        android:layout_marginEnd="@dimen/dp_20"/>
+        android:layout_marginEnd="@dimen/dp_20"
+        android:text="@string/mention_the_key"
+        android:textColor="@color/darkGreen" />
+
     <EditText
         android:id="@+id/EtWhatYouSelling_mobile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/Describe_selling"
+        android:layout_marginStart="@dimen/dp_20"
         android:layout_marginTop="@dimen/dp_10"
-        android:layout_marginStart="@dimen/dp_20"
-        android:layout_marginEnd="@dimen/dp_20"/>
+        android:layout_marginEnd="@dimen/dp_20"
+        android:hint="@string/Describe_selling" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
         android:text="@string/include_condition"
-        android:textColor="@color/darkGreen"
-        android:layout_marginStart="@dimen/dp_20"
-        android:layout_marginEnd="@dimen/dp_20"/>
+        android:textColor="@color/darkGreen" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/required_fields"
         android:layout_marginStart="@dimen/dp_20"
-        android:layout_marginEnd="@dimen/dp_20"/>
+        android:layout_marginEnd="@dimen/dp_20"
+        android:text="@string/required_fields" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
