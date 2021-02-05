@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OLX">
 
-        <activity android:name=".Activities.MyNetworkSecondActivity"></activity>
+        <activity android:name=".Activities.MyNetworkActivity"></activity>
         <activity android:name=".Activities.Welcome_Splash_Screen" />
 
         <activity android:name=".Activities.Discount_packages"></activity>
@@ -59,7 +59,7 @@
         <activity android:name=".Activities.MyOrdersActivity" />
         <activity android:name=".Activities.Password" />
         <activity android:name=".Activities.maps_and_location" />
-        <activity android:name=".Activities.MyNetworkActivity">
+        <activity android:name=".Activities.MyNetworkSecondActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

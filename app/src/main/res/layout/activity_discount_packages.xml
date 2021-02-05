@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-gi<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -110,7 +110,7 @@ gi<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schem
                     android:layout_marginStart="@dimen/dp_25"
                     android:layout_marginEnd="@dimen/dp_25"
                     android:drawablePadding="@dimen/dp_10"
-                    android:drawableStart="@drawable/ic_tick_discount"
+                    android:drawableStart="@drawable/ic_tick_discount"/>
 
 
 

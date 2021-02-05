@@ -23,7 +23,7 @@ public class Edit_Profile extends AppCompatActivity {
         tvPhone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(this);
+//                Intent intent = new Intent(this);
             }
         });
     }
