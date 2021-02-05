@@ -13,9 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OLX">
-        <activity android:name=".Activities.Homepage"></activity>
-
-        <activity android:name=".Activities.CommercialVehiclesSparesActivity"></activity>
+        <activity android:name=".Activities.Edit_Profile"></activity>
+        <activity android:name=".Activities.Verify_your_phone" />
+        <activity android:name=".Activities.Homepage" />
+        <activity android:name=".Activities.CommercialVehiclesSparesActivity" />
         <activity android:name=".Activities.PhoneDetails_TabletActivity" />
         <activity android:name=".Activities.MobilePhoneDetailsActivity" />
         <activity android:name=".Activities.Welcome_Splash_Screen" />
@@ -32,7 +33,7 @@
         <activity android:name=".Activities.Google_Login" />
         <activity android:name=".Activities.Settings" />
         <activity android:name=".Activities.ChatActivity" />
-            <activity android:name=".Activities.Password" />
+        <activity android:name=".Activities.PhoneDetails_AccessoriesActivity" />
         <activity android:name=".Activities.ItemDetails" />
         <activity android:name=".Activities.Categories" />
         <activity android:name=".Activities.my_offers_menu" />
@@ -48,9 +49,8 @@
         <activity android:name=".Activities.MainActivity" />
         <activity android:name=".Activities.MyOrdersActivity" />
         <activity android:name=".Activities.maps_and_location" />
-        <activity android:name=".Activities.Edit_Profile"/>
-            <activity android:name=".Activities.PhoneDetails_AccessoriesActivity">
-
+        <activity android:name=".Activities.Password" />
+        <activity android:name=".Activities.Enter_your_email">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
