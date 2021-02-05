@@ -1,7 +1,9 @@
 package com.rahul.olx.Activities;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -30,7 +32,7 @@ public class Settings extends AppCompatActivity {
         tvPrivacy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Settings.this,Password.class);
+                Intent intent = new Intent(Settings.this, Password.class);
                 startActivity(intent);
             }
         });
@@ -38,20 +40,42 @@ public class Settings extends AppCompatActivity {
         tvLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toasty.info(Settings.this,"Logged out successfully", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Settings.this,LoginActivity.class);
-                startActivity(intent);
-                finish();
+
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Settings.this);
+                alertDialog.setTitle("Logout")
+                        .setMessage("Do you want to Logout ?")
+                        .setCancelable(true)
+                        .setPositiveButton("Log Out", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Toasty.info(Settings.this, " Dont show again ", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(Settings.this, Homepage.class);
+                                startActivity(intent);
+                                finish();
+                            }
+                        })
+                        .show();
+
+
             }
         });
-
         tvLogfromAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toasty.info(Settings.this,"Logged out from all devices", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Settings.this,LoginActivity.class);
-                startActivity(intent);
-                finish();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Settings.this);
+                alertDialog.setTitle("Logout")
+                        .setMessage("Do you want to Logout from all devices ?")
+                        .setCancelable(true)
+                        .setPositiveButton("Log Out", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Toasty.info(Settings.this, " Dont show again ", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(Settings.this, Homepage.class);
+                                startActivity(intent);
+                                finish();
+                            }
+                        })
+                        .show();
             }
         });
 

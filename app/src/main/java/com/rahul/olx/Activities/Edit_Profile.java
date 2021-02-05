@@ -16,7 +16,8 @@ import es.dmoral.toasty.Toasty;
 public class Edit_Profile extends AppCompatActivity {
 
     private TextView tvPhone, tvEmail;
-    private TextView tvSave;
+    private TextView tvSave, tvProfileName;
+    private static final String NAME = "name";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,16 +26,20 @@ public class Edit_Profile extends AppCompatActivity {
         tvSave = findViewById(R.id.tvEditProfileHeader);
         tvPhone = findViewById(R.id.epPhone);
         tvEmail = findViewById(R.id.tvEmail);
+        tvProfileName = findViewById(R.id.EditProfileName);
 
-        if(getIntent() != null)
-        {
+        tvProfileName.setText(SavePreference.getStringFromPre(this, NAME));
+
+
+        if (getIntent() != null) {
+            tvEmail.setText(getIntent().getStringExtra("email"));
             tvPhone.setText(getIntent().getStringExtra("number"));
         }
 
         tvPhone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Edit_Profile.this,Verify_your_phone.class);
+                Intent intent = new Intent(Edit_Profile.this, Verify_your_phone.class);
                 startActivity(intent);
                 finish();
             }
@@ -43,7 +48,7 @@ public class Edit_Profile extends AppCompatActivity {
         tvEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Edit_Profile.this,Enter_your_email.class);
+                Intent intent = new Intent(Edit_Profile.this, Enter_your_email.class);
                 startActivity(intent);
                 finish();
             }
@@ -52,8 +57,8 @@ public class Edit_Profile extends AppCompatActivity {
         tvSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toasty.info(Edit_Profile.this,"Details saved successfully", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Edit_Profile.this,AccountPageActivity.class);
+                Toasty.info(Edit_Profile.this, "Details saved successfully", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Edit_Profile.this, AccountPageActivity.class);
                 startActivity(intent);
                 finish();
             }
