@@ -22,10 +22,10 @@ public class confirmation_code extends AppCompatActivity {
     }
 
     private void initViews() {
-        etCode1= findViewById(R.id.etCode_1);
-        etCode2= findViewById(R.id.etCode_2);
-        etCode3= findViewById(R.id.etCode_3);
-        etCode4= findViewById(R.id.etCode_4);
+        etCode1 = findViewById(R.id.etCode_1);
+        etCode2 = findViewById(R.id.etCode_2);
+        etCode3 = findViewById(R.id.etCode_3);
+        etCode4 = findViewById(R.id.etCode_4);
         btncontinue = findViewById(R.id.btnContinuePhone);
 
         etCode1.setOnClickListener(new View.OnClickListener() {
@@ -57,7 +57,7 @@ public class confirmation_code extends AppCompatActivity {
         btncontinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(confirmation_code.this,maps_and_location.class);
+                Intent intent = new Intent(confirmation_code.this, maps_and_location.class);
                 startActivity(intent);
                 finish();
             }
