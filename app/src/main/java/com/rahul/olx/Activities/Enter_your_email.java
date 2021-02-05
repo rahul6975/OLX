@@ -30,6 +30,7 @@ public class Enter_your_email extends AppCompatActivity {
             public void onClick(View v) {
                 Toasty.info(Enter_your_email.this,"Email verified successfully",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Enter_your_email.this,Edit_Profile.class);
+                intent.putExtra("email",etEmail.getText().toString());
                 startActivity(intent);
                 finish();
             }
@@ -39,7 +40,8 @@ public class Enter_your_email extends AppCompatActivity {
     private boolean isValid()
     {
         boolean condition = true;
-        if(!etEmail.getText().toString().contains("@gmail.com"))
+        String email = etEmail.getText().toString();
+        if(!email.contains("@gmail.com"))
         {
             etEmail.setError("Enter a valid email address");
         }

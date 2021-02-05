@@ -59,6 +59,7 @@
         android:layout_margin="@dimen/dp_20"
         android:background="@color/darkGreen"
         android:text="Next"
+        android:textSize="@dimen/sp_20"
         android:id="@+id/btnNextPage"
         android:textAllCaps="false"
         android:textColor="@color/white"
