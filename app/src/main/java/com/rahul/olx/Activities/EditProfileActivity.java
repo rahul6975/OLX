@@ -12,7 +12,7 @@ import com.rahul.olx.R;
 
 public class EditProfileActivity extends AppCompatActivity {
     private Button btnEdit;
-    private TextView tvName;
+    private TextView tvName, tvFollowing, tvFollower;
     private static final String NAME = "name";
 
     @Override
@@ -20,10 +20,10 @@ public class EditProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
         btnEdit = findViewById(R.id.btnEditProfile);
+        tvFollowing = findViewById(R.id.TvFollowing);
+        tvFollower = findViewById(R.id.TvFollowers);
         tvName = findViewById(R.id.TvDhanashree_rane);
         tvName.setText(SavePreference.getStringFromPre(this,NAME));
-
-
         btnEdit.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
@@ -32,5 +32,21 @@ public class EditProfileActivity extends AppCompatActivity {
                  finish();
              }
          });
+
+        tvFollowing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EditProfileActivity.this, MyNetworkActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        tvFollower.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EditProfileActivity.this, MyNetworkActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

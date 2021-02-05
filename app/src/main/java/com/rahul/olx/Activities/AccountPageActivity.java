@@ -12,7 +12,7 @@ import com.rahul.olx.R;
 
 public class AccountPageActivity extends AppCompatActivity {
     private ImageView ivHome, ivChat, ivSell, ivHeart, ivAccount;
-    private TextView tvName, tvEdit;
+    private TextView tvName, tvEdit, tvBuyPackages, tvSettings, tvHelp;
     private static String NAME = "name";
 
 
@@ -23,7 +23,10 @@ public class AccountPageActivity extends AppCompatActivity {
         ivHome = findViewById(R.id.ibRefresh);
         ivChat = findViewById(R.id.ibLocation);
         ivSell = findViewById(R.id.ibHeart);
+        tvBuyPackages = findViewById(R.id.TvBuyPackages);
+        tvHelp = findViewById(R.id.TvHelpAndSupport);
         ivHeart = findViewById(R.id.ibChat);
+        tvSettings = findViewById(R.id.TvSettings);
         tvEdit = findViewById(R.id.TvViewAndEdit);
         ivAccount = findViewById(R.id.ibUser);
         tvName =findViewById(R.id.TvSettingsProfileName);
@@ -70,6 +73,30 @@ public class AccountPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AccountPageActivity.this,EditProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        tvBuyPackages.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AccountPageActivity.this,Invoices_and_billing.class);
+                startActivity(intent);
+            }
+        });
+
+        tvSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AccountPageActivity.this,Settings.class);
+                startActivity(intent);
+            }
+        });
+
+        tvHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AccountPageActivity.this,Help_and_Support.class);
                 startActivity(intent);
             }
         });
