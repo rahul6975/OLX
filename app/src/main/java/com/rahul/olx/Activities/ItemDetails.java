@@ -21,7 +21,7 @@ public class ItemDetails extends AppCompatActivity {
             tvBrand, tvBrandName, tvDescription, tvDetails, tvDescriptionList;
     private ViewPager viewPager;
     private TabLayout tabLayout;
-    private Button btnChat, btnMakeOffer;
+    private TextView btnChat, btnMakeOffer;
     private String price, title, extras, town, city, brand, brandName, description,
             image1, image2, image3;
 
@@ -75,8 +75,8 @@ public class ItemDetails extends AppCompatActivity {
 
     private void initViews() {
         tvPrice = findViewById(R.id.tvItemPrice);
-        btnChat = findViewById(R.id.btnChat);
-        btnMakeOffer = findViewById(R.id.btnMakeOffer);
+        btnChat = findViewById(R.id.ChatBtnText);
+        btnMakeOffer = findViewById(R.id.NavigationBtnText);
         tvTitle = findViewById(R.id.tvItemTitle);
         tvDetails = findViewById(R.id.tvDetails);
         tvExtras = findViewById(R.id.tvItemExtras);
