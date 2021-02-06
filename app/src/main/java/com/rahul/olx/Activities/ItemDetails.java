@@ -37,7 +37,7 @@ public class ItemDetails extends AppCompatActivity {
 
     private void setViewPager() {
         ImageViewPagerAdapter viewPagerAdapter = new ImageViewPagerAdapter(getSupportFragmentManager()
-                , FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,image1,image2);
+                , FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT, image1, image2);
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
     }
@@ -90,7 +90,15 @@ public class ItemDetails extends AppCompatActivity {
         btnChat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ItemDetails.this,MyNetworkSecondActivity.class);
+                Intent intent = new Intent(ItemDetails.this, MyNetworkSecondActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnMakeOffer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ItemDetails.this, MyNetworkSecondActivity.class);
                 startActivity(intent);
             }
         });

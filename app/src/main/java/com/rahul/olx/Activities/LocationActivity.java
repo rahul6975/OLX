@@ -16,6 +16,7 @@ public class LocationActivity extends AppCompatActivity {
     private RecyclerView rv;
 
     private List<LocationModelClass> modelClasses = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
