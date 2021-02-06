@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/red_bg"
     tools:context=".Activities.BrowseCategoryDisplayer">
 
     <TextView
@@ -15,8 +14,8 @@
         android:layout_marginStart="@dimen/dp_20"
         android:layout_marginTop="@dimen/dp_20"
         android:layout_marginEnd="@dimen/dp_20"
+        android:fontFamily="@font/sniglet"
         android:layout_marginBottom="@dimen/dp_20"
-        android:fontFamily="@font/salsa"
         android:text="@string/showing_results_for"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_15" />
@@ -25,9 +24,9 @@
         android:id="@+id/tvCategoryNameBC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dp_20"
+        android:layout_margin="@dimen/dp_15"
+        android:fontFamily="@font/sniglet"
         android:layout_toEndOf="@id/tvShowingResultBC"
-        android:fontFamily="@font/luckiest_guy"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_20" />
 

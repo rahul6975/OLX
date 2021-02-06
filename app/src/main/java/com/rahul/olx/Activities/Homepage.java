@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.rahul.olx.AllInOneResponseClasses.AllInOneResponseClasses;
@@ -43,6 +44,7 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
     private ImageView ivHome, ivChat, ivSell, ivHeart, ivAccount;
     private EditText etSearch;
     private Button btnSearch;
+    private TextView tvSeeAll;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,6 +102,7 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
         ivAccount = findViewById(R.id.ibUser);
         etSearch = findViewById(R.id.etSearch);
         btnSearch = findViewById(R.id.btnSearch);
+        tvSeeAll= findViewById(R.id.tvSeeAll_home);
         BrowseCategoriesAdapter adapter = new BrowseCategoriesAdapter(modelClassArrayList, this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(RecyclerView.HORIZONTAL);
@@ -124,6 +127,15 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
                 startActivity(intent);
             }
         });
+        tvSeeAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Homepage.this,Categories.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         ivHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -166,13 +178,15 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
         });
     }
 
+
+
     private boolean checkLocation() {
         boolean condition = true;
         if (!etSearch.getText().toString().contains("Bangalore") && !etSearch.getText().toString().contains("bangalore") &&
                 !etSearch.getText().toString().contains("Mumbai") && !etSearch.getText().toString().contains("mumbai") &&
                 !etSearch.getText().toString().contains("Delhi") && !etSearch.getText().toString().contains("delhi") &&
                 !etSearch.getText().toString().contains("Kolkata") && !etSearch.getText().toString().contains("kolkata")) {
-            Toasty.error(Homepage.this, "services current available only in selected locations", Toast.LENGTH_LONG).show();
+            Toasty.error(Homepage.this, "Services currently available only in select locations", Toast.LENGTH_LONG).show();
             condition = false;
         }
         return condition;

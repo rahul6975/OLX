@@ -10,60 +10,67 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello"
-            android:layout_marginTop="@dimen/dp_20"
             android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
             android:background="@drawable/rectangle_button_3"
-            android:padding="@dimen/dp_6"/>
+            android:padding="@dimen/dp_6"
+            android:text="Hello" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="is it available ?"
-            android:layout_marginTop="@dimen/dp_20"
             android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
             android:background="@drawable/rectangle_button_3"
-            android:padding="@dimen/dp_6"/>
+            android:padding="@dimen/dp_6"
+            android:text="is it available?" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="are you there ?"
-            android:layout_marginTop="@dimen/dp_20"
             android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
             android:background="@drawable/rectangle_button_3"
-            android:padding="@dimen/dp_6"/>
+            android:padding="@dimen/dp_6"
+            android:text="are you there?" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="make an offer"
-            android:layout_marginTop="@dimen/dp_20"
             android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
             android:background="@drawable/rectangle_button_3"
-            android:padding="@dimen/dp_6"/>
+            android:padding="@dimen/dp_6"
+            android:text="make offer" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Please Reply"
-            android:layout_marginTop="@dimen/dp_20"
             android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
             android:background="@drawable/rectangle_button_3"
-            android:padding="@dimen/dp_6"/>
+            android:padding="@dimen/dp_6"
+            android:text="Please Reply" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="are you busy ?"
-            android:layout_marginTop="@dimen/dp_20"
             android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
             android:background="@drawable/rectangle_button_3"
-            android:padding="@dimen/dp_6"/>
+            android:padding="@dimen/dp_6"
+            android:text="are you busy?" />
 
     </LinearLayout>
 
