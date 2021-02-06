@@ -17,7 +17,7 @@
             android:layout_marginTop="@dimen/dp_20"
             android:layout_marginStart="@dimen/dp_10"
             android:background="@drawable/rectangle_button_3"
-            android:padding="@dimen/dp_10"/>
+            android:padding="@dimen/dp_6"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
             android:layout_marginTop="@dimen/dp_20"
             android:layout_marginStart="@dimen/dp_10"
             android:background="@drawable/rectangle_button_3"
-            android:padding="@dimen/dp_10"/>
+            android:padding="@dimen/dp_6"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
             android:layout_marginTop="@dimen/dp_20"
             android:layout_marginStart="@dimen/dp_10"
             android:background="@drawable/rectangle_button_3"
-            android:padding="@dimen/dp_10"/>
+            android:padding="@dimen/dp_6"/>
 
     </LinearLayout>
     <LinearLayout
@@ -47,7 +47,7 @@
             android:layout_marginTop="@dimen/dp_20"
             android:layout_marginStart="@dimen/dp_10"
             android:background="@drawable/rectangle_button_3"
-            android:padding="@dimen/dp_10"/>
+            android:padding="@dimen/dp_6"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
             android:layout_marginTop="@dimen/dp_20"
             android:layout_marginStart="@dimen/dp_10"
             android:background="@drawable/rectangle_button_3"
-            android:padding="@dimen/dp_10"/>
+            android:padding="@dimen/dp_6"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
             android:layout_marginTop="@dimen/dp_20"
             android:layout_marginStart="@dimen/dp_10"
             android:background="@drawable/rectangle_button_3"
-            android:padding="@dimen/dp_10"/>
+            android:padding="@dimen/dp_6"/>
 
     </LinearLayout>
 
