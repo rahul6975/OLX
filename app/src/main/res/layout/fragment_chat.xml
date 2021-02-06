@@ -36,7 +36,7 @@
             android:layout_marginTop="@dimen/dp_20"
             android:background="@drawable/rectangle_button_3"
             android:padding="@dimen/dp_6"
-            android:text="are you there?" />
+            android:text="You There?" />
 
     </LinearLayout>
 

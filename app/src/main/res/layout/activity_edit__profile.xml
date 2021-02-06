@@ -15,37 +15,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="@dimen/dp_5"
-        android:paddingBottom="@dimen/dp_15">
-
-
-    <ImageView
-        android:id="@+id/ivEditProfileCross"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:paddingStart="@dimen/dp_20"
-        android:scaleType="fitCenter"
-        android:src="@drawable/clear_icon" />
-
-
-        <TextView
-            android:id="@+id/tvEditProfileHeader"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/dp_10"
-            android:drawablePadding="@dimen/dp_20"
-            android:padding="@dimen/dp_10"
-            android:text="@string/save"
-            android:textAlignment="viewEnd"
-            android:textColor="@color/marine_blue"
-            android:textSize="@dimen/sp_20"
-            android:textStyle="bold" />
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_15">
 
-    </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivEditProfileCross"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/dp_20"
+                android:scaleType="fitCenter"
+                android:src="@drawable/clear_icon" />
+
+
+            <TextView
+                android:id="@+id/tvEditProfileHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:drawablePadding="@dimen/dp_20"
+                android:padding="@dimen/dp_10"
+                android:text="@string/save"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/marine_blue"
+                android:textSize="@dimen/sp_20"
+                android:textStyle="bold" />
+
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
     <ScrollView
@@ -304,12 +304,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp_15"
                 android:layout_marginTop="@dimen/dp_25"
-                android:textColor="@color/marine_blue"
-                android:textStyle="bold"
                 android:layout_marginEnd="@dimen/dp_5"
                 android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios"
                 android:text="Email"
+                android:textColor="@color/marine_blue"
                 android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/epPhoneDetails"
                 app:layout_constraintStart_toStartOf="@+id/epPhoneDetails"
                 app:layout_constraintTop_toBottomOf="@id/epPhoneDetails" />
@@ -371,9 +371,9 @@
                 android:layout_marginStart="@dimen/dp_15"
                 android:layout_marginTop="@dimen/dp_10"
                 android:text="@string/facebook"
-                android:textStyle="bold"
                 android:textColor="@color/marine_blue"
                 android:textSize="@dimen/sp_14"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@id/optionalInfo"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -397,10 +397,10 @@
                 android:id="@+id/fbConnectButton"
                 android:layout_width="@dimen/dp_130"
                 android:layout_height="@dimen/dp_40"
-                android:layout_marginEnd="@dimen/dp_20"
                 android:layout_marginStart="@dimen/dp_40"
                 android:layout_marginTop="@dimen/dp_40"
-                android:background="@color/marine_blue"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:background="@drawable/rectangle_button_4"
                 android:paddingStart="@dimen/dp_10"
                 android:paddingEnd="@dimen/dp_10"
                 android:text="@string/connect"
@@ -412,17 +412,17 @@
                 app:layout_constraintStart_toEndOf="@+id/fbDetails"
                 app:layout_constraintTop_toBottomOf="@+id/optionalInfo" />
 
-<TextView
-    android:id="@+id/line7"
-    android:layout_width="match_parent"
-    android:layout_height="0.5dp"
-    android:background="@color/gray"
-    app:layout_constraintTop_toBottomOf="@id/fbDetails"
-    app:layout_constraintStart_toStartOf="@id/fbDetails"
-    app:layout_constraintEnd_toEndOf="@id/fbDetails"
-    android:layout_marginTop="@dimen/dp_10"
-    android:layout_marginStart="@dimen/dp_15"
-    android:layout_marginEnd="@dimen/dp_10"/>
+            <TextView
+                android:id="@+id/line7"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="@id/fbDetails"
+                app:layout_constraintStart_toStartOf="@id/fbDetails"
+                app:layout_constraintTop_toBottomOf="@id/fbDetails" />
 
 
             <TextView
@@ -432,9 +432,9 @@
                 android:layout_marginStart="@dimen/dp_15"
                 android:layout_marginTop="@dimen/dp_10"
                 android:text="Google"
-                android:textStyle="bold"
                 android:textColor="@color/marine_blue"
                 android:textSize="@dimen/sp_14"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@id/line7"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -460,20 +460,18 @@
                 android:layout_height="@dimen/dp_40"
                 android:layout_marginStart="@dimen/dp_40"
                 android:layout_marginTop="@dimen/dp_40"
-                android:background="@color/marine_blue"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:background="@drawable/rectangle_button_4"
                 android:paddingStart="@dimen/dp_10"
                 android:paddingEnd="@dimen/dp_10"
                 android:text="@string/connect"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_16"
-                android:layout_marginEnd="@dimen/dp_20"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.093"
                 app:layout_constraintStart_toEndOf="@+id/googleDetails"
                 app:layout_constraintTop_toBottomOf="@+id/line7" />
-
-
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

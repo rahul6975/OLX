@@ -8,36 +8,36 @@
 
     <ImageView
         android:id="@+id/ibRefresh"
-        android:layout_width="@dimen/dp_30"
-        android:layout_height="@dimen/dp_40"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_30"
         android:layout_weight="1"
         android:src="@drawable/ic_home"/>
 
     <ImageView
         android:id="@+id/ibLocation"
-        android:layout_width="@dimen/dp_30"
-        android:layout_height="@dimen/dp_40"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_30"
         android:layout_weight="1"
         android:src="@drawable/ic_chat_icon"/>
 
     <ImageView
         android:id="@+id/ibHeart"
-        android:layout_width="@dimen/dp_30"
-        android:layout_height="@dimen/dp_40"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_30"
         android:layout_weight="1"
         android:src="@drawable/ic_add"/>
 
     <ImageView
         android:id="@+id/ibChat"
-        android:layout_width="@dimen/dp_30"
-        android:layout_height="@dimen/dp_40"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_30"
         android:layout_weight="1"
         android:src="@drawable/ic_like" />
 
     <ImageView
         android:id="@+id/ibUser"
-        android:layout_width="@dimen/dp_30"
-        android:layout_height="@dimen/dp_40"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_30"
         android:layout_weight="1"
         android:src="@drawable/ic_user"/>
 </LinearLayout>

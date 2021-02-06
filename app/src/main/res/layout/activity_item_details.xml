@@ -139,7 +139,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:fontFamily="@font/boogaloo"
+                android:fontFamily="@font/sniglet"
                 android:text="description list"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sp_15"
@@ -165,23 +165,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp_20"
-                android:text="@string/Chat"
+                android:background="@drawable/rectangle_button_4"
                 android:padding="@dimen/dp_5"
-                android:background="@color/marine_blue"
+                android:text="@string/Chat"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_20"
                 tools:layout_editor_absoluteX="0dp" />
 
-            <ImageView
-                android:id="@+id/ivChat"
-                android:layout_width="@dimen/dp_25"
-                android:layout_height="@dimen/dp_25"
-                android:layout_marginStart="@dimen/dp_35"
-                android:padding="@dimen/dp_5"
-                android:layout_marginTop="@dimen/dp_30"
-                app:srcCompat="@drawable/ic_chat" />
         </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/RelativeLayout"
             android:layout_width="wrap_content"
@@ -193,22 +186,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp_20"
-                android:text="My offers"
+                android:background="@drawable/rectangle_button_4"
                 android:padding="@dimen/dp_5"
-                android:background="@color/marine_blue"
+                android:text="Make offer"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_20"
                 tools:layout_editor_absoluteX="0dp" />
-
-            <ImageView
-                android:id="@+id/ivOffers"
-                android:layout_width="@dimen/dp_25"
-                android:layout_height="@dimen/dp_25"
-                android:padding="@dimen/dp_5"
-                android:layout_marginStart="@dimen/dp_25"
-                android:layout_marginTop="@dimen/dp_25"
-                app:srcCompat="@drawable/make_offfer" />
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>
