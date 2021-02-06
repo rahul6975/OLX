@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cream_color"
     android:orientation="vertical"
     tools:context=".Activities.ItemDetails">
 
@@ -49,7 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp_10"
-                android:fontFamily="@font/bubblegum_sans"
+                android:fontFamily="@font/sniglet"
                 android:text="price"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sp_25"
@@ -58,10 +57,10 @@
 
             <TextView
                 android:id="@+id/tvItemTitle"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp_10"
-                android:fontFamily="@font/boogaloo"
+                android:fontFamily="@font/sniglet"
                 android:text="title"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sp_20"
@@ -115,17 +114,19 @@
             <View
                 android:id="@+id/viewLine"
                 android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:layout_margin="20dp"
+                android:layout_height="2dp"
+                android:layout_margin="@dimen/dp_15"
                 android:background="@color/gray"
                 app:layout_constraintTop_toBottomOf="@id/imgLocation" />
 
             <TextView
                 android:id="@+id/tvDescription"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp_20"
-                android:fontFamily="@font/chicle"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_20"
+                android:fontFamily="@font/sniglet"
                 android:text="Description :"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sp_25"
@@ -135,7 +136,7 @@
 
             <TextView
                 android:id="@+id/tvDescriptionList"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:fontFamily="@font/boogaloo"

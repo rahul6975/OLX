@@ -130,7 +130,7 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
         tvSeeAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Homepage.this,Discount.class);
+                Intent intent = new Intent(Homepage.this,Categories.class);
                 startActivity(intent);
             }
         });
@@ -186,7 +186,7 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
                 !etSearch.getText().toString().contains("Mumbai") && !etSearch.getText().toString().contains("mumbai") &&
                 !etSearch.getText().toString().contains("Delhi") && !etSearch.getText().toString().contains("delhi") &&
                 !etSearch.getText().toString().contains("Kolkata") && !etSearch.getText().toString().contains("kolkata")) {
-            Toasty.error(Homepage.this, "services current available only in selected locations", Toast.LENGTH_LONG).show();
+            Toasty.error(Homepage.this, "Services currently available only in select locations", Toast.LENGTH_LONG).show();
             condition = false;
         }
         return condition;
