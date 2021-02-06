@@ -161,8 +161,8 @@
             android:layout_margin="@dimen/dp_10"
             android:layout_weight="1"
             android:background="#003034"
-            android:drawableLeft="@drawable/ic_chat"
             android:text="Chat"
+            android:textSize="@dimen/dp_20"
             android:textAllCaps="false"
             android:textColor="@color/white" />
 
@@ -173,7 +173,7 @@
             android:layout_margin="@dimen/dp_10"
             android:layout_weight="1"
             android:background="#003034"
-            android:drawableLeft="@drawable/make_offfer"
+            android:textSize="@dimen/dp_20"
             android:text="Make Offer"
             android:textAllCaps="false"
             android:textColor="@color/white" />
