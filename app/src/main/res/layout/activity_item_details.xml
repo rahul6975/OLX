@@ -154,30 +154,62 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/btnChat"
+        <RelativeLayout
+            android:id="@+id/RelativeLayout2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dp_10"
-            android:layout_weight="1"
-            android:background="#003034"
-            android:drawableLeft="@drawable/ic_chat"
-            android:text="Chat"
-            android:textAllCaps="false"
-            android:textColor="@color/white" />
+            android:layout_weight="1">
 
-        <Button
-            android:id="@+id/btnMakeOffer"
+            <TextView
+                android:id="@+id/ChatBtnText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:text="@string/Chat"
+                android:padding="@dimen/dp_5"
+                android:background="@color/marine_blue"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <ImageView
+                android:id="@+id/ivChat"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:layout_marginStart="@dimen/dp_35"
+                android:padding="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_30"
+                app:srcCompat="@drawable/ic_chat" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/RelativeLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dp_10"
-            android:layout_weight="1"
-            android:background="#003034"
-            android:drawableLeft="@drawable/make_offfer"
-            android:text="Make Offer"
-            android:textAllCaps="false"
-            android:textColor="@color/white" />
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/NavigationBtnText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:text="My offers"
+                android:padding="@dimen/dp_5"
+                android:background="@color/marine_blue"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <ImageView
+                android:id="@+id/ivOffers"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:padding="@dimen/dp_5"
+                android:layout_marginStart="@dimen/dp_25"
+                android:layout_marginTop="@dimen/dp_25"
+                app:srcCompat="@drawable/make_offfer" />
+        </RelativeLayout>
     </LinearLayout>
-
 </LinearLayout>
 
