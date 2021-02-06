@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:id="@+id/llBottom"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llBottom"
     android:layout_width="match_parent"
     android:layout_height="@dimen/dp_50"
     android:background="@color/white"
-    android:padding="@dimen/dp_10"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:padding="@dimen/dp_10">
 
     <ImageView
         android:id="@+id/ibRefresh"
         android:layout_width="@dimen/dp_20"
         android:layout_height="@dimen/dp_30"
         android:layout_weight="1"
-        android:src="@drawable/ic_home"/>
+        android:src="@drawable/ic_home" />
 
     <ImageView
         android:id="@+id/ibLocation"
         android:layout_width="@dimen/dp_20"
         android:layout_height="@dimen/dp_30"
         android:layout_weight="1"
-        android:src="@drawable/ic_chat_icon"/>
+        android:src="@drawable/ic_chat_icon" />
 
     <ImageView
         android:id="@+id/ibHeart"
         android:layout_width="@dimen/dp_20"
         android:layout_height="@dimen/dp_30"
         android:layout_weight="1"
-        android:src="@drawable/ic_add"/>
+        android:src="@drawable/ic_add" />
 
     <ImageView
         android:id="@+id/ibChat"
@@ -39,5 +39,5 @@
         android:layout_width="@dimen/dp_20"
         android:layout_height="@dimen/dp_30"
         android:layout_weight="1"
-        android:src="@drawable/ic_user"/>
+        android:src="@drawable/ic_user" />
 </LinearLayout>

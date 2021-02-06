@@ -40,9 +40,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
-// This library is used by retrofit internally to convert json-pojo and pojo-json
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
-//This library is used to observe the API logs, Http status code and the API response
     implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.github.bumptech.glide:glide:4.11.0'

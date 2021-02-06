@@ -203,6 +203,7 @@
         app:layout_constraintEnd_toEndOf="@+id/TvInvite"
         app:layout_constraintStart_toStartOf="@+id/TvInvite"
         app:layout_constraintTop_toBottomOf="@+id/tvInviteDetails" />
+
     <TextView
         android:id="@+id/TvVersion"
         android:layout_width="match_parent"
