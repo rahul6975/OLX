@@ -57,8 +57,9 @@ public class FragmentSelling extends Fragment {
         btnExplore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CategoriesFragment categoriesFragment= new  CategoriesFragment();
-                getChildFragmentManager().beginTransaction().replace(R.id.flFragment,categoriesFragment,"categories").commit();
+//
+                Intent intent = new Intent(getContext(),MainActivity.class);
+                startActivity(intent);
             }
         });
     }

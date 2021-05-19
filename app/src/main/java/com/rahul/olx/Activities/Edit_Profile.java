@@ -59,8 +59,10 @@ public class Edit_Profile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toasty.info(Edit_Profile.this, "Details saved successfully", Toast.LENGTH_SHORT).show();
-                AccountFragment accountFragment = new AccountFragment();
-                getSupportFragmentManager().beginTransaction().replace(R.id.flFragment,accountFragment,"account").commit();
+                Intent intent = new Intent(Edit_Profile.this,MainActivity.class);
+                startActivity(intent);
+//                AccountFragment accountFragment = new AccountFragment();
+//                getSupportFragmentManager().beginTransaction().replace(R.id.flFragment,accountFragment,"account").commit();
             }
         });
 
