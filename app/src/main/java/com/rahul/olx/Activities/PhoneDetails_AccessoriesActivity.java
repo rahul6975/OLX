@@ -36,7 +36,7 @@ public class PhoneDetails_AccessoriesActivity extends AppCompatActivity {
                 if (isValid()) {
                     Toasty.error(PhoneDetails_AccessoriesActivity.this, "Application received, you'll receive a confirmation call",
                             Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(PhoneDetails_AccessoriesActivity.this, Homepage.class);
+                    Intent intent = new Intent(PhoneDetails_AccessoriesActivity.this,MainActivity.class);
                     startActivity(intent);
                     finish();
                 }

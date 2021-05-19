@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/IvOlxIcon"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="300dp"
         android:scaleType="centerCrop"
         android:src="@drawable/olx_icon"
         app:layout_constraintBottom_toTopOf="@id/btnContinueWithPhone"
@@ -123,7 +123,7 @@
         android:gravity="center_horizontal"
         android:text="@string/olx_Term"
         android:textColor="@color/white"
-        android:textSize="@dimen/sp_15"
+        android:textSize="@dimen/sp_12"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

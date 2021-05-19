@@ -13,12 +13,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.rahul.olx.Fragments.CategoriesFragment;
 import com.rahul.olx.R;
 
 
 public class FragmentSelling extends Fragment {
     private Button mBtnExploreTheADS_selling;
-    private ChatActivity chatActivity;
+    private MainActivity chatActivity;
     private Button btnExplore;
 
     public FragmentSelling() {
@@ -38,7 +39,7 @@ public class FragmentSelling extends Fragment {
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        chatActivity =(ChatActivity)context;
+        chatActivity =(MainActivity) context;
     }
 
     @Override
@@ -56,8 +57,8 @@ public class FragmentSelling extends Fragment {
         btnExplore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), my_offers_menu.class);
-                startActivity(intent);
+                CategoriesFragment categoriesFragment= new  CategoriesFragment();
+                getChildFragmentManager().beginTransaction().replace(R.id.flFragment,categoriesFragment,"categories").commit();
             }
         });
     }

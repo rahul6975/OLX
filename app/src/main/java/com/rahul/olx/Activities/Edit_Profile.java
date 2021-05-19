@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.rahul.olx.Fragments.AccountFragment;
 import com.rahul.olx.R;
 
 import es.dmoral.toasty.Toasty;
@@ -58,9 +59,8 @@ public class Edit_Profile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toasty.info(Edit_Profile.this, "Details saved successfully", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Edit_Profile.this, AccountPageActivity.class);
-                startActivity(intent);
-                finish();
+                AccountFragment accountFragment = new AccountFragment();
+                getSupportFragmentManager().beginTransaction().replace(R.id.flFragment,accountFragment,"account").commit();
             }
         });
 

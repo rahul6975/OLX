@@ -1,5 +1,7 @@
 package com.rahul.olx.Activities;
 
+import android.widget.ImageView;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -10,7 +12,8 @@ import com.rahul.olx.Fragments.ImageFragment2;
 
 public class ImageViewPagerAdapter extends FragmentStatePagerAdapter {
     private String image1, image2;
-    public ImageViewPagerAdapter(@NonNull FragmentManager fm, int behavior,String image1, String image2) {
+
+    public ImageViewPagerAdapter(@NonNull   FragmentManager fm, int behavior,String image1, String image2) {
         super(fm, behavior);
         this.image1 = image1;
         this.image2 = image2;

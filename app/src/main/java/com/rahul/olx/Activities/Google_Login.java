@@ -28,7 +28,7 @@ public class Google_Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (emailValidate()) {
-                    Intent intent = new Intent(Google_Login.this, Homepage.class);
+                    Intent intent = new Intent(Google_Login.this, MainActivity.class);
                     startActivity(intent);
                     finish();
                 }

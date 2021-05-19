@@ -1,13 +1,18 @@
-package com.rahul.olx.Activities;
+package com.rahul.olx.Fragments;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
+import android.os.Bundle;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -15,6 +20,10 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.rahul.olx.Activities.BrowseCategoryDisplayer;
+import com.rahul.olx.Activities.Categories;
+import com.rahul.olx.Activities.ItemDetails;
+import com.rahul.olx.Activities.LocationSearchActivity;
 import com.rahul.olx.AllInOneResponseClasses.AllInOneResponseClasses;
 import com.rahul.olx.AllInOneResponseClasses.DataClasses;
 import com.rahul.olx.ApiCallInterfaces.AllInOneApiClient;
@@ -34,7 +43,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Homepage extends AppCompatActivity implements BrowseCategoryClickListener , AllInOneClickListener {
+public class HomeFragment extends Fragment implements BrowseCategoryClickListener, AllInOneClickListener {
 
     private ArrayList<BrowseCategoriesModelClass> modelClassArrayList = new ArrayList<>();
     private RecyclerView rvBrowseCategories, rvForAll;
@@ -46,18 +55,42 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
     private Button btnSearch;
     private TextView tvSeeAll;
 
+
+    public HomeFragment() {
+        // Required empty public constructor
+    }
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_homepage);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_home, container, false);
+    }
+
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         buildBrowseCategory();
+        rvBrowseCategories = view.findViewById(R.id.rvBrowseCategories);
+        rvForAll = view.findViewById(R.id.RVForAll);
+        pb = view.findViewById(R.id.ProgressBar);
+        ivHome = view.findViewById(R.id.ibRefresh);
+        ivChat = view.findViewById(R.id.ibLocation);
+        ivSell = view.findViewById(R.id.ibHeart);
+        ivHeart = view.findViewById(R.id.ibChat);
+        ivAccount = view.findViewById(R.id.ibUser);
+        etSearch = view.findViewById(R.id.etSearch);
+        btnSearch = view.findViewById(R.id.btnSearch);
+        tvSeeAll= view.findViewById(R.id.tvSeeAll_home);
         initViewsAndListeners();
         getApiInsideRecyclerView();
         setAdapter();
+
     }
 
     private void setAdapter() {
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
         rvForAll.setLayoutManager(gridLayoutManager);
         adapter = new AllInOneViewAdapter(dataClassesArrayList,this);
         rvForAll.setAdapter(adapter);
@@ -92,19 +125,9 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
     }
 
     private void initViewsAndListeners() {
-        rvBrowseCategories = findViewById(R.id.rvBrowseCategories);
-        rvForAll = findViewById(R.id.RVForAll);
-        pb = findViewById(R.id.ProgressBar);
-        ivHome = findViewById(R.id.ibRefresh);
-        ivChat = findViewById(R.id.ibLocation);
-        ivSell = findViewById(R.id.ibHeart);
-        ivHeart = findViewById(R.id.ibChat);
-        ivAccount = findViewById(R.id.ibUser);
-        etSearch = findViewById(R.id.etSearch);
-        btnSearch = findViewById(R.id.btnSearch);
-        tvSeeAll= findViewById(R.id.tvSeeAll_home);
+
         BrowseCategoriesAdapter adapter = new BrowseCategoriesAdapter(modelClassArrayList, this);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(RecyclerView.HORIZONTAL);
         rvBrowseCategories.setLayoutManager(linearLayoutManager);
         rvBrowseCategories.setAdapter(adapter);
@@ -122,7 +145,7 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
             @Override
             public void onClick(View v) {
                 String location = etSearch.getText().toString();
-                Intent intent = new Intent(Homepage.this, LocationSearchActivity.class);
+                Intent intent = new Intent(getContext(), LocationSearchActivity.class);
                 intent.putExtra("location", location);
                 startActivity(intent);
             }
@@ -130,52 +153,12 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
         tvSeeAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Homepage.this,Categories.class);
+                Intent intent = new Intent(getContext(), Categories.class);
                 startActivity(intent);
             }
         });
 
 
-
-        ivHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Homepage.this,Homepage.class);
-                startActivity(intent);
-            }
-        });
-
-        ivChat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Homepage.this,ChatActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        ivSell.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Homepage.this,my_offers_menu.class);
-                startActivity(intent);
-            }
-        });
-
-        ivHeart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Homepage.this,MyAdsActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        ivAccount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Homepage.this,AccountPageActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
 
@@ -186,7 +169,7 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
                 !etSearch.getText().toString().contains("Mumbai") && !etSearch.getText().toString().contains("mumbai") &&
                 !etSearch.getText().toString().contains("Delhi") && !etSearch.getText().toString().contains("delhi") &&
                 !etSearch.getText().toString().contains("Kolkata") && !etSearch.getText().toString().contains("kolkata")) {
-            Toasty.error(Homepage.this, "Services currently available only in select locations", Toast.LENGTH_LONG).show();
+            Toasty.error(getContext(), "Services currently available only in select locations", Toast.LENGTH_LONG).show();
             condition = false;
         }
         return condition;
@@ -194,7 +177,7 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
 
     @Override
     public void onItemClick(int position) {
-        Intent intent = new Intent(this, BrowseCategoryDisplayer.class);
+        Intent intent = new Intent(getContext(), BrowseCategoryDisplayer.class);
         intent.putExtra("position", position);
         startActivity(intent);
     }
@@ -202,7 +185,7 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
     @Override
     public void onItemClick(DataClasses dataClasses) {
         try {
-            Intent intent = new Intent(Homepage.this, ItemDetails.class);
+            Intent intent = new Intent(getContext(), ItemDetails.class);
             intent.putExtra("price", dataClasses.getPrice().getValue().getDisplay());
             intent.putExtra("title", dataClasses.getTitle());
             intent.putExtra("extras", dataClasses.getMainInfo());
@@ -215,8 +198,12 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
         }
         catch (Exception e)
         {
-            Toasty.info(Homepage.this,"Failed to fetch results, try again!",Toast.LENGTH_LONG).show();
+            Toasty.info(getContext(),"Failed to fetch results, try again!",Toast.LENGTH_LONG).show();
         }
 
     }
+
+
+
+
 }
