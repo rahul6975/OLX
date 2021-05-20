@@ -4,38 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/google_bg"
     tools:context=".Activities.Google_Login">
 
     <ImageView
         android:id="@+id/ivGoogle"
         android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_50"
         android:layout_height="@dimen/dp_220"
-        android:src="@drawable/google_bg"
+        android:src="@drawable/ic_google"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etName"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_50"
+        android:paddingLeft="10dp"
         android:layout_marginLeft="@dimen/dp_20"
-        android:layout_marginTop="@dimen/sp_20"
+        android:layout_marginTop="@dimen/dp_50"
         android:layout_marginRight="@dimen/dp_20"
-        android:background="@drawable/rectangle_white_bg"
-        android:hint="@string/your_name"
-        android:textColorHint="@color/black"
+        android:background="@drawable/rect"
+        android:hint="Enter Your Name"
         app:layout_constraintTop_toBottomOf="@id/ivGoogle" />
 
     <EditText
         android:id="@+id/etEmail"
+        android:paddingLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_50"
         android:layout_marginLeft="@dimen/dp_20"
-        android:layout_marginTop="@dimen/sp_20"
+        android:layout_marginTop="@dimen/dp_15"
         android:layout_marginRight="@dimen/dp_20"
-        android:background="@drawable/rectangle_white_bg"
-        android:hint="@string/enter_email_address"
-        android:textColorHint="@color/black"
+        android:background="@drawable/rect"
+        android:hint="Enter E-mail Address"
         app:layout_constraintTop_toBottomOf="@id/etName" />
 
 
@@ -43,25 +43,26 @@
         android:id="@+id/etGooglePassword"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_50"
+        android:paddingLeft="10dp"
         android:layout_marginLeft="@dimen/dp_20"
-        android:layout_marginTop="@dimen/sp_20"
+        android:layout_marginTop="@dimen/dp_15"
         android:layout_marginRight="@dimen/dp_20"
-        android:background="@drawable/rectangle_white_bg"
-        android:hint="@string/enter_password"
+        android:background="@drawable/rect"
+        android:hint="Enter Password"
         android:inputType="textPassword"
-        android:textColorHint="@color/black"
         app:layout_constraintTop_toBottomOf="@id/etEmail" />
 
     <Button
         android:id="@+id/btnGoogleLogin"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_50"
-        android:layout_marginLeft="@dimen/dp_50"
+        android:layout_marginLeft="@dimen/dp_20"
         android:layout_marginTop="@dimen/sp_30"
-        android:layout_marginRight="@dimen/dp_50"
+        android:layout_marginRight="@dimen/dp_20"
         android:background="@drawable/rectangle_red_bg"
-        android:fontFamily="cursive"
         android:text="@string/login"
+        android:textStyle="bold"
+        android:textColor="@color/white"
         android:textSize="@dimen/sp_25"
         app:layout_constraintTop_toBottomOf="@id/etGooglePassword" />
 
