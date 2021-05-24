@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         btnContinueWithGoogle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this,Google_Login.class);
+                Intent intent = new Intent(LoginActivity.this, Google_Login.class);
                 startActivity(intent);
                 finish();
             }

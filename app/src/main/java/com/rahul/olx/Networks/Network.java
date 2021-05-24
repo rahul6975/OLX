@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Network {
 
-    private static HttpLoggingInterceptor httpLoggingInterceptor= new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY);
+    private static HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY);
 
     public static Retrofit getInstance() {
         Retrofit.Builder builder = new Retrofit.Builder().baseUrl("https://www.olx.in/api/")

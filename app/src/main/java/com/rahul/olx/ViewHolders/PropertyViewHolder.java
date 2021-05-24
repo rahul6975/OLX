@@ -20,7 +20,7 @@ public class PropertyViewHolder extends RecyclerView.ViewHolder {
     private TextView tvPropertyPrice, tvPropertyTitle, tvPropertyTown, tvPropertyCity, tvExtraProperty;
     private ImageView imgPropertyCoverImage, imgPropertyheart;
 
-    public PropertyViewHolder(@NonNull View itemView,PropertyClickListener propertyClickListener) {
+    public PropertyViewHolder(@NonNull View itemView, PropertyClickListener propertyClickListener) {
         super(itemView);
         this.propertyClickListener = propertyClickListener;
         itemView(itemView);
@@ -42,6 +42,7 @@ public class PropertyViewHolder extends RecyclerView.ViewHolder {
             }
         });
     }
+
     public void setData(DataPropertyClasses dataPropertyClasses) {
         try {
             tvPropertyPrice.setText(dataPropertyClasses.getPrice().getValue().getDisplay());
@@ -50,9 +51,7 @@ public class PropertyViewHolder extends RecyclerView.ViewHolder {
             tvPropertyTown.setText(dataPropertyClasses.getLocationsResolved().getADMINLEVEL3Name());
             tvPropertyCity.setText(dataPropertyClasses.getLocationsResolved().getADMINLEVEL1Name());
             Glide.with(imgPropertyCoverImage).load(dataPropertyClasses.getImages().get(0).getUrl()).into(imgPropertyCoverImage);
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             tvExtraProperty.setText("");
         }
         constraintLayout.setOnClickListener(new View.OnClickListener() {

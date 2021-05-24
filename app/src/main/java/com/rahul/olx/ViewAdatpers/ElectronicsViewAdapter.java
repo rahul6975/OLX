@@ -19,15 +19,15 @@ public class ElectronicsViewAdapter extends RecyclerView.Adapter<ElectronicsView
     private List<DataElectronicClasses> dataElectronicClassesList;
     private ElectronicsClickListener electronicsClickListener;
 
-    public ElectronicsViewAdapter(List<DataElectronicClasses> dataElectronicClassesList,ElectronicsClickListener electronicsClickListener) {
+    public ElectronicsViewAdapter(List<DataElectronicClasses> dataElectronicClassesList, ElectronicsClickListener electronicsClickListener) {
         this.dataElectronicClassesList = dataElectronicClassesList;
-        this.electronicsClickListener =electronicsClickListener;
+        this.electronicsClickListener = electronicsClickListener;
     }
 
     @NonNull
     @Override
     public ElectronicsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.browse_category_on_click_items,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.browse_category_on_click_items, parent, false);
         return new ElectronicsViewHolder(view, electronicsClickListener);
     }
 
@@ -42,6 +42,7 @@ public class ElectronicsViewAdapter extends RecyclerView.Adapter<ElectronicsView
     public int getItemCount() {
         return dataElectronicClassesList.size();
     }
+
     public void updateData(List<DataElectronicClasses> dataElectronicClasses) {
         this.dataElectronicClassesList = dataElectronicClasses;
         notifyDataSetChanged();

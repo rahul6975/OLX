@@ -34,7 +34,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Homepage extends AppCompatActivity implements BrowseCategoryClickListener , AllInOneClickListener {
+public class Homepage extends AppCompatActivity implements BrowseCategoryClickListener, AllInOneClickListener {
 
     private ArrayList<BrowseCategoriesModelClass> modelClassArrayList = new ArrayList<>();
     private RecyclerView rvBrowseCategories, rvForAll;
@@ -59,7 +59,7 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
     private void setAdapter() {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
         rvForAll.setLayoutManager(gridLayoutManager);
-        adapter = new AllInOneViewAdapter(dataClassesArrayList,this);
+        adapter = new AllInOneViewAdapter(dataClassesArrayList, this);
         rvForAll.setAdapter(adapter);
     }
 
@@ -102,7 +102,7 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
         ivAccount = findViewById(R.id.ibUser);
         etSearch = findViewById(R.id.etSearch);
         btnSearch = findViewById(R.id.btnSearch);
-        tvSeeAll= findViewById(R.id.tvSeeAll_home);
+        tvSeeAll = findViewById(R.id.tvSeeAll_home);
         BrowseCategoriesAdapter adapter = new BrowseCategoriesAdapter(modelClassArrayList, this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(RecyclerView.HORIZONTAL);
@@ -130,17 +130,16 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
         tvSeeAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Homepage.this,Categories.class);
+                Intent intent = new Intent(Homepage.this, Categories.class);
                 startActivity(intent);
             }
         });
 
 
-
         ivHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Homepage.this,Homepage.class);
+                Intent intent = new Intent(Homepage.this, Homepage.class);
                 startActivity(intent);
             }
         });
@@ -148,7 +147,7 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
         ivChat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Homepage.this,ChatActivity.class);
+                Intent intent = new Intent(Homepage.this, ChatActivity.class);
                 startActivity(intent);
             }
         });
@@ -156,7 +155,7 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
         ivSell.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Homepage.this,my_offers_menu.class);
+                Intent intent = new Intent(Homepage.this, my_offers_menu.class);
                 startActivity(intent);
             }
         });
@@ -164,7 +163,7 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
         ivHeart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Homepage.this,MyAdsActivity.class);
+                Intent intent = new Intent(Homepage.this, MyAdsActivity.class);
                 startActivity(intent);
             }
         });
@@ -172,12 +171,11 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
         ivAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Homepage.this,AccountPageActivity.class);
+                Intent intent = new Intent(Homepage.this, AccountPageActivity.class);
                 startActivity(intent);
             }
         });
     }
-
 
 
     private boolean checkLocation() {
@@ -212,10 +210,8 @@ public class Homepage extends AppCompatActivity implements BrowseCategoryClickLi
             intent.putExtra("city", dataClasses.getLocationsResolved().getADMINLEVEL1Name());
             intent.putExtra("description", dataClasses.getDescription());
             startActivity(intent);
-        }
-        catch (Exception e)
-        {
-            Toasty.info(Homepage.this,"Failed to fetch results, try again!",Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            Toasty.info(Homepage.this, "Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
         }
 
     }

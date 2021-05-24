@@ -85,26 +85,20 @@ public class LocationSearchActivity extends AppCompatActivity implements MumbaiC
         if (location.contains("Mumbai") || location.contains("mumbai")) {
             setReyclerOfMumbai();
             setMumbaiAdapter();
-        }
-        else if(location.contains("Delhi") || location.contains("delhi"))
-        {
+        } else if (location.contains("Delhi") || location.contains("delhi")) {
             setReyclerOfDelhi();
             setDelhiAdapter();
-        }
-        else if(location.contains("Bangalore") || location.contains("bangalore"))
-        {
+        } else if (location.contains("Bangalore") || location.contains("bangalore")) {
             setReyclerOfBangalore();
             setBangaloreAdapter();
-        }
-        else if(location.contains("Kolkata") || location.contains("kolkata"))
-        {
+        } else if (location.contains("Kolkata") || location.contains("kolkata")) {
             setReyclerOfKolkata();
             setKolkataAdapter();
         }
     }
 
     private void setKolkataAdapter() {
-        kolkataViewAdapter = new KolkataViewAdapter(dataKolkataClassesList,this);
+        kolkataViewAdapter = new KolkataViewAdapter(dataKolkataClassesList, this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         rv.setLayoutManager(linearLayoutManager);
         rv.setAdapter(kolkataViewAdapter);
@@ -115,8 +109,7 @@ public class LocationSearchActivity extends AppCompatActivity implements MumbaiC
         apiCient.getApi().enqueue(new Callback<ResponseKolkataClasses>() {
             @Override
             public void onResponse(Call<ResponseKolkataClasses> call, Response<ResponseKolkataClasses> response) {
-                if(response.body() != null)
-                {
+                if (response.body() != null) {
                     dataKolkataClassesList = response.body().getData();
                     kolkataViewAdapter.updateData(dataKolkataClassesList);
                     pb.setVisibility(View.GONE);
@@ -131,7 +124,7 @@ public class LocationSearchActivity extends AppCompatActivity implements MumbaiC
     }
 
     private void setBangaloreAdapter() {
-        bangaloreViewAdapter = new BangaloreViewAdapter(dataBangaloreClassesList,this);
+        bangaloreViewAdapter = new BangaloreViewAdapter(dataBangaloreClassesList, this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         rv.setLayoutManager(linearLayoutManager);
         rv.setAdapter(bangaloreViewAdapter);
@@ -142,8 +135,7 @@ public class LocationSearchActivity extends AppCompatActivity implements MumbaiC
         apiClient.getApit().enqueue(new Callback<ResponseBangaloreClasses>() {
             @Override
             public void onResponse(Call<ResponseBangaloreClasses> call, Response<ResponseBangaloreClasses> response) {
-                if(response.body() != null)
-                {
+                if (response.body() != null) {
                     dataBangaloreClassesList = response.body().getData();
                     bangaloreViewAdapter.updateData(dataBangaloreClassesList);
                     pb.setVisibility(View.GONE);
@@ -158,7 +150,7 @@ public class LocationSearchActivity extends AppCompatActivity implements MumbaiC
     }
 
     private void setDelhiAdapter() {
-        delhiViewAdapter = new DelhiViewAdapter(dataDelhiClassesList,this);
+        delhiViewAdapter = new DelhiViewAdapter(dataDelhiClassesList, this);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         rv.setLayoutManager(linearLayoutManager);
@@ -170,11 +162,10 @@ public class LocationSearchActivity extends AppCompatActivity implements MumbaiC
         apiClient.getApit().enqueue(new Callback<ResponseDelhiClasses>() {
             @Override
             public void onResponse(Call<ResponseDelhiClasses> call, Response<ResponseDelhiClasses> response) {
-                if(response.body() != null)
-                {
-                   dataDelhiClassesList = response.body().getData();
-                   delhiViewAdapter.updateData(dataDelhiClassesList);
-                   pb.setVisibility(View.GONE);
+                if (response.body() != null) {
+                    dataDelhiClassesList = response.body().getData();
+                    delhiViewAdapter.updateData(dataDelhiClassesList);
+                    pb.setVisibility(View.GONE);
                 }
             }
 
@@ -188,7 +179,7 @@ public class LocationSearchActivity extends AppCompatActivity implements MumbaiC
 
     private void setMumbaiAdapter() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        adapter = new MumbaiViewAdapter(dataMumbaiClassesList,this);
+        adapter = new MumbaiViewAdapter(dataMumbaiClassesList, this);
         rv.setLayoutManager(linearLayoutManager);
         rv.setAdapter(adapter);
     }
@@ -205,6 +196,7 @@ public class LocationSearchActivity extends AppCompatActivity implements MumbaiC
 
                 }
             }
+
             @Override
             public void onFailure(Call<ResponseMumbaiClasses> call, Throwable t) {
 
@@ -225,10 +217,8 @@ public class LocationSearchActivity extends AppCompatActivity implements MumbaiC
             intent.putExtra("city", dataMumbaiClasses.getLocationsResolved().getADMINLEVEL1Name());
             intent.putExtra("description", dataMumbaiClasses.getDescription());
             startActivity(intent);
-        }
-        catch (Exception e)
-        {
-            Toasty.info(LocationSearchActivity.this,"Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            Toasty.info(LocationSearchActivity.this, "Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -245,10 +235,8 @@ public class LocationSearchActivity extends AppCompatActivity implements MumbaiC
             intent.putExtra("city", dataBangaloreClasses.getLocationsResolved().getADMINLEVEL1Name());
             intent.putExtra("description", dataBangaloreClasses.getDescription());
             startActivity(intent);
-        }
-        catch (Exception e)
-        {
-            Toasty.info(LocationSearchActivity.this,"Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            Toasty.info(LocationSearchActivity.this, "Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -265,10 +253,8 @@ public class LocationSearchActivity extends AppCompatActivity implements MumbaiC
             intent.putExtra("city", dataDelhiClasses.getLocationsResolved().getADMINLEVEL1Name());
             intent.putExtra("description", dataDelhiClasses.getDescription());
             startActivity(intent);
-        }
-        catch (Exception e)
-        {
-            Toasty.info(LocationSearchActivity.this,"Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            Toasty.info(LocationSearchActivity.this, "Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -285,10 +271,8 @@ public class LocationSearchActivity extends AppCompatActivity implements MumbaiC
             intent.putExtra("city", dataKolkataClasses.getLocationsResolved().getADMINLEVEL1Name());
             intent.putExtra("description", dataKolkataClasses.getDescription());
             startActivity(intent);
-        }
-        catch (Exception e)
-        {
-            Toasty.info(LocationSearchActivity.this,"Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            Toasty.info(LocationSearchActivity.this, "Failed to fetch results, try again!", Toast.LENGTH_LONG).show();
         }
     }
 }
