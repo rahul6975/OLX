@@ -20,7 +20,7 @@ public class FragmentAll extends Fragment {
 
     private Button btnExplore;
     private Button mBtnExploreTheADS_all;
-private ChatActivity chatActivity;
+private MainActivity mainActivity;
 
     public FragmentAll() {
         // Required empty public constructor
@@ -39,7 +39,7 @@ private ChatActivity chatActivity;
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        chatActivity =(ChatActivity)context;
+        mainActivity=(MainActivity)context;
     }
 
     @Override
@@ -50,7 +50,7 @@ private ChatActivity chatActivity;
         btnExplore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), Homepage.class);
+                Intent intent = new Intent(getContext(), MainActivity.class);
                 startActivity(intent);
             }
         });

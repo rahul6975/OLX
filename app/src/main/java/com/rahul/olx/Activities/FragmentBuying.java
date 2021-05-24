@@ -18,7 +18,7 @@ import com.rahul.olx.R;
 
 public class FragmentBuying extends Fragment {
 private Button mBtnExploreTheADS_buying;
-    private ChatActivity chatActivity;
+    private MainActivity chatActivity;
     private Button btnExplore;
 
     public FragmentBuying() {
@@ -38,7 +38,7 @@ private Button mBtnExploreTheADS_buying;
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        chatActivity =(ChatActivity)context;
+        chatActivity =(MainActivity) context;
     }
 
     @Override
@@ -56,7 +56,7 @@ private Button mBtnExploreTheADS_buying;
         btnExplore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), Homepage.class);
+                Intent intent = new Intent(getContext(), MainActivity.class);
                 startActivity(intent);
             }
         });

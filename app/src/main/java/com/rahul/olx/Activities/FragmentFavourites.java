@@ -19,7 +19,7 @@ import com.rahul.olx.R;
 public class FragmentFavourites extends Fragment {
 
     private Button mBtnDiscoverFav, btnDiscover;
-    private MyAdsActivity myAdsActivity;
+    private MainActivity myAdsActivity;
 
     public FragmentFavourites() {
         // Required empty public constructor
@@ -38,7 +38,7 @@ public class FragmentFavourites extends Fragment {
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        myAdsActivity =(MyAdsActivity)context;
+        myAdsActivity =(MainActivity)context;
     }
 
     @Override
@@ -49,7 +49,7 @@ public class FragmentFavourites extends Fragment {
          btnDiscover.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                 Intent intent = new Intent(getContext(), Homepage.class);
+                 Intent intent = new Intent(getContext(), MainActivity.class);
                  startActivity(intent);
              }
          });

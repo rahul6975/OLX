@@ -36,7 +36,7 @@ public class maps_and_location extends AppCompatActivity {
         tvLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(maps_and_location.this, Homepage.class);
+                Intent intent = new Intent(maps_and_location.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -57,7 +57,7 @@ public class maps_and_location extends AppCompatActivity {
             case REQ_CODE:
                 if (grantResults.length >= 1) {
                     if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                        Intent intent = new Intent(maps_and_location.this, Homepage.class);
+                        Intent intent = new Intent(maps_and_location.this, MainActivity.class);
                         startActivity(intent);
                         finish();
                     } else if (ActivityCompat.shouldShowRequestPermissionRationale(maps_and_location.this, permissions[0])) {

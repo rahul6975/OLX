@@ -13,13 +13,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.rahul.olx.Fragments.CategoriesFragment;
+import com.rahul.olx.Fragments.LikesFragment;
 import com.rahul.olx.R;
 
 
 public class FragmentADS extends Fragment {
 
         private Button mBtnDiscoverAds, btnAdd;
-        private MyAdsActivity myAdsActivity;
+        private MainActivity mainActivity;
+
 
         public FragmentADS() {
             // Required empty public constructor
@@ -38,7 +41,7 @@ public class FragmentADS extends Fragment {
         @Override
         public void onAttach(@NonNull Context context) {
             super.onAttach(context);
-           myAdsActivity =(MyAdsActivity)context;
+            mainActivity=(MainActivity)context;
         }
 
         @Override
@@ -49,8 +52,8 @@ public class FragmentADS extends Fragment {
             btnAdd.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(getContext(), my_offers_menu.class);
-                    startActivity(intent);
+                Intent intent = new Intent(getContext(),MainActivity.class);
+                startActivity(intent);
                 }
             });
         }

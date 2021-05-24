@@ -49,7 +49,7 @@ public class Settings extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 Toasty.info(Settings.this, " Dont show again ", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(Settings.this, Homepage.class);
+                                Intent intent = new Intent(Settings.this, MainActivity.class);
                                 startActivity(intent);
                                 finish();
                             }
@@ -70,7 +70,7 @@ public class Settings extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 Toasty.info(Settings.this, " Dont show again ", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(Settings.this, Homepage.class);
+                                Intent intent = new Intent(Settings.this, MainActivity.class);
                                 startActivity(intent);
                                 finish();
                             }

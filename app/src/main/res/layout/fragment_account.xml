@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.AccountFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llAccountPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/IvUser"
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="@dimen/dp_70"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="@dimen/dp_60"
+                android:background="@drawable/edit_profile_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/TvSettingsProfileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:hint="Name here"
+                    android:textColor="@color/darkGreen"
+                    android:textSize="@dimen/sp_28"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.22"
+                    app:layout_constraintStart_toEndOf="@id/IvUser"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/TvViewAndEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:text="@string/view_edit_profile"
+                    android:textColor="@color/darkGreen"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.138"
+                    app:layout_constraintStart_toEndOf="@id/IvUser"
+                    app:layout_constraintTop_toBottomOf="@id/TvSettingsProfileName" />
+
+                <View
+                    android:id="@+id/view_UnderLine"
+                    android:layout_width="130dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:background="@color/darkGreen" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/TvBuyPackages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_25"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:drawableLeft="@drawable/ic_shopping_bag"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:drawablePadding="@dimen/dp_15"
+            android:text="@string/buy_packages_my_orders"
+            android:textColor="@color/darkGreen"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/TvPackagesOrdersBilling"
+            app:layout_constraintTop_toBottomOf="@id/llAccountPage" />
+
+        <TextView
+            android:id="@+id/TvPackagesOrdersBilling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_60"
+            android:text="@string/packages_orders"
+            android:textColor="@color/darkGreen"
+            app:layout_constraintBottom_toTopOf="@id/view_FullUnderLine"
+            app:layout_constraintTop_toBottomOf="@id/TvBuyPackages" />
+
+        <View
+            android:id="@+id/view_FullUnderLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/gray"
+            app:layout_constraintBottom_toTopOf="@id/TvSettings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TvPackagesOrdersBilling" />
+
+        <TextView
+            android:id="@+id/TvSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_15"
+            android:drawableLeft="@drawable/settings"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:drawablePadding="@dimen/dp_20"
+            android:text="@string/settings"
+            android:textColor="@color/darkGreen"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/TvPrivacyAndLogout"
+            app:layout_constraintTop_toBottomOf="@id/view_FullUnderLine" />
+
+        <TextView
+            android:id="@+id/TvPrivacyAndLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_65"
+            android:text="@string/privacy_logout"
+            android:textColor="@color/darkGreen"
+            app:layout_constraintBottom_toTopOf="@id/view_FullUnderLine1"
+            app:layout_constraintTop_toBottomOf="@id/TvSettings" />
+
+        <View
+            android:id="@+id/view_FullUnderLine1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/gray"
+            app:layout_constraintBottom_toTopOf="@id/TvHelpAndSupport"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TvPrivacyAndLogout" />
+
+        <TextView
+            android:id="@+id/TvHelpAndSupport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_15"
+            android:drawableLeft="@drawable/ic_information"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:drawablePadding="@dimen/dp_20"
+            android:text="@string/Help_and_support"
+            android:textColor="@color/darkGreen"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/TvHelpCenter"
+            app:layout_constraintTop_toBottomOf="@id/view_FullUnderLine1" />
+
+        <TextView
+            android:id="@+id/TvHelpCenter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_65"
+            android:text="@string/Help_center"
+            android:textColor="@color/darkGreen"
+            app:layout_constraintBottom_toTopOf="@id/view_FullUnderLine2"
+            app:layout_constraintTop_toBottomOf="@id/TvHelpAndSupport" />
+
+        <View
+            android:id="@+id/view_FullUnderLine2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/gray"
+            app:layout_constraintBottom_toTopOf="@id/TvSelectLanguage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TvHelpCenter" />
+
+        <TextView
+            android:id="@+id/TvSelectLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_15"
+            android:drawableLeft="@drawable/language"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:drawablePadding="@dimen/dp_20"
+            android:text="@string/select_language"
+            android:textColor="@color/darkGreen"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/TvEnglish"
+            app:layout_constraintTop_toBottomOf="@id/view_FullUnderLine2" />
+
+        <TextView
+            android:id="@+id/TvEnglish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_65"
+            android:text="@string/English"
+            android:textColor="@color/darkGreen"
+            app:layout_constraintBottom_toTopOf="@id/view_FullUnderLine3"
+            app:layout_constraintTop_toBottomOf="@id/TvSelectLanguage" />
+
+        <View
+            android:id="@+id/view_FullUnderLine3"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TvEnglish" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
