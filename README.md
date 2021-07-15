@@ -1,23 +1,16 @@
-Here we have tried to clone OLX india, an e-marketplace application where a user can advertise/buy/sell any used products online.
-We mainly used the concepts of RecyclerView , Retrofit, Fragments and Shared Preferences along with intents.
-While designing we mostly used Constraint and nested linear/relative layouts.
-We made use of live data instead of creating assets as the OLX Api's could be extracted online.
-We made use of third party dependencies like glide for imageView, Toasty for toast messages, Retrofit for handling Api's respectively.
+# OLX Clone
+#### OLX App is a online buying/selling android app where user can buy/sell used products.
 
-Following below is the code for Retrofit dependency
+## Screenshots
 
-     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
-     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
-  
-Following below is the code for Glide dependency
+<a href="https://postimg.cc/v4hRnY87" target="_blank"><img src="https://i.postimg.cc/cJydVCVz/Screenshot-2021-07-15-16-06-11-500-com-rahul-olx.jpg" alt="Screenshot-2021-07-15-16-06-11-500-com-rahul-olx"/></a> <a href="https://postimg.cc/yWZwPXY8" target="_blank"><img src="https://i.postimg.cc/66jtBYkn/Screenshot-2021-07-15-16-06-14-295-com-rahul-olx.jpg" alt="Screenshot-2021-07-15-16-06-14-295-com-rahul-olx"/></a> <a href="https://postimg.cc/KKjWgtHF" target="_blank"><img src="https://i.postimg.cc/DzP3HgQW/Screenshot-2021-07-15-16-06-43-411-com-rahul-olx.jpg" alt="Screenshot-2021-07-15-16-06-43-411-com-rahul-olx"/></a> <a href="https://postimg.cc/Ff6Bb1MS" target="_blank"><img src="https://i.postimg.cc/85kgS6wZ/Screenshot-2021-07-15-16-06-51-532-com-rahul-olx.jpg" alt="Screenshot-2021-07-15-16-06-51-532-com-rahul-olx"/></a><br/><br/>
+<a href="https://postimg.cc/ygJ220mn" target="_blank"><img src="https://i.postimg.cc/C1JYBNzy/Screenshot-2021-07-15-16-06-56-783-com-rahul-olx.jpg" alt="Screenshot-2021-07-15-16-06-56-783-com-rahul-olx"/></a> <a href="https://postimg.cc/TpvBHLpq" target="_blank"><img src="https://i.postimg.cc/L6JR5jS7/Screenshot-2021-07-15-16-07-07-809-com-rahul-olx.jpg" alt="Screenshot-2021-07-15-16-07-07-809-com-rahul-olx"/></a> <a href="https://postimg.cc/tYd80q60" target="_blank"><img src="https://i.postimg.cc/WbxVktb4/Screenshot-2021-07-15-16-07-13-128-com-rahul-olx.jpg" alt="Screenshot-2021-07-15-16-07-13-128-com-rahul-olx"/></a> <a href="https://postimg.cc/y3mpzjkh" target="_blank"><img src="https://i.postimg.cc/J0gfZd8F/Screenshot-2021-07-15-16-07-42-283-com-rahul-olx.jpg" alt="Screenshot-2021-07-15-16-07-42-283-com-rahul-olx"/></a><br/><br/>
 
-    implementation 'com.google.code.gson:gson:2.8.6'
-    implementation 'com.github.bumptech.glide:glide:4.11.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
- 
- 
- Following below is the code for Toasty dependency
- 
-    implementation 'javax.annotation:javax.annotation-api:1.3.2'
-    implementation 'com.github.GrenderG:Toasty:1.4.0'
-    
+
+## Technologies
+* Java
+* Glide 
+* Recycler View 
+* Fragments
+* Retrofit
+* Shared Preferences
